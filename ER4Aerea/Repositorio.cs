@@ -9,14 +9,16 @@ namespace ER4Aerea
 {
     public abstract class Repositorio
     {
+        public abstract object[] extrairValores(Dominio dominio);
+        public abstract string montarWhereByFiltroString(string filtro);
         private static Bd persistencia = Bd.Instance;
         
         protected abstract string tabela();
         protected abstract string colunaId();
         protected abstract string[] colunas();
-
         protected abstract Dominio mapRow(OleDbDataReader dr);
         protected abstract void valuesMap(Dictionary<string, object> d, Dominio dominio);
+
 
         protected Bd obterPersistencia()
         {
@@ -71,6 +73,36 @@ namespace ER4Aerea
 
             return mapRow(dr);
         }
+        public List<Dominio> obterTodos()
+        {
+
+            OleDbDataReader dr = executeQuery(montarSelect());
+
+            List<Dominio> lista=new List<Dominio>();
+
+            while (dr.Read())
+            {                
+                lista.Add(mapRow(dr));
+
+            }
+
+            return lista;
+        }
+        public List<Dominio> obterByFiltroString(string filtro)
+        {
+            OleDbDataReader dr = executeQuery(montarSelect(montarWhereByFiltroString(filtro)));
+
+            List<Dominio> lista = new List<Dominio>();
+
+            while (dr.Read())
+            {
+                lista.Add(mapRow(dr));
+
+            }
+
+            return lista;
+        }
+
         //PRIVATE
         private Dominio insert(Dominio dominio)
         {
@@ -81,6 +113,7 @@ namespace ER4Aerea
 
             return dominio;
         }
+        
         private Dominio update(Dominio dominio)
         {
             updateCommand(dominio, dominio.id);
@@ -92,17 +125,30 @@ namespace ER4Aerea
         }
 
         protected string montarSelectWhereId(int id) {
-            string str = "Select * from " + tabela() + " Where " + colunaId() +" = " + id.ToString();
+            return montarSelect(colunaId() +" = " + id.ToString());
+        }
+        protected string montarSelect() { 
+            return "Select * from " + tabela();
+        }
+        protected string montarSelect(string where)
+        {
+            string str = montarSelect();
+
+            if (!string.IsNullOrEmpty(where))
+                str+= " Where " + where;
             return str;
         }
+        
         protected OleDbDataReader executeQuery(string str) {
             OleDbDataReader dr = this.obterPersistencia().obterQuery(str);
             return dr;
         }
+        
         protected OleDbDataReader executeQueryById(int id)
         {
             return executeQuery(montarSelectWhereId(id));
         }
+        
         protected string montarInsert()
         {   string[] strAux= new string[colunas().Length];
 
@@ -130,6 +176,7 @@ namespace ER4Aerea
 
             return str;
         }
+        
         protected void insertCommand(Dominio dominio)
         {
             executarCommand(montarInsert(),dominio);

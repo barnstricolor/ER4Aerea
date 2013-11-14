@@ -13,6 +13,10 @@ namespace ER4Aerea
 {
     public partial class frmPesquisa : Form
     {
+        public Repositorio repo { get; set; }
+
+
+
         public string codigo { get; set; }
         public string descricao { get; set; }
         public string tabela { get; set; }
@@ -26,29 +30,42 @@ namespace ER4Aerea
             InitializeComponent();
         }
 
-        private void frmPesquisa_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            /*Bd persistencia = new Bd();
+            grd.Rows.Clear();
 
-            string str;
-            str = "Select " + codigo +","+ descricao + " from " + tabela + " Where 1=1";
-            if (!string.IsNullOrEmpty(txtOrigem.Text))
-                str+=" And " + codigo +" = "+txtOrigem.Text;
-            if (!string.IsNullOrEmpty(txtNomOrigem.Text))
-                str += " And " + descricao + " = LIKE '%" + txtOrigem.Text + "%'";
-            
-            OleDbDataReader dr = persistencia.obterQuery(str);
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            grd.DataSource = dt;
+            List<Dominio> lista = repo.obterByFiltroString(txtNomOrigem.Text);
 
-            dr.Close();*/
+            foreach (var dominio in lista)
+            {
+                preencherRow(dominio);
+            }            
+             
         }
+        private void preencherRow(Dominio dominio) {
+
+            object[] valores = repo.extrairValores(dominio);
+
+            grd.Rows.Add(valores);
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void grd_DoubleClick(object sender, EventArgs e)
         {

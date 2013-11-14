@@ -76,7 +76,8 @@ namespace ER4Aerea
 
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCidade frm = new frmCidade();
+            frmPesquisa frm = new frmPesquisa();
+            frm.repo = new CidadeRepositorio();
             frm.MdiParent = this;
             frm.Show();            
         }
@@ -87,9 +88,10 @@ namespace ER4Aerea
 
         private void aviãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAviao frm = new frmAviao();
+            frmPesquisa frm = new frmPesquisa();
+            frm.repo = new AviaoRepositorio();
             frm.MdiParent = this;
-            frm.Show();
+            frm.Show();  
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace ER4Aerea
             
             return new string[] {colunaId(),"NOM_CIDADE","NUM_CEP"}; 
         }
-
+        
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
         {
@@ -30,7 +30,14 @@ namespace ER4Aerea
             cidade.cep = dr["NUM_CEP"].ToString();
 
             return cidade;
-
+        }
+        public override object[] extrairValores(Dominio dominio)
+        {
+            Cidade cidade = (Cidade)dominio;
+            return new object[] { cidade.id, cidade.nome, cidade.cep };
+        }
+        public override string montarWhereByFiltroString(string filtro){
+            return "NOM_CIDADE LIKE '%" + filtro + "%'";
         }
     }
 }

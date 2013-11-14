@@ -34,5 +34,14 @@ namespace ER4Aerea
             d.Add("QTD_ASSENTO", aviao.assentos);
 
         }
+        public override object[] extrairValores(Dominio dominio)
+        {
+            Aviao aviao= (Aviao)dominio;
+            return new object[] { aviao.id, aviao.modelo, aviao.assentos };
+        }
+        public override string montarWhereByFiltroString(string filtro)
+        {
+            return "NOM_MODELO LIKE '%" + filtro + "%'";
+        }
     }
 }

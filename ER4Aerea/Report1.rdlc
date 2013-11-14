@@ -182,7 +182,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>NOM CIDADE</Value>
+                            <Value>Nome da Cidade</Value>
                             <Style>
                               <FontFamily>Tahoma</FontFamily>
                               <FontSize>11pt</FontSize>
@@ -235,6 +235,14 @@
                         <TextRuns>
                           <TextRun>
                             <Value>=Fields!NOM_CIDADE.Value</Value>
+                            <Style>
+                              <FontFamily>Tahoma</FontFamily>
+                              <FontWeight>Normal</FontWeight>
+                              <Color>#333333</Color>
+                            </Style>
+                          </TextRun>
+                          <TextRun>
+                            <Value> - mostrar uf</Value>
                             <Style>
                               <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Normal</FontWeight>
