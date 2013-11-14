@@ -26,15 +26,12 @@ namespace ER4Aerea
             return aviao;
         }
 
-        protected override Dictionary<string, object> valuesMap(Dominio dominio)
+        protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
         {
             Aviao aviao = (Aviao)dominio;
-            Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("ID_AVIAO", aviao.id);
             d.Add("NOM_MODELO", aviao.modelo);
             d.Add("QTD_ASSENTO", aviao.assentos);
-
-            return d;
 
         }
     }

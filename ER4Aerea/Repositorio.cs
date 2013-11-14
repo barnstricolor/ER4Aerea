@@ -16,7 +16,7 @@ namespace ER4Aerea
         protected abstract string[] colunas();
 
         protected abstract Dominio mapRow(OleDbDataReader dr);
-        protected abstract Dictionary<string, object> valuesMap(Dominio dominio);
+        protected abstract void valuesMap(Dictionary<string, object> d, Dominio dominio);
 
         protected Bd obterPersistencia()
         {
@@ -77,16 +77,20 @@ namespace ER4Aerea
 
             dominio.id = obterSequencia();
 
-            insertCommand(valuesMap(dominio));
+            insertCommand(dominio);
 
             return dominio;
         }
         private Dominio update(Dominio dominio)
         {
-            updateCommand(valuesMap(dominio), dominio.id);
+            updateCommand(dominio, dominio.id);
 
             return dominio;
-        }        
+        }
+        private Dictionary<string,object> criarDictionary(){
+            return new Dictionary<string,object>();
+        }
+
         protected string montarSelectWhereId(int id) {
             string str = "Select * from " + tabela() + " Where " + colunaId() +" = " + id.ToString();
             return str;
@@ -126,31 +130,29 @@ namespace ER4Aerea
 
             return str;
         }
-        protected void insertCommand(Dictionary<string, object> d)
+        protected void insertCommand(Dominio dominio)
         {
-            OleDbCommand cmd = new OleDbCommand(montarInsert(), obterConexao());
-
-            foreach (var value in d)
-                cmd.Parameters.AddWithValue("@" + value.Key, value.Value);
-
-            cmd.CommandType = System.Data.CommandType.Text;
-
-            cmd.CommandText = montarInsert();
-
-            cmd.ExecuteNonQuery();
+            executarCommand(montarInsert(),dominio);
         }
-        protected void updateCommand(Dictionary<string, object> d,int id)
+        
+        protected void updateCommand(Dominio dominio,int id)
         {
-            OleDbCommand cmd = new OleDbCommand(montarInsert(), obterConexao());
+            executarCommand(montarUpdateById(id),dominio);
+        }
 
+        protected void executarCommand(string cmdText, Dominio dominio){
+            Dictionary<string,dominio> d = criarDictionary();
+            valuesMap(d,dominio);
+            montarCommand(cmdText).ExecuteNonQuery();
+        }
+
+        protected OleDbCommand montarCommand(string cmdText){
+            OleDbCommand cmd = new OleDbCommand(cmdText, obterConexao());
             foreach (var value in d)
                 cmd.Parameters.AddWithValue("@" + value.Key, value.Value);
-
             cmd.CommandType = System.Data.CommandType.Text;
-
-            cmd.CommandText = montarUpdateById(id);
-
-            cmd.ExecuteNonQuery();
+            cmd.CommandText = cmdText;
+            return cmd;
         }
 
     }
