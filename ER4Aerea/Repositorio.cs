@@ -141,12 +141,13 @@ namespace ER4Aerea
         }
 
         protected void executarCommand(string cmdText, Dominio dominio){
-            Dictionary<string,dominio> d = criarDictionary();
+            Dictionary<string,object> d = criarDictionary();
             valuesMap(d,dominio);
-            montarCommand(cmdText).ExecuteNonQuery();
+            montarCommand(cmdText,d).ExecuteNonQuery();
         }
 
-        protected OleDbCommand montarCommand(string cmdText){
+        protected OleDbCommand montarCommand(string cmdText, Dictionary<string, object> d)
+        {
             OleDbCommand cmd = new OleDbCommand(cmdText, obterConexao());
             foreach (var value in d)
                 cmd.Parameters.AddWithValue("@" + value.Key, value.Value);

@@ -79,16 +79,8 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CAD_ASSENTOTableAdapter = null;
-            this.tableAdapterManager.CAD_AVIAOTableAdapter = null;
             this.tableAdapterManager.CAD_CIDADETableAdapter = this.cAD_CIDADETableAdapter;
-            this.tableAdapterManager.CAD_CLIENTETableAdapter = null;
-            this.tableAdapterManager.CAD_PRECOTableAdapter = null;
-            this.tableAdapterManager.CAD_PROMOCAOTableAdapter = null;
-            this.tableAdapterManager.CAD_RESERVATableAdapter = null;
             this.tableAdapterManager.CAD_TRECHOTableAdapter = null;
-            this.tableAdapterManager.CAD_USUARIOTableAdapter = null;
-            this.tableAdapterManager.CAD_VOOTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ER4Aerea.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cAD_CIDADEBindingNavigator
@@ -213,7 +205,6 @@
             this.cAD_CIDADEBindingNavigatorSaveItem.Name = "cAD_CIDADEBindingNavigatorSaveItem";
             this.cAD_CIDADEBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.cAD_CIDADEBindingNavigatorSaveItem.Text = "Save Data";
-            this.cAD_CIDADEBindingNavigatorSaveItem.Click += new System.EventHandler(this.cAD_CIDADEBindingNavigatorSaveItem_Click);
             // 
             // iD_CIDADELabel
             // 
@@ -280,7 +271,7 @@
             this.Controls.Add(this.cAD_CIDADEBindingNavigator);
             this.Name = "frmCidade";
             this.Text = "frmCidade";
-            this.Load += new System.EventHandler(this.frmCidade_Load);
+            //this.Load += new System.EventHandler(this.frmCidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cAD_CIDADEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cAD_CIDADEBindingNavigator)).EndInit();

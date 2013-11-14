@@ -13,15 +13,13 @@ namespace ER4Aerea
         }
 
         //PROTECTED
-        protected override Dictionary<string, object> valuesMap(Dominio dominio)
+        protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
         {
             Cidade cidade = (Cidade)dominio;
-            Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("ID_CIDADE", cidade.id);
             d.Add("NOM_CIDADE", cidade.nome);
             d.Add("NUM_CEP", cidade.cep);
 
-            return d;
         }
         protected override Dominio mapRow(OleDbDataReader dr) {
 
