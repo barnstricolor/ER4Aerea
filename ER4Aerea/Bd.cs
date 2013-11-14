@@ -7,7 +7,6 @@ namespace ER4Aerea
     public class Bd
     {
         private OleDbConnection conn;
-        private string lixo;
         private string usuario { get; set; }
         private string senha { get; set; }
         
