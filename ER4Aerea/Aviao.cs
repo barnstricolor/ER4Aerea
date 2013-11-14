@@ -8,7 +8,6 @@ namespace ER4Aerea
 {
     public class Aviao:Dominio
     {
-        //public int id { get; set; }
         public string modelo { get; set; }
         public int assentos { get; set; }
 
