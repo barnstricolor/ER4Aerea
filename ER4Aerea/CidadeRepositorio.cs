@@ -23,7 +23,7 @@ namespace ER4Aerea
         }
         protected override Dominio mapRow(OleDbDataReader dr) {
 
-            Cidade cidade = new Cidade(dr["NOM_CIDADE"].ToString());
+            Cidade cidade = new Cidade(dr["NOM_CIDADE"].ToString(), dr["NUM_CEP"].ToString());
 
             cidade.id = int.Parse(dr["ID_CIDADE"].ToString());
             cidade.nome = dr["NOM_CIDADE"].ToString();

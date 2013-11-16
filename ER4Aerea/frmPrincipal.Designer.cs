@@ -153,7 +153,7 @@
             // cidadeToolStripMenuItem1
             // 
             this.cidadeToolStripMenuItem1.Name = "cidadeToolStripMenuItem1";
-            this.cidadeToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.cidadeToolStripMenuItem1.Size = new System.Drawing.Size(125, 24);
             this.cidadeToolStripMenuItem1.Text = "Cidade";
             this.cidadeToolStripMenuItem1.Click += new System.EventHandler(this.cidadeToolStripMenuItem1_Click);
             // 
@@ -216,12 +216,12 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(140, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.aboutToolStripMenuItem.Text = "&Sobre ... ...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 

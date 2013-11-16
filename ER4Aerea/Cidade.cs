@@ -11,11 +11,12 @@ namespace ER4Aerea
         //public int id { get; set; }
         public string nome { get; set; }
         public string cep { get; set; }
-        public Cidade(String nome)
+        public Cidade(String nome,string cep)
         {
             /*if (string.IsNullOrEmpty(nome))
                 throw new ArgumentException("Nome da cidade obrigatório!");*/
             this.nome = nome;
+            this.cep = cep;
         }
         
     }
