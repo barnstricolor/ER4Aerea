@@ -89,7 +89,8 @@
             this.grd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd.Size = new System.Drawing.Size(691, 197);
             this.grd.TabIndex = 5;
-            this.grd.DoubleClick += new System.EventHandler(this.grd_DoubleClick);
+            this.grd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
+            this.grd.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellDoubleClick);
             // 
             // Column1
             // 
@@ -102,6 +103,7 @@
             this.Column2.HeaderText = "Column2";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 500;
             // 
             // frmPesquisa
             // 
@@ -114,14 +116,11 @@
             this.Controls.Add(this.txtNomOrigem);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmPesquisa";
             this.Opacity = 0.95D;
-            this.Text = "frmPesquisa";
+            this.Load += new System.EventHandler(this.frmPesquisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

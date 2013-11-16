@@ -75,55 +75,39 @@ namespace ER4Aerea
         }
         public List<Dominio> obterTodos()
         {
-
             OleDbDataReader dr = executeQuery(montarSelect());
-
             List<Dominio> lista=new List<Dominio>();
-
             while (dr.Read())
             {                
                 lista.Add(mapRow(dr));
-
             }
-
             return lista;
         }
         public List<Dominio> obterByFiltroString(string filtro)
         {
             OleDbDataReader dr = executeQuery(montarSelect(montarWhereByFiltroString(filtro)));
-
             List<Dominio> lista = new List<Dominio>();
-
             while (dr.Read())
             {
                 lista.Add(mapRow(dr));
-
             }
-
             return lista;
         }
-
         //PRIVATE
         private Dominio insert(Dominio dominio)
         {
-
             dominio.id = obterSequencia();
-
             insertCommand(dominio);
-
             return dominio;
         }
-        
         private Dominio update(Dominio dominio)
         {
             updateCommand(dominio, dominio.id);
-
             return dominio;
         }
         private Dictionary<string,object> criarDictionary(){
             return new Dictionary<string,object>();
         }
-
         protected string montarSelectWhereId(int id) {
             return montarSelect(colunaId() +" = " + id.ToString());
         }
@@ -143,12 +127,10 @@ namespace ER4Aerea
             OleDbDataReader dr = this.obterPersistencia().obterQuery(str);
             return dr;
         }
-        
         protected OleDbDataReader executeQueryById(int id)
         {
             return executeQuery(montarSelectWhereId(id));
         }
-        
         protected string montarInsert()
         {   string[] strAux= new string[colunas().Length];
 
@@ -156,10 +138,8 @@ namespace ER4Aerea
             {
                 strAux[i] = "?";
             }
-        
             string str = "Insert Into " + tabela() + "(" + string.Join(",", colunas()) + ")";
             str += " Values (" + string.Join(",", strAux) + ")";
-
             return str;
         }
         protected string montarUpdateById(int id)
@@ -170,7 +150,6 @@ namespace ER4Aerea
             {
                 strAux[i] = colunas()[i] +" = ?";
             }
-            
             string str = "Update " + tabela() + " Set " + string.Join(",", strAux);            
             str += " Where " + colunaId() + " = " + id.ToString();
 

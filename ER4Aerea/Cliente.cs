@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ER4Aerea
 {
-    public  class Cliente
+    public  class Cliente:Dominio
     {
-        private  int id { get; set; }
+        //private  int id { get; set; }
         private  string nome { get; set; }
         
         private  Boolean promocao { get; set; }

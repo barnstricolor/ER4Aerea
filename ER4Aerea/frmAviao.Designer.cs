@@ -51,7 +51,7 @@
             // iD_AVIAOLabel
             // 
             iD_AVIAOLabel.AutoSize = true;
-            iD_AVIAOLabel.Location = new System.Drawing.Point(16, 15);
+            iD_AVIAOLabel.Location = new System.Drawing.Point(130, 53);
             iD_AVIAOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iD_AVIAOLabel.Name = "iD_AVIAOLabel";
             iD_AVIAOLabel.Size = new System.Drawing.Size(56, 17);
@@ -62,7 +62,7 @@
             // qTD_ASSENTOLabel
             // 
             qTD_ASSENTOLabel.AutoSize = true;
-            qTD_ASSENTOLabel.Location = new System.Drawing.Point(16, 47);
+            qTD_ASSENTOLabel.Location = new System.Drawing.Point(19, 111);
             qTD_ASSENTOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             qTD_ASSENTOLabel.Name = "qTD_ASSENTOLabel";
             qTD_ASSENTOLabel.Size = new System.Drawing.Size(167, 17);
@@ -72,7 +72,7 @@
             // nOM_MODELOLabel
             // 
             nOM_MODELOLabel.AutoSize = true;
-            nOM_MODELOLabel.Location = new System.Drawing.Point(191, 15);
+            nOM_MODELOLabel.Location = new System.Drawing.Point(128, 81);
             nOM_MODELOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nOM_MODELOLabel.Name = "nOM_MODELOLabel";
             nOM_MODELOLabel.Size = new System.Drawing.Size(58, 17);
@@ -81,8 +81,8 @@
             // 
             // ID_AVIAO
             // 
-            this.ID_AVIAO.Location = new System.Drawing.Point(81, 11);
-            this.ID_AVIAO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_AVIAO.Location = new System.Drawing.Point(194, 48);
+            this.ID_AVIAO.Margin = new System.Windows.Forms.Padding(4);
             this.ID_AVIAO.Name = "ID_AVIAO";
             this.ID_AVIAO.Size = new System.Drawing.Size(100, 22);
             this.ID_AVIAO.TabIndex = 1;
@@ -90,8 +90,8 @@
             // 
             // qTD_ASSENTOTextBox
             // 
-            this.qTD_ASSENTOTextBox.Location = new System.Drawing.Point(191, 43);
-            this.qTD_ASSENTOTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qTD_ASSENTOTextBox.Location = new System.Drawing.Point(194, 108);
+            this.qTD_ASSENTOTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.qTD_ASSENTOTextBox.Name = "qTD_ASSENTOTextBox";
             this.qTD_ASSENTOTextBox.Size = new System.Drawing.Size(85, 22);
             this.qTD_ASSENTOTextBox.TabIndex = 3;
@@ -99,8 +99,8 @@
             // 
             // nOM_MODELOTextBox
             // 
-            this.nOM_MODELOTextBox.Location = new System.Drawing.Point(259, 11);
-            this.nOM_MODELOTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nOM_MODELOTextBox.Location = new System.Drawing.Point(194, 78);
+            this.nOM_MODELOTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nOM_MODELOTextBox.Name = "nOM_MODELOTextBox";
             this.nOM_MODELOTextBox.Size = new System.Drawing.Size(157, 22);
             this.nOM_MODELOTextBox.TabIndex = 2;
@@ -110,7 +110,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(425, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(16, 138);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 55);
             this.panel1.TabIndex = 42;
@@ -132,7 +132,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Location = new System.Drawing.Point(220, 20);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(100, 28);
             this.btnExcluir.TabIndex = 6;
@@ -142,7 +142,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(4, 20);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 4;
@@ -153,7 +153,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(328, 20);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 7;
@@ -163,7 +163,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(112, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 5;
@@ -183,7 +183,7 @@
             this.Controls.Add(this.qTD_ASSENTOTextBox);
             this.Controls.Add(nOM_MODELOLabel);
             this.Controls.Add(this.nOM_MODELOTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAviao";
             this.Tag = "CAD_AVIAO";
             this.Text = "frmAviao";
