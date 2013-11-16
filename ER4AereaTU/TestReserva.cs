@@ -19,8 +19,8 @@ namespace ER4AereaTU
 	    public void setUpTest(){
 		    cliente = new Cliente("Cliente", false);
 		    clienteEspecial = new Cliente("Especial", true);
-		    rao = new Cidade("Ribeirão Preto");
-		    sao = new Cidade("São Paulo");
+		    rao = new Cidade("Ribeirão Preto","14100");
+		    sao = new Cidade("São Paulo","14098");
 		    boeing777 = new Aviao("Boeing 777", 5);
 		    raoSao777 = new Voo(boeing777, rao, sao, new DateTime(), 100f);
             usuario = new Usuario("Teste");

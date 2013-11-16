@@ -11,7 +11,6 @@ namespace ER4Aerea
             
             return new string[] {colunaId(),"NOM_CIDADE","NUM_CEP"}; 
         }
-        
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
         {

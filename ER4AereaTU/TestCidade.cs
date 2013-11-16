@@ -17,7 +17,7 @@ namespace ER4AereaTU
         [TestMethod]
         public void TestCidadeDAO()
         {
-            Cidade cidade=new Cidade("CIDADE NOVA");
+            Cidade cidade=new Cidade("CIDADE NOVA","14100");
             
             cidade.cep = "14100";
             cidadeDAO.salvar(cidade);

@@ -14,7 +14,7 @@ namespace ER4Aerea
     {
         
         public Crud()
-        {
+        {/*
             this.SuspendLayout();
             // 
             // Crud
@@ -22,16 +22,9 @@ namespace ER4Aerea
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Name = "Crud";
-
-            TextBox txt = new TextBox();
-            txt.Location = new Point(50, 50);
-            txt.Visible = true;
-            this.Controls.Add(txt);            
-            
-            
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            */
         }
         public override void btnFechar_Click(object sender, EventArgs e)
         {
