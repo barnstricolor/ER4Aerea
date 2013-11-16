@@ -18,7 +18,7 @@ namespace ER4Aerea
                 "er4aerea@gmail.com",
                 email,
                 "Promoção",
-                "vou levar... te levar daquiiiiiii, pra nuvi");
+                "vou levar... te levar daquiiiiiii");
             SmtpClient envio = new SmtpClient("smtp.gmail.com");
             envio.Port = 25;
             envio.Timeout = 10;
