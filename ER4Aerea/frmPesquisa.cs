@@ -29,7 +29,7 @@ namespace ER4Aerea
             InitializeComponent();
         }
 
-        public int getIdDomino() {
+        public int getIdDominio() {
             if (grd.SelectedRows.Count > 0)
             {
                 return (int)grd.SelectedRows[0].Cells[0].Value;
