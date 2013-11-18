@@ -7,9 +7,9 @@ namespace ER4Aerea
     {
         protected override string tabela() { return "CAD_CIDADE"; }
         protected override string colunaId() { return "ID_CIDADE"; }
-        public override string[,] colunas()
+        protected override string[] colunas()
         {             
-            return new string[,] {{colunaId(),"N","Código"},{"NOM_CIDADE","C","Nome da cidade"},{"NUM_CEP","C","C.E.P."}}; 
+            return new string[] {colunaId(),"NOM_CIDADE","NUM_CEP"}; 
         }
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)

@@ -81,22 +81,20 @@
     <Compile Include="AviaoRepositorio.cs" />
     <Compile Include="Bd.cs" />
     <Compile Include="Cidade.cs" />
+    <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="Crud.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dominio.cs" />
-    <Compile Include="frmBase.cs">
+    <Compile Include="frmCidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBase.Designer.cs">
-      <DependentUpon>frmBase.cs</DependentUpon>
+    <Compile Include="frmCidade.Designer.cs">
+      <DependentUpon>frmCidade.cs</DependentUpon>
     </Compile>
     <Compile Include="frmView.cs">
       <SubType>Form</SubType>
@@ -135,11 +133,8 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Voo.cs" />
-    <EmbeddedResource Include="Crud.resx">
-      <DependentUpon>Crud.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBase.resx">
-      <DependentUpon>frmBase.cs</DependentUpon>
+    <EmbeddedResource Include="frmCidade.resx">
+      <DependentUpon>frmCidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

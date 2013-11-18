@@ -12,10 +12,10 @@ namespace ER4Aerea
         public abstract object[] extrairValores(Dominio dominio);
         public abstract string montarWhereByFiltroString(string filtro);
         private static Bd persistencia = Bd.Instance;
-        
+
         protected abstract string tabela();
         protected abstract string colunaId();
-        public abstract string[,] colunas();//CAMPO,TIPO,DESCRICAO
+        protected abstract string[] colunas();
         protected abstract Dominio mapRow(OleDbDataReader dr);
         protected abstract void valuesMap(Dictionary<string, object> d, Dominio dominio);
 
@@ -24,12 +24,12 @@ namespace ER4Aerea
         {
             return persistencia;
         }
-        
+
         protected OleDbConnection obterConexao()
         {
             return this.obterPersistencia().obterConexao();
         }
-        
+
         protected int obterSequencia()
         {
             return obterPersistencia().obterSequencia("SQ_" + tabela());
@@ -75,43 +75,62 @@ namespace ER4Aerea
         }
         public List<Dominio> obterTodos()
         {
+
             OleDbDataReader dr = executeQuery(montarSelect());
-            List<Dominio> lista=new List<Dominio>();
+
+            List<Dominio> lista = new List<Dominio>();
+
             while (dr.Read())
-            {                
+            {
                 lista.Add(mapRow(dr));
+
             }
+
             return lista;
         }
         public List<Dominio> obterByFiltroString(string filtro)
         {
             OleDbDataReader dr = executeQuery(montarSelect(montarWhereByFiltroString(filtro)));
+
             List<Dominio> lista = new List<Dominio>();
+
             while (dr.Read())
             {
                 lista.Add(mapRow(dr));
+
             }
+
             return lista;
         }
+
         //PRIVATE
         private Dominio insert(Dominio dominio)
         {
+
             dominio.id = obterSequencia();
+
             insertCommand(dominio);
+
             return dominio;
         }
+
         private Dominio update(Dominio dominio)
         {
             updateCommand(dominio, dominio.id);
+
             return dominio;
         }
-        private Dictionary<string,object> criarDictionary(){
-            return new Dictionary<string,object>();
+        private Dictionary<string, object> criarDictionary()
+        {
+            return new Dictionary<string, object>();
         }
-        protected string montarSelectWhereId(int id) {
-            return montarSelect(colunaId() +" = " + id.ToString());
+
+        protected string montarSelectWhereId(int id)
+        {
+            return montarSelect(colunaId() + " = " + id.ToString());
         }
-        protected string montarSelect() { 
+        protected string montarSelect()
+        {
             return "Select * from " + tabela();
         }
         protected string montarSelect(string where)
@@ -119,59 +138,65 @@ namespace ER4Aerea
             string str = montarSelect();
 
             if (!string.IsNullOrEmpty(where))
-                str+= " Where " + where;
+                str += " Where " + where;
             return str;
         }
-        
-        protected OleDbDataReader executeQuery(string str) {
+
+        protected OleDbDataReader executeQuery(string str)
+        {
             OleDbDataReader dr = this.obterPersistencia().obterQuery(str);
             return dr;
         }
+
         protected OleDbDataReader executeQueryById(int id)
         {
             return executeQuery(montarSelectWhereId(id));
         }
-        protected string montarInsert()
-        {   string[] strAux = new string[colunas().GetLength(0)];
-            string[] arr    = new string[colunas().GetLength(0)];
 
-            for (int i = 0; i < colunas().GetLength(0); i++)
+        protected string montarInsert()
+        {
+            string[] strAux = new string[colunas().Length];
+
+            for (int i = 0; i < colunas().Length; i++)
             {
-                strAux[i]   = "?";
-                arr[i] = colunas()[i, 0];
+                strAux[i] = "?";
             }
-            string str = "Insert Into " + tabela() + "(" + string.Join(",", arr) + ")";
+
+            string str = "Insert Into " + tabela() + "(" + string.Join(",", colunas()) + ")";
             str += " Values (" + string.Join(",", strAux) + ")";
+
             return str;
         }
         protected string montarUpdateById(int id)
         {
-            string[] strAux = new string[colunas().GetLength(0)];
+            string[] strAux = new string[colunas().Length];
 
-            for (int i = 0; i < colunas().GetLength(0); i++)
+            for (int i = 0; i < colunas().Length; i++)
             {
-                strAux[i] = colunas()[i,0] +" = ?";
+                strAux[i] = colunas()[i] + " = ?";
             }
-            string str = "Update " + tabela() + " Set " + string.Join(",", strAux);            
+
+            string str = "Update " + tabela() + " Set " + string.Join(",", strAux);
             str += " Where " + colunaId() + " = " + id.ToString();
 
             return str;
         }
-        
+
         protected void insertCommand(Dominio dominio)
         {
-            executarCommand(montarInsert(),dominio);
-        }
-        
-        protected void updateCommand(Dominio dominio,int id)
-        {
-            executarCommand(montarUpdateById(id),dominio);
+            executarCommand(montarInsert(), dominio);
         }
 
-        protected void executarCommand(string cmdText, Dominio dominio){
-            Dictionary<string,object> d = criarDictionary();
-            valuesMap(d,dominio);
-            montarCommand(cmdText,d).ExecuteNonQuery();
+        protected void updateCommand(Dominio dominio, int id)
+        {
+            executarCommand(montarUpdateById(id), dominio);
+        }
+
+        protected void executarCommand(string cmdText, Dominio dominio)
+        {
+            Dictionary<string, object> d = criarDictionary();
+            valuesMap(d, dominio);
+            montarCommand(cmdText, d).ExecuteNonQuery();
         }
 
         protected OleDbCommand montarCommand(string cmdText, Dictionary<string, object> d)

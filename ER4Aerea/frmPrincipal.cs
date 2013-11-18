@@ -76,11 +76,8 @@ namespace ER4Aerea
 
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPesquisa frm = new frmPesquisa();
-            frm.repositorio = new CidadeRepositorio();
-            frm.MdiParent = this;
-            frm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            frm.Show();            
+            CidadeController controller = CidadeController.criar();
+            controller.mostrarPesquisa(this);
         }
 
         private void assentoToolStripMenuItem_Click(object sender, EventArgs e)

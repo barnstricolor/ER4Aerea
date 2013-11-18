@@ -23,12 +23,21 @@ namespace ER4Aerea
 
         public System.Windows.Forms.TextBox id_retorno { get; set; }
         public System.Windows.Forms.TextBox nom_retorno { get; set; }
-
+        
         public frmPesquisa()
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        public int getIdDomino() {
+            if (grd.SelectedRows.Count > 0)
+            {
+                return (int)grd.SelectedRows[0].Cells[0].Value;
+            }
+            return 0;
+        }
+
+        public void button1_Click(object sender, EventArgs e)
         {
             grd.Rows.Clear();
             List<Dominio> lista = repositorio.obterByFiltroString(txtNomOrigem.Text);
@@ -43,16 +52,18 @@ namespace ER4Aerea
         }
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
-            button1.PerformClick();
+            btnPesquisar.PerformClick();
         }
         private void grd_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Crud crud = new Crud(this.repositorio);
-            crud.dominio = repositorio.obter(int.Parse(grd.Rows[e.RowIndex].Cells[0].Value.ToString()));
-            crud.ShowDialog();
         }
 
         private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
         {
 
         }
