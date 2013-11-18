@@ -47,10 +47,7 @@ namespace ER4Aerea
         }
         private void grd_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Crud crud = new Crud();
-            crud.repositorio = this.repositorio;
-            //crud.dominio = new Cidade("Teste","14100");
-            //crud.Text = "Cidade";
+            Crud crud = new Crud(this.repositorio);
             crud.dominio = repositorio.obter(int.Parse(grd.Rows[e.RowIndex].Cells[0].Value.ToString()));
             crud.ShowDialog();
         }

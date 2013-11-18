@@ -15,7 +15,7 @@ namespace ER4Aerea
         
         protected abstract string tabela();
         protected abstract string colunaId();
-        protected abstract string[] colunas();
+        public abstract string[,] colunas();//CAMPO,TIPO,DESCRICAO
         protected abstract Dominio mapRow(OleDbDataReader dr);
         protected abstract void valuesMap(Dictionary<string, object> d, Dominio dominio);
 
@@ -132,23 +132,25 @@ namespace ER4Aerea
             return executeQuery(montarSelectWhereId(id));
         }
         protected string montarInsert()
-        {   string[] strAux= new string[colunas().Length];
+        {   string[] strAux = new string[colunas().GetLength(0)];
+            string[] arr    = new string[colunas().GetLength(0)];
 
-            for (int i = 0; i < colunas().Length; i++)
+            for (int i = 0; i < colunas().GetLength(0); i++)
             {
-                strAux[i] = "?";
+                strAux[i]   = "?";
+                arr[i] = colunas()[i, 0];
             }
-            string str = "Insert Into " + tabela() + "(" + string.Join(",", colunas()) + ")";
+            string str = "Insert Into " + tabela() + "(" + string.Join(",", arr) + ")";
             str += " Values (" + string.Join(",", strAux) + ")";
             return str;
         }
         protected string montarUpdateById(int id)
         {
-            string[] strAux = new string[colunas().Length];
+            string[] strAux = new string[colunas().GetLength(0)];
 
-            for (int i = 0; i < colunas().Length; i++)
+            for (int i = 0; i < colunas().GetLength(0); i++)
             {
-                strAux[i] = colunas()[i] +" = ?";
+                strAux[i] = colunas()[i,0] +" = ?";
             }
             string str = "Update " + tabela() + " Set " + string.Join(",", strAux);            
             str += " Where " + colunaId() + " = " + id.ToString();

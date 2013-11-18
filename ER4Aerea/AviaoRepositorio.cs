@@ -11,8 +11,10 @@ namespace ER4Aerea
     {
         protected override string tabela() { return "CAD_AVIAO"; }
         protected override string colunaId() { return "ID_AVIAO"; }
-        protected override string[] colunas() {
-            return new string[] { colunaId(), "NOM_MODELO", "QTD_ASSENTO" }; 
+        public override string[,] colunas() {
+            return new string[,] {{ colunaId(), "N", "Código" }, 
+                                  { "NOM_MODELO", "C", "Modelo" }, 
+                                  { "QTD_ASSENTO", "N", "Assentos" }}; 
         }
         
         protected override Dominio mapRow(OleDbDataReader dr)

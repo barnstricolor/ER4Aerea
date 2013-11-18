@@ -7,9 +7,9 @@ namespace ER4Aerea
     {
         protected override string tabela() { return "CAD_CIDADE"; }
         protected override string colunaId() { return "ID_CIDADE"; }
-        protected override string[] colunas() { 
-            
-            return new string[] {colunaId(),"NOM_CIDADE","NUM_CEP"}; 
+        public override string[,] colunas()
+        {             
+            return new string[,] {{colunaId(),"N","Código"},{"NOM_CIDADE","C","Nome da cidade"},{"NUM_CEP","C","C.E.P."}}; 
         }
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
@@ -20,7 +20,8 @@ namespace ER4Aerea
             d.Add("NUM_CEP", cidade.cep);
 
         }
-        protected override Dominio mapRow(OleDbDataReader dr) {
+        protected override Dominio mapRow(OleDbDataReader dr)
+        {
 
             Cidade cidade = new Cidade(dr["NOM_CIDADE"].ToString(), dr["NUM_CEP"].ToString());
 

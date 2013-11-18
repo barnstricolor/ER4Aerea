@@ -43,7 +43,7 @@
             // lblID
             // 
             lblID.AutoSize = true;
-            lblID.Location = new System.Drawing.Point(13, 32);
+            lblID.Location = new System.Drawing.Point(10, 10);
             lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblID.Name = "lblID";
             lblID.Size = new System.Drawing.Size(56, 17);
@@ -107,7 +107,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(13, 53);
+            this.txtID.Location = new System.Drawing.Point(10, 30);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 22);
