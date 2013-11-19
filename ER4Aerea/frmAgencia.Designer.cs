@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
-            this.grdVolta = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAssentos = new System.Windows.Forms.NumericUpDown();
@@ -64,13 +56,19 @@
             this.partida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnReservar = new System.Windows.Forms.Button();
+            this.grdVolta = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdIda)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).BeginInit();
             this.SuspendLayout();
             // 
             // tlp
@@ -93,83 +91,6 @@
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp.Size = new System.Drawing.Size(1220, 559);
             this.tlp.TabIndex = 0;
-            // 
-            // grdVolta
-            // 
-            this.grdVolta.AllowUserToAddRows = false;
-            this.grdVolta.AllowUserToDeleteRows = false;
-            this.grdVolta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdVolta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16});
-            this.grdVolta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVolta.Location = new System.Drawing.Point(356, 283);
-            this.grdVolta.Margin = new System.Windows.Forms.Padding(4);
-            this.grdVolta.Name = "grdVolta";
-            this.grdVolta.ReadOnly = true;
-            this.grdVolta.Size = new System.Drawing.Size(860, 272);
-            this.grdVolta.TabIndex = 3;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Column8";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Column9";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Column10";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Column11";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Column12";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Column13";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Column14";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Column15";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Column16";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
             // 
             // panel1
             // 
@@ -230,7 +151,7 @@
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(254, 236);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 26);
             this.btnPesquisar.TabIndex = 15;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -238,6 +159,9 @@
             // 
             // dcbDestino
             // 
+            this.dcbDestino.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dcbDestino.FormattingEnabled = true;
             this.dcbDestino.Location = new System.Drawing.Point(11, 111);
             this.dcbDestino.Name = "dcbDestino";
@@ -246,6 +170,9 @@
             // 
             // dcbOrigem
             // 
+            this.dcbOrigem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dcbOrigem.FormattingEnabled = true;
             this.dcbOrigem.Location = new System.Drawing.Point(11, 62);
             this.dcbOrigem.Name = "dcbOrigem";
@@ -392,9 +319,9 @@
             // 
             // preco
             // 
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.preco.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.preco.DefaultCellStyle = dataGridViewCellStyle3;
             this.preco.HeaderText = "Preço";
             this.preco.Name = "preco";
             this.preco.ReadOnly = true;
@@ -413,9 +340,9 @@
             // 
             // partida
             // 
-            dataGridViewCellStyle2.Format = "t";
-            dataGridViewCellStyle2.NullValue = null;
-            this.partida.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "t";
+            dataGridViewCellStyle4.NullValue = null;
+            this.partida.DefaultCellStyle = dataGridViewCellStyle4;
             this.partida.HeaderText = "Partida";
             this.partida.Name = "partida";
             this.partida.ReadOnly = true;
@@ -437,10 +364,66 @@
             // 
             this.btnReservar.Location = new System.Drawing.Point(254, 12);
             this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.Size = new System.Drawing.Size(75, 26);
             this.btnReservar.TabIndex = 16;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = true;
+            // 
+            // grdVolta
+            // 
+            this.grdVolta.AllowUserToAddRows = false;
+            this.grdVolta.AllowUserToDeleteRows = false;
+            this.grdVolta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVolta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.grdVolta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdVolta.Location = new System.Drawing.Point(356, 283);
+            this.grdVolta.Margin = new System.Windows.Forms.Padding(4);
+            this.grdVolta.Name = "grdVolta";
+            this.grdVolta.ReadOnly = true;
+            this.grdVolta.Size = new System.Drawing.Size(860, 272);
+            this.grdVolta.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Avião";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Assentos Disponíveis";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewCellStyle2.Format = "t";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Partida";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // frmAgencia
             // 
@@ -457,13 +440,13 @@
             this.Load += new System.EventHandler(this.frmReserva_Load);
             this.Resize += new System.EventHandler(this.frmReserva_Resize);
             this.tlp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdIda)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,23 +470,19 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView grdIda;
-        public System.Windows.Forms.DataGridView grdVolta;
         public System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn aviao;
         private System.Windows.Forms.DataGridViewTextBoxColumn assento;
         private System.Windows.Forms.DataGridViewTextBoxColumn partida;
         public System.Windows.Forms.Button btnReservar;
+        public System.Windows.Forms.DataGridView grdVolta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
 
 
 

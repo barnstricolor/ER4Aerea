@@ -34,6 +34,7 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoo));
+            System.Windows.Forms.Label Chegada;
             this.dtpPartida = new System.Windows.Forms.DateTimePicker();
             this.txtId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,11 +45,13 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtOrigem = new System.Windows.Forms.TextBox();
             this.txtDestino = new System.Windows.Forms.TextBox();
+            this.dtpChegada = new System.Windows.Forms.DateTimePicker();
             dAT_PARTIDALabel = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
             vAL_PRECOLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            Chegada = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +61,9 @@
             dAT_PARTIDALabel.Location = new System.Drawing.Point(16, 75);
             dAT_PARTIDALabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dAT_PARTIDALabel.Name = "dAT_PARTIDALabel";
-            dAT_PARTIDALabel.Size = new System.Drawing.Size(44, 17);
+            dAT_PARTIDALabel.Size = new System.Drawing.Size(53, 17);
             dAT_PARTIDALabel.TabIndex = 5;
-            dAT_PARTIDALabel.Text = "Saida";
+            dAT_PARTIDALabel.Text = "Partida";
             // 
             // iD_AVIAOLabel
             // 
@@ -75,7 +78,7 @@
             // vAL_PRECOLabel
             // 
             vAL_PRECOLabel.AutoSize = true;
-            vAL_PRECOLabel.Location = new System.Drawing.Point(46, 164);
+            vAL_PRECOLabel.Location = new System.Drawing.Point(46, 194);
             vAL_PRECOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             vAL_PRECOLabel.Name = "vAL_PRECOLabel";
             vAL_PRECOLabel.Size = new System.Drawing.Size(45, 17);
@@ -85,7 +88,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(16, 103);
+            label1.Location = new System.Drawing.Point(16, 133);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(54, 17);
@@ -95,7 +98,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(16, 133);
+            label2.Location = new System.Drawing.Point(16, 163);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(56, 17);
@@ -114,7 +117,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(526, 201);
+            this.txtId.Location = new System.Drawing.Point(519, 231);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(88, 22);
@@ -124,7 +127,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(444, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(437, 54);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(249, 153);
@@ -143,7 +146,7 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(99, 159);
+            this.txtPreco.Location = new System.Drawing.Point(99, 189);
             this.txtPreco.Margin = new System.Windows.Forms.Padding(4);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(79, 22);
@@ -152,7 +155,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(99, 200);
+            this.btnLimpar.Location = new System.Drawing.Point(99, 230);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 111;
@@ -162,7 +165,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(621, 200);
+            this.btnFechar.Location = new System.Drawing.Point(614, 230);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 110;
@@ -172,7 +175,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(18, 200);
+            this.btnSalvar.Location = new System.Drawing.Point(18, 230);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 109;
@@ -182,7 +185,7 @@
             // 
             // txtOrigem
             // 
-            this.txtOrigem.Location = new System.Drawing.Point(99, 99);
+            this.txtOrigem.Location = new System.Drawing.Point(99, 129);
             this.txtOrigem.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrigem.Name = "txtOrigem";
             this.txtOrigem.Size = new System.Drawing.Size(79, 22);
@@ -191,18 +194,39 @@
             // 
             // txtDestino
             // 
-            this.txtDestino.Location = new System.Drawing.Point(99, 129);
+            this.txtDestino.Location = new System.Drawing.Point(99, 159);
             this.txtDestino.Margin = new System.Windows.Forms.Padding(4);
             this.txtDestino.Name = "txtDestino";
             this.txtDestino.Size = new System.Drawing.Size(79, 22);
             this.txtDestino.TabIndex = 114;
             this.txtDestino.Tag = "ID_AVIAO,N";
             // 
+            // Chegada
+            // 
+            Chegada.AutoSize = true;
+            Chegada.Location = new System.Drawing.Point(16, 105);
+            Chegada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            Chegada.Name = "Chegada";
+            Chegada.Size = new System.Drawing.Size(53, 17);
+            Chegada.TabIndex = 116;
+            Chegada.Text = "Partida";
+            // 
+            // dtpChegada
+            // 
+            this.dtpChegada.Location = new System.Drawing.Point(99, 99);
+            this.dtpChegada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpChegada.Name = "dtpChegada";
+            this.dtpChegada.Size = new System.Drawing.Size(291, 22);
+            this.dtpChegada.TabIndex = 117;
+            this.dtpChegada.Tag = "DAT_PARTIDA,D";
+            // 
             // frmVoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 235);
+            this.ClientSize = new System.Drawing.Size(701, 269);
+            this.Controls.Add(Chegada);
+            this.Controls.Add(this.dtpChegada);
             this.Controls.Add(this.txtDestino);
             this.Controls.Add(label2);
             this.Controls.Add(this.txtOrigem);
@@ -240,6 +264,7 @@
         public System.Windows.Forms.TextBox txtPreco;
         public System.Windows.Forms.TextBox txtOrigem;
         public System.Windows.Forms.TextBox txtDestino;
+        public System.Windows.Forms.DateTimePicker dtpChegada;
 
     }
 }

@@ -52,18 +52,25 @@ namespace ER4Aerea
         }
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             btnPesquisar.PerformClick();
         }
         private void grd_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnEditar.PerformClick();
         }
 
-        private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
