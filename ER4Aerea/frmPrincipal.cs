@@ -76,7 +76,7 @@ namespace ER4Aerea
 
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CidadeController controller = CidadeController.criar();
+            Controller controller = CidadeController.criar();
             controller.mostrarPesquisa(this);
         }
 
@@ -86,11 +86,8 @@ namespace ER4Aerea
 
         private void aviãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPesquisa frm = new frmPesquisa();
-            frm.repositorio = new AviaoRepositorio();
-            frm.MdiParent = this;
-            frm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            frm.Show();  
+            Controller controller = AviaoController.criar();
+            controller.mostrarPesquisa(this);
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)

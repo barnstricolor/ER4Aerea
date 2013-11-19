@@ -40,7 +40,7 @@ namespace ER4Aerea
         public void button1_Click(object sender, EventArgs e)
         {
             grd.Rows.Clear();
-            List<Dominio> lista = repositorio.obterByFiltroString(txtNomOrigem.Text);
+            HashSet<Dominio> lista = repositorio.obterByFiltroString(txtNomOrigem.Text);
             foreach (var dominio in lista)
             {
                 preencherRow(dominio);

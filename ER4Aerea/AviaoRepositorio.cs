@@ -9,7 +9,7 @@ namespace ER4Aerea
 {
     public class AviaoRepositorio:Repositorio
     {
-        protected override string tabela() { return "CAD_AVIAO"; }
+        protected override string tabela() { return "AVIAO"; }
         protected override string colunaId() { return "ID_AVIAO"; }
         protected override string[] colunas() { return new string[] { colunaId(), "NOM_MODELO", "QTD_ASSENTO" }; }
         

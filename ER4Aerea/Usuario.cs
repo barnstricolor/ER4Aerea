@@ -6,21 +6,12 @@ using System.Threading.Tasks;
 
 namespace ER4Aerea
 {
-    public class Usuario
+    public class Usuario:Dominio
     {
 
-        private String nome;
-        public Usuario(string nome) {
-            this.nome = nome;
-        }
-        protected String getNome()
-        {
-            return nome;
-        }
-
-        protected void setNome(String nome)
-        {
-            this.nome = nome;
-        }
+        public String nome{get;set;}
+        public String login { get; set; }
+        public String senha { get; set; }
+       
     }
 }

@@ -18,7 +18,7 @@ namespace ER4Aerea
         protected abstract string[] colunas();
         protected abstract Dominio mapRow(OleDbDataReader dr);
         protected abstract void valuesMap(Dictionary<string, object> d, Dominio dominio);
-
+        protected virtual void afterSave(Dominio dominio){}
 
         protected Bd obterPersistencia()
         {
@@ -53,14 +53,17 @@ namespace ER4Aerea
         }
         public Dominio salvar(Dominio dominio)
         {
+            Dominio result;
             if (dominio.id == 0)
             {
-                return insert(dominio);
+                result=insert(dominio);
             }
             else
             {
-                return update(dominio);
+                result=update(dominio);
             }
+            afterSave(result);
+            return result;
         }
         public Dominio obter(int id)
         {
@@ -73,12 +76,12 @@ namespace ER4Aerea
 
             return mapRow(dr);
         }
-        public List<Dominio> obterTodos()
+        public HashSet<Dominio> obterTodos()
         {
 
             OleDbDataReader dr = executeQuery(montarSelect());
 
-            List<Dominio> lista = new List<Dominio>();
+            HashSet<Dominio> lista = new HashSet<Dominio>();
 
             while (dr.Read())
             {
@@ -88,11 +91,11 @@ namespace ER4Aerea
 
             return lista;
         }
-        public List<Dominio> obterByFiltroString(string filtro)
+        public HashSet<Dominio> obterByFiltroString(string filtro)
         {
             OleDbDataReader dr = executeQuery(montarSelect(montarWhereByFiltroString(filtro)));
 
-            List<Dominio> lista = new List<Dominio>();
+            HashSet<Dominio> lista = new HashSet<Dominio>();
 
             while (dr.Read())
             {

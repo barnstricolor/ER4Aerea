@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ER4Aerea
 {
-    public class Reserva
+    public class Reserva:Dominio
     {
 
-	    private Cliente cliente;
-	    private int assentos;
-	    private float preco;
-	    private Voo voo;
-	    private Usuario usuario;
+	    public Cliente cliente;
+        public int assentos;
+        public float preco;
+        public Voo voo;
+        public Usuario usuario;
 	
 	    public Reserva(Cliente cliente, int assentos, float preco, Voo voo, Usuario usuario) {
 		    this.cliente = cliente;

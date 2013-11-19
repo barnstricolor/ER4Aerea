@@ -9,28 +9,28 @@ namespace ER4Aerea
     public  class Cliente:Dominio
     {
         //private  int id { get; set; }
-        private  string nome { get; set; }
+        public  string nome { get; set; }
         
-        private  Boolean promocao { get; set; }
-        private  string email { get; set; }
-        private  string endereco { get; set; }
-        private  int cpf { get; set; }
-        private  Cidade cidade { get; set; }
-        private  string rg { get; set; }
-        private  string sexo { get; set; }
-        private  DateTime nascimento { get; set; }
-        private  int numero { get; set; }
-        private  string bairro { get; set; }
-        private  string cep { get; set; }
-        private  string telefone { get; set; }
-        private  string ccelular { get; set; }
-        private  string fax { get; set; }
-        private  string contato { get; set; }
-        private  string telefoneContato { get; set; }
+        public  Boolean promocao { get; set; }
+        public  string email { get; set; }
+        public  string endereco { get; set; }
+        public  int cpf { get; set; }
+        public  Cidade cidade { get; set; }
+        public  string rg { get; set; }
+        public  string sexo { get; set; }
+        public  DateTime nascimento { get; set; }
+        public  int numero { get; set; }
+        public  string bairro { get; set; }
+        public  string cep { get; set; }
+        public  string telefone { get; set; }
+        public  string ccelular { get; set; }
+        public  string fax { get; set; }
+        public  string contato { get; set; }
+        public  string telefoneContato { get; set; }
 
     
     
-	    private Boolean especial = false;
+	    public bool especial = false;
 	
 	    private static float DESCONTO = (float) 0.3;
 

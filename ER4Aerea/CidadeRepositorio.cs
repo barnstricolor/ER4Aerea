@@ -5,7 +5,7 @@ namespace ER4Aerea
 {
     public class CidadeRepositorio: Repositorio 
     {
-        protected override string tabela() { return "CAD_CIDADE"; }
+        protected override string tabela() { return "CIDADE"; }
         protected override string colunaId() { return "ID_CIDADE"; }
         protected override string[] colunas()
         {             

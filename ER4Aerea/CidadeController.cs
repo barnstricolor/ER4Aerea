@@ -7,75 +7,56 @@ using System.Windows.Forms;
 
 namespace ER4Aerea
 {
-    class CidadeController
+    class CidadeController:Controller
     {
         public static CidadeController criar() { return new CidadeController(); }
         
-        protected frmCidade cidadeTela { get; set; }
-        protected frmPesquisa pesquisaTela { get; set; }
-        public void mostrarPesquisa(Form mdi)
-        {
-            pesquisaTela = criarPesquisaTela(mdi);
-            pesquisaTela.Show();
-        }
+        protected frmCidade frmTela { get; set; }
 
-        protected frmPesquisa criarPesquisaTela(Form mdi) {
-            frmPesquisa pesquisaTela = new frmPesquisa();
-            pesquisaTela.MdiParent = mdi;
-            pesquisaTela.repositorio = repositorio();
-            pesquisaTela.Text = "Cadastro de Cidade";
-            pesquisaTela.btnPesquisar.Click += new EventHandler(this.pesquisa_Click);
-            pesquisaTela.btnNovo.Click += new EventHandler(this.novo_Click);
-            pesquisaTela.btnEditar.Click += new EventHandler(this.editar_Click);
-            pesquisaTela.btnExcluir.Click += new EventHandler(this.excluir_Click);
-            return pesquisaTela;
+        protected frmCidade tela()
+        {
+            return frmTela;
         }
         
-        void pesquisa_Click(object sender, EventArgs e) {
-           //MessageBox.Show("pesuiqsa click");
+        protected override void configurarPesquisaTela(frmPesquisa pesquisaTela, Form mdi)
+        {
+            pesquisaTela.Text = "Cadastro de Cidade";
         }
-        void novo_Click(object sender, EventArgs e) {
-            cidadeTela = obterCidadeTela();
-            cidadeTela.ShowDialog();
-        }
-        void salvar_Click(object sender, EventArgs e)
+        
+        protected override void salvar_Click(object sender, EventArgs e)
         {
             Cidade cidade = null;
-            if (string.IsNullOrEmpty(cidadeTela.txtId.Text))
-                cidade = new Cidade(cidadeTela.txtNome.Text, cidadeTela.txtCep.Text);
-            else 
-                cidade = (Cidade)repositorio().obter(int.Parse(cidadeTela.txtId.Text));
-            
-            cidade.nome = cidadeTela.txtNome.Text;
-            cidade.cep = cidadeTela.txtCep.Text;
+            if (string.IsNullOrEmpty(tela().txtId.Text))
+                cidade = new Cidade(tela().txtNome.Text, tela().txtCep.Text);
+            else
+                cidade = (Cidade)repositorio().obter(int.Parse(tela().txtId.Text));
+
+            cidade.nome = tela().txtNome.Text;
+            cidade.cep = tela().txtCep.Text;
             repositorio().salvar(cidade);
-            cidadeTela.Close();
+            tela().Close();
             pesquisaTela.btnPesquisar.PerformClick();
         }
-        void editar_Click(object sender, EventArgs e)
+        protected override void editar_Click(object sender, EventArgs e)
         {
             int id = pesquisaTela.getIdDominio();
             Cidade cidade = (Cidade)repositorio().obter(id);
 
-            cidadeTela = obterCidadeTela();
-            cidadeTela.txtId.Text = cidade.id.ToString();
-            cidadeTela.txtNome.Text = cidade.nome;
-            cidadeTela.txtCep.Text = cidade.cep;
-            cidadeTela.ShowDialog();
+            criarTela();
+            tela().txtId.Text = cidade.id.ToString();
+            tela().txtNome.Text = cidade.nome;
+            tela().txtCep.Text = cidade.cep;
+            tela().ShowDialog();
         }
-        void excluir_Click(object sender, EventArgs e) {
-            int id = pesquisaTela.getIdDominio();
-            repositorio().excluir(id);
-            pesquisaTela.btnPesquisar.PerformClick();
-        }
-        protected frmCidade obterCidadeTela() {
-            frmCidade cidadeTela = new frmCidade();
-            cidadeTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
-            return cidadeTela;
-
+        protected override Form criarTela()
+        {
+            this.frmTela = new frmCidade();
+            frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
+            return frmTela;
         }
 
-        protected CidadeRepositorio repositorio() {
+        protected override Repositorio repositorio()
+        {
             return new CidadeRepositorio();
         }
     }
