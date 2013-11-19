@@ -20,6 +20,7 @@ namespace ER4Aerea
         private void frmView_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DataSet1.CAD_CIDADE' table. You can move, or remove it, as needed.
+            
             this.CAD_CIDADETableAdapter.Fill(this.DataSet1.CAD_CIDADE);
 
             this.reportViewer1.RefreshReport();

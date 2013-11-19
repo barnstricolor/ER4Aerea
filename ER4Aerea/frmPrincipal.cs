@@ -16,30 +16,6 @@ namespace ER4Aerea
         {
             InitializeComponent();
         }
-
-
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -80,10 +56,6 @@ namespace ER4Aerea
             controller.mostrarPesquisa(this);
         }
 
-        private void assentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void aviãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller controller = AviaoController.criar();
@@ -96,51 +68,19 @@ namespace ER4Aerea
             controller.mostrarPesquisa(this);
         }
 
-        private void preçoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void promoçãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmReserva frm = new frmReserva();
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();            
-
-        }
-
-        private void trechoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vôoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void cidadeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form frm = new frmView();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();            
+
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller controller = UsuarioController.criar();
+            controller.mostrarPesquisa(this);
 
         }
 

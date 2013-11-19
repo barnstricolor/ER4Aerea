@@ -89,11 +89,23 @@
     <Compile Include="Controller.cs" />
     <Compile Include="ClienteRepositorio.cs" />
     <Compile Include="ClienteController.cs" />
+    <Compile Include="Reservas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reservas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioController.cs" />
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioRepositorio.cs" />
     <Compile Include="ReservaRepositorio.cs" />
@@ -153,6 +165,7 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Voo.cs" />
+    <EmbeddedResource Include="Reservas.rdlc" />
     <EmbeddedResource Include="frmAviao.resx">
       <DependentUpon>frmAviao.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmView.resx">
       <DependentUpon>frmView.cs</DependentUpon>
@@ -209,6 +225,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reservas.xsc">
+      <DependentUpon>Reservas.xsd</DependentUpon>
+    </None>
+    <None Include="Reservas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reservas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reservas.xss">
+      <DependentUpon>Reservas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
