@@ -52,6 +52,7 @@ namespace ER4Aerea
         protected override Form criarTela() {
             this.frmTela = new frmAviao();
             frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
+            frmTela.Text = "Cadastro de Avião";
             return frmTela;
         }
 

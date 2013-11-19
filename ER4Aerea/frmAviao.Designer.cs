@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAviao));
             System.Windows.Forms.Label qTD_ASSENTOLabel;
             System.Windows.Forms.Label nOM_MODELOLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAviao));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtAssento = new System.Windows.Forms.TextBox();
@@ -42,6 +42,26 @@
             nOM_MODELOLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // qTD_ASSENTOLabel
+            // 
+            qTD_ASSENTOLabel.AutoSize = true;
+            qTD_ASSENTOLabel.Location = new System.Drawing.Point(34, 70);
+            qTD_ASSENTOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            qTD_ASSENTOLabel.Name = "qTD_ASSENTOLabel";
+            qTD_ASSENTOLabel.Size = new System.Drawing.Size(167, 17);
+            qTD_ASSENTOLabel.TabIndex = 46;
+            qTD_ASSENTOLabel.Text = "Quantidade de assentos:";
+            // 
+            // nOM_MODELOLabel
+            // 
+            nOM_MODELOLabel.AutoSize = true;
+            nOM_MODELOLabel.Location = new System.Drawing.Point(209, 38);
+            nOM_MODELOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nOM_MODELOLabel.Name = "nOM_MODELOLabel";
+            nOM_MODELOLabel.Size = new System.Drawing.Size(58, 17);
+            nOM_MODELOLabel.TabIndex = 48;
+            nOM_MODELOLabel.Text = "Modelo:";
             // 
             // pictureBox1
             // 
@@ -64,16 +84,6 @@
             this.txtId.TabIndex = 44;
             this.txtId.Tag = "ID_AVIAO,N";
             // 
-            // qTD_ASSENTOLabel
-            // 
-            qTD_ASSENTOLabel.AutoSize = true;
-            qTD_ASSENTOLabel.Location = new System.Drawing.Point(34, 70);
-            qTD_ASSENTOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            qTD_ASSENTOLabel.Name = "qTD_ASSENTOLabel";
-            qTD_ASSENTOLabel.Size = new System.Drawing.Size(167, 17);
-            qTD_ASSENTOLabel.TabIndex = 46;
-            qTD_ASSENTOLabel.Text = "Quantidade de assentos:";
-            // 
             // txtAssento
             // 
             this.txtAssento.Location = new System.Drawing.Point(209, 66);
@@ -82,16 +92,6 @@
             this.txtAssento.Size = new System.Drawing.Size(85, 22);
             this.txtAssento.TabIndex = 47;
             this.txtAssento.Tag = "QTD_ASSENTO,N";
-            // 
-            // nOM_MODELOLabel
-            // 
-            nOM_MODELOLabel.AutoSize = true;
-            nOM_MODELOLabel.Location = new System.Drawing.Point(209, 38);
-            nOM_MODELOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nOM_MODELOLabel.Name = "nOM_MODELOLabel";
-            nOM_MODELOLabel.Size = new System.Drawing.Size(58, 17);
-            nOM_MODELOLabel.TabIndex = 48;
-            nOM_MODELOLabel.Text = "Modelo:";
             // 
             // txtModelo
             // 
@@ -119,6 +119,7 @@
             this.btnFechar.TabIndex = 51;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnSalvar
             // 

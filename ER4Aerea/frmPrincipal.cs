@@ -92,11 +92,8 @@ namespace ER4Aerea
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPesquisa frm = new frmPesquisa();
-            //frm.repo = new cliRepositorio();
-            frm.MdiParent = this;
-            frm.Show();  
-
+            Controller controller = ClienteController.criar();
+            controller.mostrarPesquisa(this);
         }
 
         private void preçoToolStripMenuItem_Click(object sender, EventArgs e)

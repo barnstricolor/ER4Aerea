@@ -7,58 +7,56 @@ using System.Windows.Forms;
 
 namespace ER4Aerea
 {
-    class CidadeController:Controller
+    class ClienteController:Controller
     {
-        public static CidadeController criar() { return new CidadeController(); }
+        public static ClienteController criar() { return new ClienteController(); }
         
-        protected frmCidade frmTela { get; set; }
+        protected frmCliente frmTela { get; set; }
 
-        protected frmCidade tela()
+        protected frmCliente tela()
         {
             return frmTela;
         }
         
         protected override void configurarPesquisaTela(frmPesquisa pesquisaTela, Form mdi)
         {
-            pesquisaTela.Text = "Cadastro de Cidade";
+            pesquisaTela.Text = "Cadastro de Clientes";
         }
         
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            Cidade cidade = null;
+            Cliente cliente = null;
             if (string.IsNullOrEmpty(tela().txtId.Text))
-                cidade = new Cidade(tela().txtNome.Text, tela().txtCep.Text);
+                cliente = new Cliente(tela().txtNome.Text, false);
             else
-                cidade = (Cidade)repositorio().obter(int.Parse(tela().txtId.Text));
+                cliente = (Cliente)repositorio().obter(int.Parse(tela().txtId.Text));
 
-            cidade.nome = tela().txtNome.Text;
-            cidade.cep = tela().txtCep.Text;
-            repositorio().salvar(cidade);
+            cliente.nome = tela().txtNome.Text;
+            repositorio().salvar(cliente);
             tela().Close();
             pesquisaTela.btnPesquisar.PerformClick();
         }
         protected override void editar_Click(object sender, EventArgs e)
         {
             int id = pesquisaTela.getIdDominio();
-            Cidade cidade = (Cidade)repositorio().obter(id);
+            Cliente cliente = (Cliente)repositorio().obter(id);
 
             criarTela();
-            tela().txtId.Text = cidade.id.ToString();
-            tela().txtNome.Text = cidade.nome;
-            tela().txtCep.Text = cidade.cep;
+            tela().txtId.Text = cliente.id.ToString();
+            tela().txtNome.Text = cliente.nome;
             tela().ShowDialog();
         }
         protected override Form criarTela()
         {
-            this.frmTela = new frmCidade();
+            this.frmTela = new frmCliente();
             frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
-            frmTela.Text = "Cadastro de Cidade";
+            frmTela.Text = "Cadastro de Clientes";
             return frmTela;
         }
 
         protected override Repositorio repositorio()
         {
-            return new CidadeRepositorio();
+            return new ClienteRepositorio();
         }
     }
 }
