@@ -70,7 +70,9 @@ namespace ER4Aerea
 
         public Boolean parteNaData(DateTime date)
         {
-            return this.partida.Equals(date);
+            return this.partida.Day.Equals(date.Day) &&
+                this.partida.Month.Equals(date.Month) && 
+                this.partida.Year.Equals(date.Year);
         }
 
         public Boolean mesmaOrigemDestino(Cidade origem, Cidade destino)

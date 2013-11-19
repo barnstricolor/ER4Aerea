@@ -28,10 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
+            this.grdVolta = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAssentos = new System.Windows.Forms.NumericUpDown();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.dcbDestino = new System.Windows.Forms.ComboBox();
+            this.dcbOrigem = new System.Windows.Forms.ComboBox();
             this.optIda = new System.Windows.Forms.RadioButton();
             this.optIdaVolta = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,25 +55,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpPartida = new System.Windows.Forms.DateTimePicker();
-            this.txtNomDestino = new System.Windows.Forms.TextBox();
-            this.txtDestino = new System.Windows.Forms.TextBox();
-            this.txtNomOrigem = new System.Windows.Forms.TextBox();
-            this.txtOrigem = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.grdVoo = new System.Windows.Forms.DataGridView();
+            this.grdIda = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNomCliente = new System.Windows.Forms.TextBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aviao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVoo)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdIda)).BeginInit();
             this.SuspendLayout();
             // 
             // tlp
@@ -69,18 +79,95 @@
             this.tlp.ColumnCount = 2;
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.88601F));
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.11399F));
+            this.tlp.Controls.Add(this.grdVolta, 0, 1);
             this.tlp.Controls.Add(this.panel1, 0, 0);
             this.tlp.Controls.Add(this.panel2, 1, 0);
             this.tlp.Controls.Add(this.panel3, 0, 1);
-            this.tlp.Controls.Add(this.panel4, 1, 1);
             this.tlp.Location = new System.Drawing.Point(0, 0);
-            this.tlp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlp.Margin = new System.Windows.Forms.Padding(4);
             this.tlp.Name = "tlp";
             this.tlp.RowCount = 2;
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp.Size = new System.Drawing.Size(1029, 550);
+            this.tlp.Size = new System.Drawing.Size(1220, 559);
             this.tlp.TabIndex = 0;
+            // 
+            // grdVolta
+            // 
+            this.grdVolta.AllowUserToAddRows = false;
+            this.grdVolta.AllowUserToDeleteRows = false;
+            this.grdVolta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVolta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16});
+            this.grdVolta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdVolta.Location = new System.Drawing.Point(356, 283);
+            this.grdVolta.Margin = new System.Windows.Forms.Padding(4);
+            this.grdVolta.Name = "grdVolta";
+            this.grdVolta.ReadOnly = true;
+            this.grdVolta.Size = new System.Drawing.Size(860, 272);
+            this.grdVolta.TabIndex = 3;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Column9";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Column10";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Column11";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Column12";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Column13";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Column14";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Column15";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Column16";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
             // 
             // panel1
             // 
@@ -88,8 +175,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtAssentos);
+            this.panel1.Controls.Add(this.btnPesquisar);
+            this.panel1.Controls.Add(this.dcbDestino);
+            this.panel1.Controls.Add(this.dcbOrigem);
             this.panel1.Controls.Add(this.optIda);
             this.panel1.Controls.Add(this.optIdaVolta);
             this.panel1.Controls.Add(this.label4);
@@ -98,43 +188,73 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dtpPartida);
-            this.panel1.Controls.Add(this.txtNomDestino);
-            this.panel1.Controls.Add(this.txtDestino);
-            this.panel1.Controls.Add(this.txtNomOrigem);
-            this.panel1.Controls.Add(this.txtOrigem);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 267);
+            this.panel1.Size = new System.Drawing.Size(344, 271);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // label5
             // 
-            this.button2.Location = new System.Drawing.Point(59, 76);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 27);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(151, 39);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 17);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Assentos";
             // 
-            // button1
+            // txtAssentos
             // 
-            this.button1.Location = new System.Drawing.Point(59, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 27);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtAssentos.Location = new System.Drawing.Point(224, 34);
+            this.txtAssentos.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtAssentos.Name = "txtAssentos";
+            this.txtAssentos.Size = new System.Drawing.Size(108, 22);
+            this.txtAssentos.TabIndex = 17;
+            this.txtAssentos.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(254, 236);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 15;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // dcbDestino
+            // 
+            this.dcbDestino.FormattingEnabled = true;
+            this.dcbDestino.Location = new System.Drawing.Point(11, 111);
+            this.dcbDestino.Name = "dcbDestino";
+            this.dcbDestino.Size = new System.Drawing.Size(321, 24);
+            this.dcbDestino.TabIndex = 13;
+            // 
+            // dcbOrigem
+            // 
+            this.dcbOrigem.FormattingEnabled = true;
+            this.dcbOrigem.Location = new System.Drawing.Point(11, 62);
+            this.dcbOrigem.Name = "dcbOrigem";
+            this.dcbOrigem.Size = new System.Drawing.Size(321, 24);
+            this.dcbOrigem.TabIndex = 12;
             // 
             // optIda
             // 
             this.optIda.AutoSize = true;
-            this.optIda.Location = new System.Drawing.Point(12, 130);
-            this.optIda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optIda.Location = new System.Drawing.Point(224, 9);
+            this.optIda.Margin = new System.Windows.Forms.Padding(4);
             this.optIda.Name = "optIda";
             this.optIda.Size = new System.Drawing.Size(108, 21);
             this.optIda.TabIndex = 11;
@@ -145,8 +265,8 @@
             // 
             this.optIdaVolta.AutoSize = true;
             this.optIdaVolta.Checked = true;
-            this.optIdaVolta.Location = new System.Drawing.Point(177, 132);
-            this.optIdaVolta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.optIdaVolta.Location = new System.Drawing.Point(15, 9);
+            this.optIdaVolta.Margin = new System.Windows.Forms.Padding(4);
             this.optIdaVolta.Name = "optIdaVolta";
             this.optIdaVolta.Size = new System.Drawing.Size(94, 21);
             this.optIdaVolta.TabIndex = 10;
@@ -160,7 +280,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 213);
+            this.label4.Location = new System.Drawing.Point(12, 190);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 17);
@@ -172,11 +292,12 @@
             this.dtpChegada.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpChegada.Location = new System.Drawing.Point(12, 230);
-            this.dtpChegada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpChegada.Location = new System.Drawing.Point(12, 207);
+            this.dtpChegada.Margin = new System.Windows.Forms.Padding(4);
             this.dtpChegada.Name = "dtpChegada";
-            this.dtpChegada.Size = new System.Drawing.Size(265, 22);
+            this.dtpChegada.Size = new System.Drawing.Size(320, 22);
             this.dtpChegada.TabIndex = 8;
+            this.dtpChegada.Value = new System.DateTime(2013, 11, 19, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -184,7 +305,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 167);
+            this.label3.Location = new System.Drawing.Point(8, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 17);
@@ -197,7 +318,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 58);
+            this.label2.Location = new System.Drawing.Point(8, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
@@ -210,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 12);
+            this.label1.Location = new System.Drawing.Point(8, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
@@ -222,77 +343,43 @@
             this.dtpPartida.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpPartida.Location = new System.Drawing.Point(12, 185);
-            this.dtpPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpPartida.Location = new System.Drawing.Point(12, 162);
+            this.dtpPartida.Margin = new System.Windows.Forms.Padding(4);
             this.dtpPartida.Name = "dtpPartida";
-            this.dtpPartida.Size = new System.Drawing.Size(265, 22);
+            this.dtpPartida.Size = new System.Drawing.Size(320, 22);
             this.dtpPartida.TabIndex = 4;
-            // 
-            // txtNomDestino
-            // 
-            this.txtNomDestino.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomDestino.Enabled = false;
-            this.txtNomDestino.Location = new System.Drawing.Point(89, 78);
-            this.txtNomDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNomDestino.Name = "txtNomDestino";
-            this.txtNomDestino.Size = new System.Drawing.Size(190, 22);
-            this.txtNomDestino.TabIndex = 3;
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(12, 78);
-            this.txtDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(77, 22);
-            this.txtDestino.TabIndex = 2;
-            // 
-            // txtNomOrigem
-            // 
-            this.txtNomOrigem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomOrigem.Enabled = false;
-            this.txtNomOrigem.Location = new System.Drawing.Point(89, 30);
-            this.txtNomOrigem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNomOrigem.Name = "txtNomOrigem";
-            this.txtNomOrigem.Size = new System.Drawing.Size(192, 22);
-            this.txtNomOrigem.TabIndex = 1;
-            // 
-            // txtOrigem
-            // 
-            this.txtOrigem.Location = new System.Drawing.Point(12, 30);
-            this.txtOrigem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtOrigem.Name = "txtOrigem";
-            this.txtOrigem.Size = new System.Drawing.Size(79, 22);
-            this.txtOrigem.TabIndex = 0;
+            this.dtpPartida.Value = new System.DateTime(2013, 11, 19, 0, 0, 0, 0);
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.grdVoo);
-            this.panel2.Location = new System.Drawing.Point(301, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Controls.Add(this.grdIda);
+            this.panel2.Location = new System.Drawing.Point(356, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(724, 267);
+            this.panel2.Size = new System.Drawing.Size(860, 271);
             this.panel2.TabIndex = 1;
             // 
-            // grdVoo
+            // grdIda
             // 
-            this.grdVoo.AllowUserToAddRows = false;
-            this.grdVoo.AllowUserToDeleteRows = false;
-            this.grdVoo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdVoo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVoo.Location = new System.Drawing.Point(0, 0);
-            this.grdVoo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdVoo.Name = "grdVoo";
-            this.grdVoo.ReadOnly = true;
-            this.grdVoo.Size = new System.Drawing.Size(724, 267);
-            this.grdVoo.TabIndex = 0;
-            this.grdVoo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.grdIda.AllowUserToAddRows = false;
+            this.grdIda.AllowUserToDeleteRows = false;
+            this.grdIda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdIda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.preco,
+            this.aviao,
+            this.assento,
+            this.partida});
+            this.grdIda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdIda.Location = new System.Drawing.Point(0, 0);
+            this.grdIda.Margin = new System.Windows.Forms.Padding(4);
+            this.grdIda.Name = "grdIda";
+            this.grdIda.ReadOnly = true;
+            this.grdIda.Size = new System.Drawing.Size(860, 271);
+            this.grdIda.TabIndex = 0;
             // 
             // panel3
             // 
@@ -300,149 +387,109 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(4, 279);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(4, 283);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(289, 267);
+            this.panel3.Size = new System.Drawing.Size(344, 272);
             this.panel3.TabIndex = 2;
             // 
-            // panel4
+            // ID
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.txtNomCliente);
-            this.panel4.Controls.Add(this.txtCliente);
-            this.panel4.Location = new System.Drawing.Point(301, 279);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(724, 267);
-            this.panel4.TabIndex = 3;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
-            // button5
+            // preco
             // 
-            this.button5.Location = new System.Drawing.Point(313, 121);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Listar Voo";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.preco.DefaultCellStyle = dataGridViewCellStyle1;
+            this.preco.HeaderText = "Preço";
+            this.preco.Name = "preco";
+            this.preco.ReadOnly = true;
             // 
-            // button4
+            // aviao
             // 
-            this.button4.Location = new System.Drawing.Point(56, 112);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Email";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.aviao.HeaderText = "Avião";
+            this.aviao.Name = "aviao";
+            this.aviao.ReadOnly = true;
             // 
-            // button3
+            // assento
             // 
-            this.button3.Location = new System.Drawing.Point(56, 25);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 27);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.assento.HeaderText = "Assentos Disponíveis";
+            this.assento.Name = "assento";
+            this.assento.ReadOnly = true;
             // 
-            // label5
+            // partida
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 6);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Cliente";
+            dataGridViewCellStyle2.Format = "t";
+            dataGridViewCellStyle2.NullValue = null;
+            this.partida.DefaultCellStyle = dataGridViewCellStyle2;
+            this.partida.HeaderText = "Partida";
+            this.partida.Name = "partida";
+            this.partida.ReadOnly = true;
             // 
-            // txtNomCliente
-            // 
-            this.txtNomCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomCliente.Enabled = false;
-            this.txtNomCliente.Location = new System.Drawing.Point(93, 26);
-            this.txtNomCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNomCliente.Name = "txtNomCliente";
-            this.txtNomCliente.Size = new System.Drawing.Size(607, 22);
-            this.txtNomCliente.TabIndex = 15;
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(9, 26);
-            this.txtCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(77, 22);
-            this.txtCliente.TabIndex = 14;
-            // 
-            // frmReserva
+            // frmAgencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1252, 598);
+            this.ClientSize = new System.Drawing.Size(1222, 559);
             this.Controls.Add(this.tlp);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmReserva";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmAgencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserva de Passagens Aéreas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReserva_Load);
             this.Resize += new System.EventHandler(this.frmReserva_Resize);
             this.tlp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdVoo)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdIda)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tlp;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpChegada;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpPartida;
-        private System.Windows.Forms.TextBox txtNomDestino;
-        private System.Windows.Forms.TextBox txtDestino;
-        private System.Windows.Forms.TextBox txtNomOrigem;
-        private System.Windows.Forms.TextBox txtOrigem;
-        private System.Windows.Forms.DataGridView grdVoo;
-        private System.Windows.Forms.RadioButton optIda;
-        private System.Windows.Forms.RadioButton optIdaVolta;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNomCliente;
-        private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.ComboBox dcbDestino;
+        public System.Windows.Forms.ComboBox dcbOrigem;
+        public System.Windows.Forms.DateTimePicker dtpChegada;
+        public System.Windows.Forms.DateTimePicker dtpPartida;
+        public System.Windows.Forms.RadioButton optIda;
+        public System.Windows.Forms.RadioButton optIdaVolta;
+        public System.Windows.Forms.NumericUpDown txtAssentos;
+        public System.Windows.Forms.Button btnPesquisar;
+        public System.Windows.Forms.TableLayoutPanel tlp;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.DataGridView grdIda;
+        public System.Windows.Forms.DataGridView grdVolta;
+        public System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aviao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partida;
 
 
 

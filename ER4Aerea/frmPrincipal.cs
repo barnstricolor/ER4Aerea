@@ -97,8 +97,9 @@ namespace ER4Aerea
 
         private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller controller = ReservaController.criar();
-            controller.mostrarPesquisa(this);
+            AgenciaController controller = AgenciaController.criar();
+            controller.mostrarTela(this);
+
 
         }
 

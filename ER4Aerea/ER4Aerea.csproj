@@ -89,6 +89,7 @@
     <Compile Include="Controller.cs" />
     <Compile Include="ClienteRepositorio.cs" />
     <Compile Include="ClienteController.cs" />
+    <Compile Include="AgenciaController.cs" />
     <Compile Include="frmReserva.cs">
       <SubType>Form</SubType>
     </Compile>
