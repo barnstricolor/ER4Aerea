@@ -117,7 +117,8 @@
             // 
             this.vôoToolStripMenuItem.Name = "vôoToolStripMenuItem";
             this.vôoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.vôoToolStripMenuItem.Text = "Vôo";
+            this.vôoToolStripMenuItem.Text = "Voo";
+            this.vôoToolStripMenuItem.Click += new System.EventHandler(this.vôoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -130,6 +131,7 @@
             this.reservaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.reservaToolStripMenuItem.Text = "Reserva";
+            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -244,6 +246,7 @@
             this.Name = "frmPrincipal";
             this.Text = "ER4Aerea - Te leva nas nuvens";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

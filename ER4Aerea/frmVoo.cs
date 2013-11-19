@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ER4Aerea
 {
-    public partial class frmUsuario : Form
+    public partial class frmVoo : Form
     {
-        public frmUsuario()
+        public frmVoo()
         {
             InitializeComponent();
         }
@@ -20,6 +20,16 @@ namespace ER4Aerea
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

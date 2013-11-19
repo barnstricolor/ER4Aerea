@@ -22,7 +22,17 @@ namespace ER4Aerea
             Bd persistencia = Bd.Instance;
             if (persistencia.obterConexao()!=null)
             {
-                this.DialogResult = DialogResult.OK;
+                UsuarioRepositorio repositorio = new UsuarioRepositorio();
+                Usuario usuario = (Usuario)repositorio.obter(txtNome.Text, txtSenha.Text);
+                if (usuario != null)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    Bd.USUARIO_LOGADO = txtNome.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou Senha inválido!", "Segurança", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

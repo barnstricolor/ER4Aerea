@@ -76,6 +76,17 @@ namespace ER4Aerea
 
             return mapRow(dr);
         }
+        public Dominio obter(string usuario,string senha)
+        {
+
+            OleDbDataReader dr = executeQuery(montarSelect("NOM_LOGIN = '"+usuario+"' And NOM_SENHA='"+senha+"'"));
+
+            if (!dr.HasRows) return null;
+
+            dr.Read();
+
+            return mapRow(dr);
+        }
         public HashSet<Dominio> obterTodos()
         {
 

@@ -9,13 +9,13 @@ namespace ER4Aerea
         private OleDbConnection conn;
         private string usuario { get; set; }
         private string senha { get; set; }
+        public static string USUARIO_LOGADO;
         
         private static Bd instance;
         private Bd(string usuario, string senha)
         {
             this.usuario = usuario;
             this.senha = senha;
-
             string strConexao = "Provider=MSDAORA;Data Source=XE;User Id=" + usuario + ";Password=" + senha + ";";
             this.conn = new OleDbConnection();
             this.conn.ConnectionString = strConexao;
