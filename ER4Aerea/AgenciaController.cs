@@ -19,7 +19,8 @@ namespace ER4Aerea
         public void mostrarTela(Form mdi)
         {
             tela = criarTela(mdi);
-            tela.Show();
+            tela.Show
+();
         }
         
         protected frmAgencia criarTela(Form mdi)
@@ -29,9 +30,16 @@ namespace ER4Aerea
             tela.dcbOrigem.Click += new EventHandler(this.carregarCidade);
             tela.dcbDestino.Click += new EventHandler(this.carregarCidade);
             tela.btnPesquisar.Click += new EventHandler(this.pesquisarVoos);
+            tela.btnReservar.Click += new EventHandler(this.mostrarTelaVenda);
             return tela;
         }
 
+
+        protected void mostrarTelaVenda(object sender, EventArgs e)
+        {
+            VendaController ctl = new VendaController();
+            ctl.mostrarTela(tela.MdiParent);
+        }
         protected void carregarCidade(object sender, EventArgs e){
 
             CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();

@@ -100,7 +100,6 @@ namespace ER4Aerea
             AgenciaController controller = AgenciaController.criar();
             controller.mostrarTela(this);
 
-
         }
 
     }

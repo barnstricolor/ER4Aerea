@@ -57,18 +57,20 @@
             this.dtpPartida = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grdIda = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aviao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnReservar = new System.Windows.Forms.Button();
             this.tlp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVolta)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdIda)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlp
@@ -381,18 +383,6 @@
             this.grdIda.Size = new System.Drawing.Size(860, 271);
             this.grdIda.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(4, 283);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(344, 272);
-            this.panel3.TabIndex = 2;
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -430,6 +420,28 @@
             this.partida.Name = "partida";
             this.partida.ReadOnly = true;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.btnReservar);
+            this.panel3.Location = new System.Drawing.Point(4, 283);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(344, 272);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Location = new System.Drawing.Point(254, 12);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.TabIndex = 16;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            // 
             // frmAgencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -451,6 +463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAssentos)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdIda)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -490,6 +503,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aviao;
         private System.Windows.Forms.DataGridViewTextBoxColumn assento;
         private System.Windows.Forms.DataGridViewTextBoxColumn partida;
+        public System.Windows.Forms.Button btnReservar;
 
 
 
