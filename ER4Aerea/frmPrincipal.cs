@@ -86,7 +86,7 @@ namespace ER4Aerea
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            this.Text = "ER4Aérea - " + Bd.USUARIO_LOGADO;
+            this.Text = "ER4Aérea - " + Bd.NOME_USUARIO_LOGADO;
         }
 
         private void vôoToolStripMenuItem_Click(object sender, EventArgs e)

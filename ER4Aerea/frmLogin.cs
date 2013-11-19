@@ -27,7 +27,8 @@ namespace ER4Aerea
                 if (usuario != null)
                 {
                     this.DialogResult = DialogResult.OK;
-                    Bd.USUARIO_LOGADO = txtNome.Text;
+                    Bd.NOME_USUARIO_LOGADO = usuario.nome;
+                    Bd.ID_USUARIO_LOGADO = usuario.id;
                 }
                 else
                 {

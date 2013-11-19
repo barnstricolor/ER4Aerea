@@ -9,7 +9,8 @@ namespace ER4Aerea
         private OleDbConnection conn;
         private string usuario { get; set; }
         private string senha { get; set; }
-        public static string USUARIO_LOGADO;
+        public static string NOME_USUARIO_LOGADO { get; set; }
+        public static int ID_USUARIO_LOGADO { get; set; }
         
         private static Bd instance;
         private Bd(string usuario, string senha)
