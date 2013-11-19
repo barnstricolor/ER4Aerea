@@ -11,7 +11,6 @@ namespace ER4Aerea
 
         public String nome{get;set;}
         public String login { get; set; }
-        public String senha { get; set; }
-       
+        public String senha { get; set; }       
     }
 }
