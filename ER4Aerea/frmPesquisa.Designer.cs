@@ -42,6 +42,7 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnPesquisar.Location = new System.Drawing.Point(16, 249);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
@@ -53,6 +54,7 @@
             // 
             // btnFechar
             // 
+            this.btnFechar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnFechar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnFechar.Location = new System.Drawing.Point(607, 249);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
@@ -61,6 +63,7 @@
             this.btnFechar.TabIndex = 4;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txtNomOrigem
             // 
@@ -79,6 +82,9 @@
             this.grd.AllowUserToDeleteRows = false;
             this.grd.AllowUserToResizeColumns = false;
             this.grd.AllowUserToResizeRows = false;
+            this.grd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -110,7 +116,8 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(124, 251);
+            this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNovo.Location = new System.Drawing.Point(124, 249);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(100, 28);
@@ -120,7 +127,8 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(232, 251);
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditar.Location = new System.Drawing.Point(232, 249);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 28);
@@ -131,7 +139,8 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(340, 251);
+            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExcluir.Location = new System.Drawing.Point(340, 249);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(100, 28);
@@ -144,6 +153,7 @@
             this.AcceptButton = this.btnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.btnFechar;
             this.ClientSize = new System.Drawing.Size(723, 292);
             this.Controls.Add(this.btnExcluir);
@@ -157,6 +167,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPesquisa";
             this.Opacity = 0.95D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPesquisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
             this.ResumeLayout(false);

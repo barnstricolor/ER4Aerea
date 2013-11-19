@@ -54,6 +54,7 @@ namespace ER4Aerea
             tela().txtDestino.Text = voo.destino.id.ToString();
             tela().txtPreco.Text = voo.preco.ToString();
             tela().dtpPartida.Value = voo.partida;
+            tela().dtpChegada.Value = voo.chegada;
             tela().ShowDialog();                         
             
         }

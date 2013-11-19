@@ -48,8 +48,6 @@ namespace ER4Aerea
                 childForm.Close();
             }
         }
-
-
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller controller = CidadeController.criar();
@@ -76,14 +74,12 @@ namespace ER4Aerea
             frm.Show();            
 
         }
-
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller controller = UsuarioController.criar();
             controller.mostrarPesquisa(this);
 
         }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             this.Text = "ER4Aérea - " + Bd.NOME_USUARIO_LOGADO;
@@ -101,6 +97,5 @@ namespace ER4Aerea
             controller.mostrarTela(this);
 
         }
-
     }
 }
