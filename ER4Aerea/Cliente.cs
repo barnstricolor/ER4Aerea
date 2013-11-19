@@ -9,9 +9,7 @@ namespace ER4Aerea
     public  class Cliente:Dominio
     {
         //private  int id { get; set; }
-        public  string nome { get; set; }
-        
-        public Boolean promocao { get; set; }
+        public  string nome { get; set; }      
         public string email { get; set; }
         public string endereco { get; set; }
         public int cpf { get; set; }
