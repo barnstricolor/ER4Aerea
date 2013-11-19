@@ -27,7 +27,8 @@ namespace ER4Aerea
         public string telefoneContato { get; set; }
         public string ocupacao { get; set; }
         public float renda { get; set; }
-        public bool especial = false;
+        public bool especial { get; set; }
+        public bool promocao { get; set; }
 	
 	    private static float DESCONTO = (float) 0.3;
 
