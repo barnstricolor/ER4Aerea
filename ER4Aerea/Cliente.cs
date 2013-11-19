@@ -27,6 +27,7 @@ namespace ER4Aerea
         public float renda { get; set; }
         public bool especial { get; set; }
         public bool promocao { get; set; }
+        public string rg { get; set; }
 	
 	    private static float DESCONTO = (float) 0.3;
 
