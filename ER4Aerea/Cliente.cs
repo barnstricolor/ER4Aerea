@@ -11,26 +11,23 @@ namespace ER4Aerea
         //private  int id { get; set; }
         public  string nome { get; set; }
         
-        public  Boolean promocao { get; set; }
-        public  string email { get; set; }
-        public  string endereco { get; set; }
-        public  int cpf { get; set; }
-        public  Cidade cidade { get; set; }
-        public  string rg { get; set; }
-        public  string sexo { get; set; }
-        public  DateTime nascimento { get; set; }
-        public  int numero { get; set; }
-        public  string bairro { get; set; }
-        public  string cep { get; set; }
-        public  string telefone { get; set; }
-        public  string ccelular { get; set; }
-        public  string fax { get; set; }
-        public  string contato { get; set; }
-        public  string telefoneContato { get; set; }
-
-    
-    
-	    public bool especial = false;
+        public Boolean promocao { get; set; }
+        public string email { get; set; }
+        public string endereco { get; set; }
+        public int cpf { get; set; }
+        public Cidade cidade { get; set; }
+        public string sexo { get; set; }
+        public int numero { get; set; }
+        public string bairro { get; set; }
+        public string cep { get; set; }
+        public string telefone { get; set; }
+        public string celular { get; set; }
+        public string fax { get; set; }
+        public string contato { get; set; }
+        public string telefoneContato { get; set; }
+        public string ocupacao { get; set; }
+        public float renda { get; set; }
+        public bool especial = false;
 	
 	    private static float DESCONTO = (float) 0.3;
 
