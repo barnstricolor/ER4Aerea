@@ -25,7 +25,7 @@ namespace ER4Aerea
         protected frmVenda criarTela(Form mdi)
         {
             frmVenda tela = new frmVenda();
-            //tela.MdiParent = mdi;
+            // tela.MdiParent = mdi;
             tela.dcbCliente.Click += new EventHandler(this.carregarCliente);
             //tela.dcbDestino.Click += new EventHandler(this.carregarCidade);
             //tela.btnPesquisar.Click += new EventHandler(this.pesquisarVoos);
