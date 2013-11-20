@@ -9,7 +9,7 @@ namespace ER4Aerea
         protected override string colunaId() { return "ID_CLIENTE"; }
         protected override string[] colunas()
         {             
-            return new string[] {colunaId(),"NOM_CLIENTE","FLG_PROMOCAO","NOM_EMAIL","NOM_ENDERECO", "NUM_CPF", "NUM_CELULAR", "VAL_RENDA", "NOM_OCUPACAO", "FLG_ESPECIAL", "NUM_RG", "SEXO", "NUM_END", "NOM_BAIRRO", "CAD_CEP", "NUM_TELEFONE"}; 
+            return new string[] {colunaId(),"NOM_CLIENTE","FLG_PROMOCAO","NOM_EMAIL","NOM_ENDERECO", "NUM_CPF", "NUM_CELULAR", "VAL_RENDA", "NOM_OCUPACAO", "FLG_ESPECIAL", "NUM_RG", "SEXO", "NUM_END", "NOM_BAIRRO", "CAD_CEP", "NUM_TELEFONE","ID_CIDADE"}; 
         }
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
@@ -31,13 +31,17 @@ namespace ER4Aerea
             d.Add("NOM_BAIRRO", cliente.bairro);
             d.Add("CAD_CEP", cliente.cep);
             d.Add("NUM_TELEFONE", cliente.telefone);
-            //d.Add("ID_CIDADE", cliente.cidade.id);
+            d.Add("ID_CIDADE", cliente.cidade.id);
 
         }
         protected override Dominio mapRow(OleDbDataReader dr)
         {
 
             Cliente cliente = new Cliente(dr["NOM_CLIENTE"].ToString());
+
+            CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+            Cidade cidade = (Cidade)cidadeRepositorio.obter(int.Parse(dr["ID_CIDADE"].ToString()));
+
 
             cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
             cliente.nome = dr["NOM_CLIENTE"].ToString();
@@ -56,7 +60,7 @@ namespace ER4Aerea
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
             cliente.especial = dr["FLG_ESPECIAL"].ToString();
-            //cliente.cidade = dr["ID_CIDADE"].ToString();
+            cliente.cidade = cidade;
 
             return cliente;
         }
