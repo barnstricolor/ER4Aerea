@@ -34,10 +34,9 @@ namespace ER4Aerea
         public Cliente(String nome)
         {
             this.nome = nome;
-            this.especial = especial;
         }
         
-        private Boolean isEspecial()
+        public Boolean isEspecial()
         {
             if (this.especial == "S")
                 return true;

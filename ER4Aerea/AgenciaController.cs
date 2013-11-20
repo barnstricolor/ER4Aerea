@@ -35,7 +35,6 @@ namespace ER4Aerea
             return tela;
         }
 
-
         protected void mostrarTelaVenda(object sender, EventArgs e)
         {
             VendaController ctl = new VendaController();
@@ -51,6 +50,7 @@ namespace ER4Aerea
             ctl.destino=volta;
             ctl.assentos = (int)tela.txtAssentos.Value;
             ctl.mostrarTela(tela.MdiParent);
+            tela.btnPesquisar.PerformClick();
         }
         protected void carregarCidade(object sender, EventArgs e){
 

@@ -30,6 +30,7 @@ namespace ER4Aerea
             // tela.MdiParent = mdi;
             tela.dcbCliente.Click += new EventHandler(this.carregarCliente);
             tela.dcbCliente.SelectionChangeCommitted += new EventHandler(this.atualizaValores);
+            tela.btnReservar.Click += new EventHandler(this.finalizarVenda);
 
             //tela.dcbDestino.Click += new EventHandler(this.carregarCidade);
             //tela.btnPesquisar.Click += new EventHandler(this.pesquisarVoos);
@@ -55,7 +56,7 @@ namespace ER4Aerea
                 Cliente cliente = (Cliente)clienteRepositorio.obter((int)tela.dcbCliente.SelectedValue);
                 desconto=cliente.getDesconto();
 
-                tela.lblEspecial.Visible = desconto > 0;
+                tela.lblEspecial.Visible = cliente.isEspecial();
 
                 total = origem.preco * assentos + (destino.preco) * assentos;
                 
@@ -86,6 +87,22 @@ namespace ER4Aerea
             dcb.DisplayMember = "Value";
             dcb.ValueMember = "Key";            
         }
-        
+        protected void finalizarVenda(object sender, EventArgs e)
+        {            
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            Cliente cliente = (Cliente)clienteRepositorio.obter((int)tela.dcbCliente.SelectedValue);
+
+            UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
+            Usuario usuario = (Usuario)usuarioRepositorio.obter(Bd.ID_USUARIO_LOGADO);
+
+            origem.novaReserva(cliente, assentos, usuario);
+            destino.novaReserva(cliente, assentos, usuario);
+
+            VooRepositorio vooRepositorio = new VooRepositorio();
+            vooRepositorio.salvar(origem);
+            vooRepositorio.salvar(destino);
+
+            tela.Close();
+        }        
     }
 }

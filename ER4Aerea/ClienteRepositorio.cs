@@ -55,6 +55,7 @@ namespace ER4Aerea
             cliente.bairro = dr["NOM_BAIRRO"].ToString();
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
+            cliente.especial = dr["FLG_ESPECIAL"].ToString();
             //cliente.cidade = dr["ID_CIDADE"].ToString();
 
             return cliente;
