@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAssentos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblAviaoIda = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblPartidaIda = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblPrecoIda = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblPartidaIda = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblAviaoIda = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblAssentos = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPrecoVolta = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,16 +47,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dcbCliente = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblDesconto = new System.Windows.Forms.Label();
-            this.lblPrecoFinal = new System.Windows.Forms.Label();
             this.btnReservar = new System.Windows.Forms.Button();
+            this.lblPrecoFinal = new System.Windows.Forms.Label();
+            this.lblDesconto = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dcbCliente = new System.Windows.Forms.ComboBox();
+            this.lblEspecial = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,46 +76,22 @@
             this.panel1.Size = new System.Drawing.Size(1060, 70);
             this.panel1.TabIndex = 3;
             // 
-            // lblAssentos
+            // lblPrecoIda
             // 
-            this.lblAssentos.Location = new System.Drawing.Point(96, 27);
-            this.lblAssentos.Name = "lblAssentos";
-            this.lblAssentos.Size = new System.Drawing.Size(78, 23);
-            this.lblAssentos.TabIndex = 6;
-            this.lblAssentos.Text = "1";
+            this.lblPrecoIda.Location = new System.Drawing.Point(797, 24);
+            this.lblPrecoIda.Name = "lblPrecoIda";
+            this.lblPrecoIda.Size = new System.Drawing.Size(250, 23);
+            this.lblPrecoIda.TabIndex = 12;
+            this.lblPrecoIda.Text = "1";
             // 
-            // label1
+            // label6
             // 
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Assentos:";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Ida\r\n";
-            // 
-            // lblAviaoIda
-            // 
-            this.lblAviaoIda.Location = new System.Drawing.Point(84, 24);
-            this.lblAviaoIda.Name = "lblAviaoIda";
-            this.lblAviaoIda.Size = new System.Drawing.Size(250, 23);
-            this.lblAviaoIda.TabIndex = 8;
-            this.lblAviaoIda.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(0, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 23);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Avião";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.Location = new System.Drawing.Point(713, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Preço";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPartidaIda
             // 
@@ -134,22 +110,46 @@
             this.label5.Text = "Partida\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lblPrecoIda
+            // lblAviaoIda
             // 
-            this.lblPrecoIda.Location = new System.Drawing.Point(797, 24);
-            this.lblPrecoIda.Name = "lblPrecoIda";
-            this.lblPrecoIda.Size = new System.Drawing.Size(250, 23);
-            this.lblPrecoIda.TabIndex = 12;
-            this.lblPrecoIda.Text = "1";
+            this.lblAviaoIda.Location = new System.Drawing.Point(87, 24);
+            this.lblAviaoIda.Name = "lblAviaoIda";
+            this.lblAviaoIda.Size = new System.Drawing.Size(250, 23);
+            this.lblAviaoIda.TabIndex = 8;
+            this.lblAviaoIda.Text = "1";
             // 
-            // label6
+            // label4
             // 
-            this.label6.Location = new System.Drawing.Point(713, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 23);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Preço";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Location = new System.Drawing.Point(3, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Avião";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Ida\r\n";
+            // 
+            // lblAssentos
+            // 
+            this.lblAssentos.Location = new System.Drawing.Point(96, 27);
+            this.lblAssentos.Name = "lblAssentos";
+            this.lblAssentos.Size = new System.Drawing.Size(78, 23);
+            this.lblAssentos.TabIndex = 6;
+            this.lblAssentos.Text = "1";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Assentos:";
             // 
             // panel2
             // 
@@ -201,7 +201,7 @@
             // 
             // lblAviaoVolta
             // 
-            this.lblAviaoVolta.Location = new System.Drawing.Point(84, 24);
+            this.lblAviaoVolta.Location = new System.Drawing.Point(87, 24);
             this.lblAviaoVolta.Name = "lblAviaoVolta";
             this.lblAviaoVolta.Size = new System.Drawing.Size(250, 23);
             this.lblAviaoVolta.TabIndex = 8;
@@ -209,7 +209,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(0, 24);
+            this.label11.Location = new System.Drawing.Point(3, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 23);
             this.label11.TabIndex = 7;
@@ -234,57 +234,45 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.dcbCliente);
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblEspecial);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Location = new System.Drawing.Point(12, 223);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1060, 180);
             this.panel3.TabIndex = 8;
             // 
-            // label8
+            // btnReservar
             // 
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(481, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(398, 23);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "CLIENTE ESPECIAL";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Visible = false;
+            this.btnReservar.Location = new System.Drawing.Point(846, 116);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(201, 36);
+            this.btnReservar.TabIndex = 21;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // lblPrecoFinal
             // 
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 23);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Cliente\r\n";
+            this.lblPrecoFinal.Location = new System.Drawing.Point(119, 116);
+            this.lblPrecoFinal.Name = "lblPrecoFinal";
+            this.lblPrecoFinal.Size = new System.Drawing.Size(250, 23);
+            this.lblPrecoFinal.TabIndex = 20;
+            this.lblPrecoFinal.Text = "R$ 0,00";
             // 
-            // dcbCliente
+            // lblDesconto
             // 
-            this.dcbCliente.FormattingEnabled = true;
-            this.dcbCliente.Location = new System.Drawing.Point(13, 26);
-            this.dcbCliente.Name = "dcbCliente";
-            this.dcbCliente.Size = new System.Drawing.Size(462, 24);
-            this.dcbCliente.TabIndex = 14;
+            this.lblDesconto.Location = new System.Drawing.Point(119, 93);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(250, 23);
+            this.lblDesconto.TabIndex = 19;
+            this.lblDesconto.Text = "R$ 0,00";
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.Location = new System.Drawing.Point(10, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Total:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(10, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 23);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Desconto:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTotal.Location = new System.Drawing.Point(119, 70);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(250, 23);
+            this.lblTotal.TabIndex = 18;
+            this.lblTotal.Text = "R$ 0,00";
             // 
             // label13
             // 
@@ -295,50 +283,65 @@
             this.label13.Text = "Preço Final";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lblTotal
+            // label10
             // 
-            this.lblTotal.Location = new System.Drawing.Point(119, 70);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(250, 23);
-            this.lblTotal.TabIndex = 18;
-            this.lblTotal.Text = "R$ 0,00";
+            this.label10.Location = new System.Drawing.Point(10, 93);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 23);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Desconto:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lblDesconto
+            // label3
             // 
-            this.lblDesconto.Location = new System.Drawing.Point(119, 93);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(250, 23);
-            this.lblDesconto.TabIndex = 19;
-            this.lblDesconto.Text = "R$ 0,00";
+            this.label3.Location = new System.Drawing.Point(10, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Total:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lblPrecoFinal
+            // dcbCliente
             // 
-            this.lblPrecoFinal.Location = new System.Drawing.Point(119, 116);
-            this.lblPrecoFinal.Name = "lblPrecoFinal";
-            this.lblPrecoFinal.Size = new System.Drawing.Size(250, 23);
-            this.lblPrecoFinal.TabIndex = 20;
-            this.lblPrecoFinal.Text = "R$ 0,00";
+            this.dcbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbCliente.FormattingEnabled = true;
+            this.dcbCliente.Location = new System.Drawing.Point(13, 26);
+            this.dcbCliente.Name = "dcbCliente";
+            this.dcbCliente.Size = new System.Drawing.Size(462, 24);
+            this.dcbCliente.TabIndex = 14;
             // 
-            // btnReservar
+            // lblEspecial
             // 
-            this.btnReservar.Location = new System.Drawing.Point(298, 96);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(108, 36);
-            this.btnReservar.TabIndex = 21;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
+            this.lblEspecial.ForeColor = System.Drawing.Color.Red;
+            this.lblEspecial.Location = new System.Drawing.Point(481, 26);
+            this.lblEspecial.Name = "lblEspecial";
+            this.lblEspecial.Size = new System.Drawing.Size(398, 23);
+            this.lblEspecial.TabIndex = 11;
+            this.lblEspecial.Text = "CLIENTE ESPECIAL";
+            this.lblEspecial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEspecial.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 23);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Cliente\r\n";
             // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 444);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1079, 413);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblAssentos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "frmVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVenda";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -368,7 +371,7 @@
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label lblEspecial;
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.Button btnReservar;
         public System.Windows.Forms.Label lblPrecoFinal;

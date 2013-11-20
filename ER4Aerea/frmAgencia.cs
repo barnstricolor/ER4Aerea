@@ -32,6 +32,11 @@ namespace ER4Aerea
 
         }
 
+        private void btnReservar_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

@@ -71,7 +71,7 @@ namespace ER4Aerea
             Form frm = new frmView();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
-            frm.Show();            
+            frm.Show();  
 
         }
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)

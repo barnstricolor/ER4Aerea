@@ -90,6 +90,17 @@
     <Compile Include="ClienteRepositorio.cs" />
     <Compile Include="ClienteController.cs" />
     <Compile Include="AgenciaController.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmView.Designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
     <Compile Include="VendaController.cs" />
     <Compile Include="frmReserva.cs">
       <SubType>Form</SubType>
@@ -127,11 +138,6 @@
     <Compile Include="UsuarioRepositorio.cs" />
     <Compile Include="ReservaRepositorio.cs" />
     <Compile Include="VooRepositorio.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Dominio.cs" />
     <Compile Include="frmAviao.cs">
       <SubType>Form</SubType>
@@ -144,12 +150,6 @@
     </Compile>
     <Compile Include="frmCidade.Designer.cs">
       <DependentUpon>frmCidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmView.Designer.cs">
-      <DependentUpon>frmView.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositorio.cs" />
     <Compile Include="Email.cs" />

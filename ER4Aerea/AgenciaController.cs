@@ -19,8 +19,7 @@ namespace ER4Aerea
         public void mostrarTela(Form mdi)
         {
             tela = criarTela(mdi);
-            tela.Show
-();
+            tela.Show();
         }
         
         protected frmAgencia criarTela(Form mdi)
@@ -31,6 +30,8 @@ namespace ER4Aerea
             tela.dcbDestino.Click += new EventHandler(this.carregarCidade);
             tela.btnPesquisar.Click += new EventHandler(this.pesquisarVoos);
             tela.btnReservar.Click += new EventHandler(this.mostrarTelaVenda);
+            tela.dtpPartida.Value = DateTime.Today;
+            tela.dtpChegada.Value = DateTime.Today;
             return tela;
         }
 
@@ -38,6 +39,17 @@ namespace ER4Aerea
         protected void mostrarTelaVenda(object sender, EventArgs e)
         {
             VendaController ctl = new VendaController();
+            VooRepositorio vooRepositorio = new VooRepositorio();
+            Voo partida = null;
+            Voo volta = null;
+            if (tela.grdIda.SelectedRows.Count > 0)
+                partida=(Voo)vooRepositorio.obter((int)tela.grdIda.SelectedRows[0].Cells[0].Value);
+
+            if (tela.grdVolta.SelectedRows.Count > 0)
+                volta =(Voo)vooRepositorio.obter((int)tela.grdVolta.SelectedRows[0].Cells[0].Value);
+            ctl.origem=partida;
+            ctl.destino=volta;
+            ctl.assentos = (int)tela.txtAssentos.Value;
             ctl.mostrarTela(tela.MdiParent);
         }
         protected void carregarCidade(object sender, EventArgs e){
@@ -85,13 +97,8 @@ namespace ER4Aerea
         }
         private void preencherRow(Voo voo,DataGridView grid)
         {
-
-
             object[] valores = new object[] { voo.id, voo.preco, voo.aviao.modelo, voo.assentosDisponiveis(), voo.partida.Hour + ":" + voo.partida.Minute };
-            grid.Rows.Add(valores);
-            
+            grid.Rows.Add(valores);            
         }
-
-
     }
 }
