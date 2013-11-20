@@ -27,7 +27,7 @@ namespace ER4Aerea
         {
             Cliente cliente = null;
             if (string.IsNullOrEmpty(tela().txtID.Text))
-                cliente = new Cliente(tela().txtNome.Text, false);
+                cliente = new Cliente(tela().txtNome.Text);
             else
                 cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
 
@@ -35,11 +35,10 @@ namespace ER4Aerea
             cliente.bairro = tela().txtBairro.Text;
             cliente.celular = tela().txtCel.Text;
             cliente.cep = tela().txtCep.Text;
-            //cliente.cidade = tela().txtCidade.Text;
+            cliente.cidade.id = int.Parse(tela().txtCidade.Text);
             cliente.cpf = tela().txtCpf.Text;
             cliente.email = tela().txtEmail.Text;
             cliente.endereco = tela().txtEndereco.Text;
-            //cliente.id = int.Parse(tela().txtID.Text);
             cliente.ocupacao = tela().txtOcup.Text;
             cliente.renda = int.Parse(tela().txtRenda.Text);
             if (tela().chkMasculino.Checked)
@@ -47,10 +46,13 @@ namespace ER4Aerea
             else
                 cliente.sexo = "F";
             if (tela().chkReceb.Checked)
-            cliente.promocao = tela().chkReceb.Checked;
+                cliente.promocao = "S";
+            else
+                cliente.promocao = "N";
             cliente.numero = int.Parse(tela().txtNum.Text);
             cliente.telefone = tela().txtTel.Text;
             cliente.rg = tela().txtRg.Text;         
+
             repositorio().salvar(cliente);
             tela().Close();
             pesquisaTela.btnPesquisar.PerformClick();

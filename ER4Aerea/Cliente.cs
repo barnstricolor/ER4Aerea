@@ -25,13 +25,13 @@ namespace ER4Aerea
         public string telefoneContato { get; set; }
         public string ocupacao { get; set; }
         public float renda { get; set; }
-        public bool especial { get; set; }
-        public bool promocao { get; set; }
+        public string especial { get; set; }
+        public string promocao { get; set; }
         public string rg { get; set; }
 	
 	    private static float DESCONTO = (float) 0.3;
 
-        public Cliente(String nome, Boolean especial)
+        public Cliente(String nome)
         {
             this.nome = nome;
             this.especial = especial;
@@ -39,17 +39,20 @@ namespace ER4Aerea
         
         private Boolean isEspecial()
         {
-		    return especial;
+            if (this.especial == "S")
+                return true;
+            else
+                return false;
 	    }
 
 
-        private void setEspecial(Boolean especial)
+        /*private void setEspecial(Boolean especial)
         {
 		    this.especial = especial;
-	    }
+	    }*/
 
 	    public  float getDesconto() {
-		    return (float) (especial == true ? DESCONTO : 0.0);
+		    return (float) (this.isEspecial() == true ? DESCONTO : 0.0);
 	    }
 
 	    private  String getNome() {

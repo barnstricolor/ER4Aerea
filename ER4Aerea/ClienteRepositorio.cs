@@ -37,11 +37,10 @@ namespace ER4Aerea
         protected override Dominio mapRow(OleDbDataReader dr)
         {
 
-            Cliente cliente = new Cliente(dr["NOM_CLIENTE"].ToString(), false);
+            Cliente cliente = new Cliente(dr["NOM_CLIENTE"].ToString());
 
             cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
             cliente.nome = dr["NOM_CLIENTE"].ToString();
-            IF (dr["FLG_PROMOCAO"].ToString()=="S")
             cliente.promocao = dr["FLG_PROMOCAO"].ToString();
             cliente.email = dr["NOM_EMAIL"].ToString();
             cliente.endereco = dr["NOM_ENDERECO"].ToString();
@@ -49,12 +48,12 @@ namespace ER4Aerea
             cliente.celular = dr["NUM_CELULAR"].ToString();
             cliente.renda = int.Parse(dr["VAL_RENDA"].ToString());
             cliente.ocupacao = dr["NOM_OCUPACAO"].ToString();
-            cliente.promocao = bool.Parse(dr["FLG_ESPECIAL"].ToString());
+            cliente.promocao = dr["FLG_ESPECIAL"].ToString();
             cliente.rg = dr["NUM_RG"].ToString();
             cliente.sexo = dr["SEXO"].ToString();
             cliente.numero = int.Parse(dr["NUM_END"].ToString());
             cliente.bairro = dr["NOM_BAIRRO"].ToString();
-            cliente.cep = dr["NUM_CEP"].ToString();
+            cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
             //cliente.cidade = dr["ID_CIDADE"].ToString();
 
