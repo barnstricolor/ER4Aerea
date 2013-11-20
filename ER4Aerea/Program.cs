@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ER4Aerea
@@ -13,6 +16,9 @@ namespace ER4Aerea
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //tratamento de erro generico
+            Erros erros = new Erros();
+            Application.ThreadException += new ThreadExceptionEventHandler(erros.UnhandledThreadExceptionHandler);
 
             frmLogin f = new frmLogin();
             if (f.ShowDialog() == DialogResult.OK)

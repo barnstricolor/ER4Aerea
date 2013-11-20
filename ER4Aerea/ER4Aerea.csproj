@@ -84,6 +84,7 @@
     <Compile Include="Cidade.cs" />
     <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
+    <Compile Include="Erros.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="AviaoController.cs" />
     <Compile Include="Controller.cs" />
