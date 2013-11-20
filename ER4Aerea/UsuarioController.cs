@@ -21,7 +21,6 @@ namespace ER4Aerea
         {
             pesquisaTela.Text = "Cadastro de Usuários";
         }
-
         protected override void salvar_Click(object sender, EventArgs e)
         {
             Usuario usuario = null;

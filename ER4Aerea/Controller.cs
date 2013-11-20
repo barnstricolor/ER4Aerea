@@ -38,7 +38,7 @@ namespace ER4Aerea
         }
 
         protected abstract Form criarTela();
-
+        //protected abstract void limpar_Click(object sender, EventArgs e);
         protected abstract void salvar_Click(object sender, EventArgs e);
         protected abstract void editar_Click(object sender, EventArgs e);
         void excluir_Click(object sender, EventArgs e) {

@@ -37,16 +37,16 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
-            this.txtId = new UCTextBox();
-            this.nOM_ENDERECOTextBox = new UCTextBox();
-            this.txtNome = new UCTextBox();
-            this.txtSenha = new UCTextBox();
-            this.nUM_CPFTextBox = new UCTextBox();
-            this.txtLogin = new UCTextBox();
+            this.txtId = new ER4Aerea.UCTextBox();
+            this.nOM_ENDERECOTextBox = new ER4Aerea.UCTextBox();
+            this.txtNome = new ER4Aerea.UCTextBox();
+            this.txtSenha = new ER4Aerea.UCTextBox();
+            this.nUM_CPFTextBox = new ER4Aerea.UCTextBox();
+            this.txtLogin = new ER4Aerea.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new UCTextBox();
-            this.textBox2 = new UCTextBox();
-            this.textBox3 = new UCTextBox();
+            this.textBox1 = new ER4Aerea.UCTextBox();
+            this.textBox2 = new ER4Aerea.UCTextBox();
+            this.textBox3 = new ER4Aerea.UCTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -255,6 +255,7 @@
             this.btnLimpar.TabIndex = 107;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnFechar
             // 

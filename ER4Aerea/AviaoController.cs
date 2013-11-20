@@ -16,7 +16,6 @@ namespace ER4Aerea
         protected frmAviao tela() {
             return frmTela;
         }
-
         protected override void configurarPesquisaTela(frmPesquisa pesquisaTela, Form mdi)
         {
             pesquisaTela.Text = "Cadastro de Avião";

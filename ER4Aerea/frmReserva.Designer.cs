@@ -30,20 +30,20 @@
         {
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label txtAssento;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
             System.Windows.Forms.Label iD_AVIAOLabel;
             System.Windows.Forms.Label vAL_PRECOLabel;
             System.Windows.Forms.Label label3;
-            this.txtVoo = new UCTextBox();
-            this.txtAssentos = new UCTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
+            this.txtVoo = new ER4Aerea.UCTextBox();
+            this.txtAssentos = new ER4Aerea.UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtValor = new UCTextBox();
-            this.txtCliente = new UCTextBox();
+            this.txtValor = new ER4Aerea.UCTextBox();
+            this.txtCliente = new ER4Aerea.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtId = new UCTextBox();
-            this.txtUsuario = new UCTextBox();
+            this.txtId = new ER4Aerea.UCTextBox();
+            this.txtUsuario = new ER4Aerea.UCTextBox();
             label2 = new System.Windows.Forms.Label();
             txtAssento = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
@@ -51,15 +51,6 @@
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtVoo
-            // 
-            this.txtVoo.Location = new System.Drawing.Point(91, 131);
-            this.txtVoo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVoo.Name = "txtVoo";
-            this.txtVoo.Size = new System.Drawing.Size(79, 22);
-            this.txtVoo.TabIndex = 129;
-            this.txtVoo.Tag = "ID_AVIAO,N";
             // 
             // label2
             // 
@@ -71,15 +62,6 @@
             label2.TabIndex = 130;
             label2.Text = "Voo";
             // 
-            // txtAssentos
-            // 
-            this.txtAssentos.Location = new System.Drawing.Point(91, 101);
-            this.txtAssentos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAssentos.Name = "txtAssentos";
-            this.txtAssentos.Size = new System.Drawing.Size(79, 22);
-            this.txtAssentos.TabIndex = 127;
-            this.txtAssentos.Tag = "ID_AVIAO,N";
-            // 
             // txtAssento
             // 
             txtAssento.Location = new System.Drawing.Point(8, 105);
@@ -90,6 +72,54 @@
             txtAssento.TabIndex = 128;
             txtAssento.Text = "Assentos";
             // 
+            // iD_AVIAOLabel
+            // 
+            iD_AVIAOLabel.Location = new System.Drawing.Point(8, 45);
+            iD_AVIAOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            iD_AVIAOLabel.Name = "iD_AVIAOLabel";
+            iD_AVIAOLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            iD_AVIAOLabel.Size = new System.Drawing.Size(73, 17);
+            iD_AVIAOLabel.TabIndex = 121;
+            iD_AVIAOLabel.Text = "Cliente";
+            // 
+            // vAL_PRECOLabel
+            // 
+            vAL_PRECOLabel.Location = new System.Drawing.Point(8, 166);
+            vAL_PRECOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            vAL_PRECOLabel.Name = "vAL_PRECOLabel";
+            vAL_PRECOLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            vAL_PRECOLabel.Size = new System.Drawing.Size(73, 17);
+            vAL_PRECOLabel.TabIndex = 122;
+            vAL_PRECOLabel.Text = "Valor";
+            // 
+            // label3
+            // 
+            label3.Location = new System.Drawing.Point(8, 75);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            label3.Size = new System.Drawing.Size(73, 17);
+            label3.TabIndex = 132;
+            label3.Text = "Usuario";
+            // 
+            // txtVoo
+            // 
+            this.txtVoo.Location = new System.Drawing.Point(91, 131);
+            this.txtVoo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVoo.Name = "txtVoo";
+            this.txtVoo.Size = new System.Drawing.Size(79, 22);
+            this.txtVoo.TabIndex = 129;
+            this.txtVoo.Tag = "ID_AVIAO,N";
+            // 
+            // txtAssentos
+            // 
+            this.txtAssentos.Location = new System.Drawing.Point(91, 101);
+            this.txtAssentos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAssentos.Name = "txtAssentos";
+            this.txtAssentos.Size = new System.Drawing.Size(79, 22);
+            this.txtAssentos.TabIndex = 127;
+            this.txtAssentos.Tag = "ID_AVIAO,N";
+            // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(91, 202);
@@ -98,6 +128,7 @@
             this.btnLimpar.TabIndex = 126;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnFechar
             // 
@@ -148,16 +179,6 @@
             this.pictureBox1.TabIndex = 123;
             this.pictureBox1.TabStop = false;
             // 
-            // iD_AVIAOLabel
-            // 
-            iD_AVIAOLabel.Location = new System.Drawing.Point(8, 45);
-            iD_AVIAOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            iD_AVIAOLabel.Name = "iD_AVIAOLabel";
-            iD_AVIAOLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            iD_AVIAOLabel.Size = new System.Drawing.Size(73, 17);
-            iD_AVIAOLabel.TabIndex = 121;
-            iD_AVIAOLabel.Text = "Cliente";
-            // 
             // txtId
             // 
             this.txtId.Enabled = false;
@@ -168,16 +189,6 @@
             this.txtId.TabIndex = 116;
             this.txtId.Tag = "ID_VOO,N";
             // 
-            // vAL_PRECOLabel
-            // 
-            vAL_PRECOLabel.Location = new System.Drawing.Point(8, 166);
-            vAL_PRECOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            vAL_PRECOLabel.Name = "vAL_PRECOLabel";
-            vAL_PRECOLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            vAL_PRECOLabel.Size = new System.Drawing.Size(73, 17);
-            vAL_PRECOLabel.TabIndex = 122;
-            vAL_PRECOLabel.Text = "Valor";
-            // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(91, 71);
@@ -186,16 +197,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(79, 22);
             this.txtUsuario.TabIndex = 131;
             this.txtUsuario.Tag = "ID_AVIAO,N";
-            // 
-            // label3
-            // 
-            label3.Location = new System.Drawing.Point(8, 75);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            label3.Size = new System.Drawing.Size(73, 17);
-            label3.TabIndex = 132;
-            label3.Text = "Usuario";
             // 
             // frmReserva
             // 

@@ -32,9 +32,9 @@
             System.Windows.Forms.Label nOM_MODELOLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAviao));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtId = new UCTextBox();
-            this.txtAssento = new UCTextBox();
-            this.txtModelo = new UCTextBox();
+            this.txtId = new ER4Aerea.UCTextBox();
+            this.txtAssento = new ER4Aerea.UCTextBox();
+            this.txtModelo = new ER4Aerea.UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -110,6 +110,7 @@
             this.btnLimpar.TabIndex = 52;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnFechar
             // 
