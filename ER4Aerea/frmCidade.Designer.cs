@@ -32,10 +32,10 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtNome = new UCTextBox();
+            this.txtCep = new UCTextBox();
             this.lblCep = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtId = new UCTextBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -133,8 +133,8 @@
         public System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnLimpar;
-        public System.Windows.Forms.TextBox txtNome;
-        public System.Windows.Forms.TextBox txtCep;
-        public System.Windows.Forms.TextBox txtId;
+        public UCTextBox txtNome;
+        public UCTextBox txtCep;
+        public UCTextBox txtId;
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtNome = new UCTextBox();
+            this.txtSenha = new UCTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -135,8 +135,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtSenha;
+        private UCTextBox txtNome;
+        private UCTextBox txtSenha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

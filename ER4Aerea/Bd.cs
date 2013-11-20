@@ -43,19 +43,6 @@ namespace ER4Aerea
         //PUBLIC
         public void pesquisa(Form tela,TextBox c) {
             
-            string strAux;
-
-            frmPesquisa frm = new frmPesquisa();
-
-            strAux = tela.Tag.ToString();
-            strAux = strAux.Substring(4, strAux.Length - 4);
-            frm.id_retorno = c;// ((TextBox)"ID_" + strAux);// (Control)("ID_" + strAux);
-            //frm.nom_retorno = txtNomCliente;
-            frm.codigo = "ID_"+strAux;
-            frm.descricao = "NOM_"+strAux;
-            frm.tabela = tela.Tag.ToString();
-            frm.tela = tela;
-            frm.ShowDialog();
 
         }
         

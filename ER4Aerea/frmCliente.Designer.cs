@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
-            this.txtCidade2 = new System.Windows.Forms.TextBox();
+            this.txtCidade2 = new UCTextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new UCTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.chkFeminino = new System.Windows.Forms.RadioButton();
             this.chkMasculino = new System.Windows.Forms.RadioButton();
@@ -39,18 +39,18 @@
             this.chkReceb = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtOcup = new System.Windows.Forms.TextBox();
-            this.txtCel = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtOcup = new UCTextBox();
+            this.txtCel = new UCTextBox();
+            this.txtTel = new UCTextBox();
+            this.txtRg = new UCTextBox();
+            this.txtCep = new UCTextBox();
+            this.txtCpf = new UCTextBox();
             this.nome_cli = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtNum = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtBairro = new UCTextBox();
+            this.txtCidade = new UCTextBox();
+            this.txtEndereco = new UCTextBox();
+            this.txtNum = new UCTextBox();
+            this.txtNome = new UCTextBox();
             this.num_end = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,10 +64,10 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRenda = new System.Windows.Forms.TextBox();
+            this.txtRenda = new UCTextBox();
             this.chkEsp = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtID = new UCTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -480,9 +480,9 @@
         public System.Windows.Forms.Button btnLimpar;
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnSalvar;
-        public System.Windows.Forms.TextBox txtCidade2;
+        public UCTextBox txtCidade2;
         public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.TextBox txtEmail;
+        public UCTextBox txtEmail;
         public System.Windows.Forms.Label label13;
         public System.Windows.Forms.RadioButton chkFeminino;
         public System.Windows.Forms.RadioButton chkMasculino;
@@ -490,18 +490,18 @@
         public System.Windows.Forms.CheckBox chkReceb;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txtOcup;
-        public System.Windows.Forms.TextBox txtCel;
-        public System.Windows.Forms.TextBox txtTel;
-        public System.Windows.Forms.TextBox txtRg;
-        public System.Windows.Forms.TextBox txtCep;
-        public System.Windows.Forms.TextBox txtCpf;
+        public UCTextBox txtOcup;
+        public UCTextBox txtCel;
+        public UCTextBox txtTel;
+        public UCTextBox txtRg;
+        public UCTextBox txtCep;
+        public UCTextBox txtCpf;
         public System.Windows.Forms.Label nome_cli;
-        public System.Windows.Forms.TextBox txtBairro;
-        public System.Windows.Forms.TextBox txtCidade;
-        public System.Windows.Forms.TextBox txtEndereco;
-        public System.Windows.Forms.TextBox txtNum;
-        public System.Windows.Forms.TextBox txtNome;
+        public UCTextBox txtBairro;
+        public UCTextBox txtCidade;
+        public UCTextBox txtEndereco;
+        public UCTextBox txtNum;
+        public UCTextBox txtNome;
         public System.Windows.Forms.Label num_end;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label7;
@@ -512,9 +512,9 @@
         public System.Windows.Forms.Label ende_cli;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtRenda;
+        public UCTextBox txtRenda;
         public System.Windows.Forms.CheckBox chkEsp;
         public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox txtID;
+        public UCTextBox txtID;
     }
 }

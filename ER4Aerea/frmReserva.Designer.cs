@@ -34,16 +34,16 @@
             System.Windows.Forms.Label iD_AVIAOLabel;
             System.Windows.Forms.Label vAL_PRECOLabel;
             System.Windows.Forms.Label label3;
-            this.txtVoo = new System.Windows.Forms.TextBox();
-            this.txtAssentos = new System.Windows.Forms.TextBox();
+            this.txtVoo = new UCTextBox();
+            this.txtAssentos = new UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.txtValor = new UCTextBox();
+            this.txtCliente = new UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtId = new UCTextBox();
+            this.txtUsuario = new UCTextBox();
             label2 = new System.Windows.Forms.Label();
             txtAssento = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
@@ -227,15 +227,15 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox txtVoo;
-        public System.Windows.Forms.TextBox txtAssentos;
+        public UCTextBox txtVoo;
+        public UCTextBox txtAssentos;
         public System.Windows.Forms.Button btnLimpar;
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnSalvar;
-        public System.Windows.Forms.TextBox txtValor;
-        public System.Windows.Forms.TextBox txtCliente;
+        public UCTextBox txtValor;
+        public UCTextBox txtCliente;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.TextBox txtUsuario;
+        public UCTextBox txtId;
+        public UCTextBox txtUsuario;
     }
 }

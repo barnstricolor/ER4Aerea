@@ -21,8 +21,8 @@ namespace ER4Aerea
         
         public Form tela { get; set; }
 
-        public System.Windows.Forms.TextBox id_retorno { get; set; }
-        public System.Windows.Forms.TextBox nom_retorno { get; set; }
+        public UCTextBox id_retorno { get; set; }
+        public UCTextBox nom_retorno { get; set; }
         
         public frmPesquisa()
         {

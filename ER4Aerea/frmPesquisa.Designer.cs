@@ -30,7 +30,7 @@
         {
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.txtNomOrigem = new System.Windows.Forms.TextBox();
+            this.txtNomOrigem = new UCTextBox();
             this.grd = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -178,7 +178,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNomOrigem;
+        private UCTextBox txtNomOrigem;
         private System.Windows.Forms.DataGridView grd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

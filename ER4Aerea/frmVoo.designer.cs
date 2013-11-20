@@ -36,15 +36,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoo));
             System.Windows.Forms.Label Chegada;
             this.dtpPartida = new System.Windows.Forms.DateTimePicker();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtId = new UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtAviao = new System.Windows.Forms.TextBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtAviao = new UCTextBox();
+            this.txtPreco = new UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtOrigem = new System.Windows.Forms.TextBox();
-            this.txtDestino = new System.Windows.Forms.TextBox();
+            this.txtOrigem = new UCTextBox();
+            this.txtDestino = new UCTextBox();
             this.dtpChegada = new System.Windows.Forms.DateTimePicker();
             dAT_PARTIDALabel = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
@@ -258,12 +258,12 @@
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.DateTimePicker dtpPartida;
-        public System.Windows.Forms.TextBox txtId;
+        public UCTextBox txtId;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox txtAviao;
-        public System.Windows.Forms.TextBox txtPreco;
-        public System.Windows.Forms.TextBox txtOrigem;
-        public System.Windows.Forms.TextBox txtDestino;
+        public UCTextBox txtAviao;
+        public UCTextBox txtPreco;
+        public UCTextBox txtOrigem;
+        public UCTextBox txtDestino;
         public System.Windows.Forms.DateTimePicker dtpChegada;
 
     }
