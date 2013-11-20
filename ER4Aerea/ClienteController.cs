@@ -73,6 +73,18 @@ namespace ER4Aerea
             criarTela();
             tela().txtID.Text = cliente.id.ToString();
             tela().txtNome.Text = cliente.nome;
+            tela().txtBairro.Text = cliente.bairro;
+            tela().txtCel.Text = cliente.celular;
+            tela().txtCep.Text = cliente.cep;
+            //tela().txtCidade.Text = cliente.cidade;
+            tela().txtCpf.Text = cliente.cpf;
+            tela().txtEmail.Text = cliente.email;
+            tela().txtEndereco.Text = cliente.endereco;
+            tela().txtNum.Text = cliente.numero.ToString();
+            tela().txtOcup.Text = cliente.ocupacao;
+            tela().txtRenda.Text = cliente.renda.ToString();
+            tela().txtRg.Text = cliente.rg;
+            tela().txtTel.Text = cliente.telefone;
             tela().ShowDialog();
         }
         protected override Form criarTela()
