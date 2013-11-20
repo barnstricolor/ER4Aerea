@@ -12,7 +12,7 @@ namespace ER4Aerea
         public  string nome { get; set; }      
         public string email { get; set; }
         public string endereco { get; set; }
-        public int cpf { get; set; }
+        public string cpf { get; set; }
         public Cidade cidade { get; set; }
         public string sexo { get; set; }
         public int numero { get; set; }
@@ -27,6 +27,7 @@ namespace ER4Aerea
         public float renda { get; set; }
         public bool especial { get; set; }
         public bool promocao { get; set; }
+        public string rg { get; set; }
 	
 	    private static float DESCONTO = (float) 0.3;
 
