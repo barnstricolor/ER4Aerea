@@ -19,18 +19,12 @@ namespace ER4Aerea
 
         public void HandleUnhandledException(Exception e)
         {
-            // do what you want here.
-            if (MessageBox.Show("An unexpected error has occurred. Continue?",
-                "My application", MessageBoxButtons.YesNo, MessageBoxIcon.Stop,
+            if (MessageBox.Show("Um erro inesperado ocorreu. Continuar ?",
+                Application.ProductName.ToString(), MessageBoxButtons.YesNo, MessageBoxIcon.Stop,
                 MessageBoxDefaultButton.Button2) == DialogResult.No)
             {
                 Application.Exit();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new ApplicationException("Exception");
         }
     }
 }

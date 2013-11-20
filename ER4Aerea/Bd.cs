@@ -40,12 +40,6 @@ namespace ER4Aerea
                 return instance;
             }
         }
-        //PUBLIC
-        public void pesquisa(Form tela,TextBox c) {
-            
-
-        }
-        
         public OleDbConnection obterConexao()
         {
             return this.conn;
@@ -55,7 +49,7 @@ namespace ER4Aerea
             OleDbCommand cmd = new OleDbCommand(strSelect, this.conn);
 
             OleDbDataReader dr = cmd.ExecuteReader();
-
+            cmd.Dispose();
             return dr;
         }
         public string aspas(string str) {
@@ -83,9 +77,9 @@ namespace ER4Aerea
         public int obterSequencia(string sequence) {
 
             OleDbCommand cmd = new OleDbCommand("Select " + sequence + ".nextval from dual", obterConexao());
-
-            OleDbDataReader dr = cmd.ExecuteReader();
             
+            OleDbDataReader dr = cmd.ExecuteReader();
+            cmd.Dispose();
             dr.Read();
             string valor=dr[0].ToString();
             return Int32.Parse(valor);

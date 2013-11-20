@@ -49,6 +49,7 @@ namespace ER4Aerea
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
+            cmd.Dispose();
 
         }
         public Dominio salvar(Dominio dominio)

@@ -40,7 +40,7 @@ namespace ER4Aerea
 
             ReservaRepositorio reservaRepositorio = new ReservaRepositorio();
             HashSet<Reserva> reservas = reservaRepositorio.obterByVoo(voo.id);
-
+            //BUGSLIFE
             voo.reservas = reservas;
 
             return voo;
