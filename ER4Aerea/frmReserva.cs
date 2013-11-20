@@ -26,5 +26,18 @@ namespace ER4Aerea
         {
 
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        ((TextBox)x).Text = String.Empty;
+                }
+            }
+
+        }
     }
 }

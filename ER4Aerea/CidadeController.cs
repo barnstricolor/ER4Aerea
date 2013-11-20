@@ -15,7 +15,6 @@ namespace ER4Aerea
 
         protected frmCidade tela()
         {
-            
             return frmTela;
         }
         

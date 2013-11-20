@@ -32,10 +32,10 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
-            this.txtNome = new UCTextBox();
-            this.txtCep = new UCTextBox();
+            this.txtNome = new ER4Aerea.UCTextBox();
+            this.txtCep = new ER4Aerea.UCTextBox();
             this.lblCep = new System.Windows.Forms.Label();
-            this.txtId = new UCTextBox();
+            this.txtId = new ER4Aerea.UCTextBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -65,6 +65,7 @@
             this.btnLimpar.TabIndex = 2;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblID
             // 
