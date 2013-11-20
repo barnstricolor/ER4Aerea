@@ -31,11 +31,14 @@ namespace ER4Aerea
             else
                 cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
 
+            CidadeRepositorio cidadeRepositorio= new CidadeRepositorio();
+            Cidade cidade = (Cidade)cidadeRepositorio.obter(int.Parse(tela().txtCidade.Text));
+
             cliente.nome = tela().txtNome.Text;
             cliente.bairro = tela().txtBairro.Text;
             cliente.celular = tela().txtCel.Text;
             cliente.cep = tela().txtCep.Text;
-            cliente.cidade.id = int.Parse(tela().txtCidade.Text);
+            cliente.cidade = cidade;
             cliente.cpf = tela().txtCpf.Text;
             cliente.email = tela().txtEmail.Text;
             cliente.endereco = tela().txtEndereco.Text;
@@ -49,6 +52,11 @@ namespace ER4Aerea
                 cliente.promocao = "S";
             else
                 cliente.promocao = "N";
+            if (tela().chkEsp.Checked)
+                cliente.especial = "S";
+            else
+                cliente.especial = "N";
+
             cliente.numero = int.Parse(tela().txtNum.Text);
             cliente.telefone = tela().txtTel.Text;
             cliente.rg = tela().txtRg.Text;         
