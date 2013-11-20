@@ -36,17 +36,18 @@ namespace ER4Aerea
             cliente.celular = tela().txtCel.Text;
             cliente.cep = tela().txtCep.Text;
             //cliente.cidade = tela().txtCidade.Text;
-            cliente.cpf = int.Parse(tela().txtCpf.Text);
+            cliente.cpf = tela().txtCpf.Text;
             cliente.email = tela().txtEmail.Text;
             cliente.endereco = tela().txtEndereco.Text;
-            cliente.id = int.Parse(tela().txtID.Text);
+            //cliente.id = int.Parse(tela().txtID.Text);
             cliente.ocupacao = tela().txtOcup.Text;
             cliente.renda = int.Parse(tela().txtRenda.Text);
             if (tela().chkMasculino.Checked)
                 cliente.sexo = "M";
             else
                 cliente.sexo = "F";
-            cliente.promocao = bool.Parse(tela().chkReceb.Text);
+            if (tela().chkReceb.Checked)
+            cliente.promocao = tela().chkReceb.Checked;
             cliente.numero = int.Parse(tela().txtNum.Text);
             cliente.telefone = tela().txtTel.Text;
             cliente.rg = tela().txtRg.Text;         
