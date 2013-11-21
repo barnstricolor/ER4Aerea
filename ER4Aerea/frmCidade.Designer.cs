@@ -43,7 +43,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(12, 105);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
@@ -52,7 +52,7 @@
             this.btnFechar.Location = new System.Drawing.Point(374, 105);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 1;
+            this.btnFechar.TabIndex = 4;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -62,7 +62,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(93, 105);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -81,14 +81,15 @@
             this.txtNome.Location = new System.Drawing.Point(15, 24);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(434, 22);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.TabIndex = 0;
             // 
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(15, 69);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(72, 22);
-            this.txtCep.TabIndex = 6;
+            this.txtCep.TabIndex = 1;
+            this.txtCep.Tag = "N";
             // 
             // lblCep
             // 

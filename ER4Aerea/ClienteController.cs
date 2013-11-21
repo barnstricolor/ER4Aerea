@@ -70,7 +70,7 @@ namespace ER4Aerea
             cliente.email = tela().txtEmail.Text;
             cliente.endereco = tela().txtEndereco.Text;
             cliente.ocupacao = tela().txtOcup.Text;
-            cliente.renda = int.Parse(tela().txtRenda.Text);
+            cliente.renda = float.Parse(tela().txtRenda.Text);
             if (tela().chkMasculino.Checked)
                 cliente.sexo = "M";
             else

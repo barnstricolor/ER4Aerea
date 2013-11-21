@@ -33,19 +33,19 @@
             System.Windows.Forms.Label vAL_PRECOLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoo));
             System.Windows.Forms.Label Chegada;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoo));
             this.dtpPartida = new System.Windows.Forms.DateTimePicker();
-            this.txtId = new UCTextBox();
+            this.txtId = new ER4Aerea.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtAviao = new UCTextBox();
-            this.txtPreco = new UCTextBox();
+            this.txtPreco = new ER4Aerea.UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtOrigem = new UCTextBox();
-            this.txtDestino = new UCTextBox();
             this.dtpChegada = new System.Windows.Forms.DateTimePicker();
+            this.dcbOrigem = new System.Windows.Forms.ComboBox();
+            this.dcbDestino = new System.Windows.Forms.ComboBox();
+            this.dcbAviao = new System.Windows.Forms.ComboBox();
             dAT_PARTIDALabel = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
             vAL_PRECOLabel = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             // dAT_PARTIDALabel
             // 
             dAT_PARTIDALabel.AutoSize = true;
-            dAT_PARTIDALabel.Location = new System.Drawing.Point(16, 75);
+            dAT_PARTIDALabel.Location = new System.Drawing.Point(39, 75);
             dAT_PARTIDALabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dAT_PARTIDALabel.Name = "dAT_PARTIDALabel";
             dAT_PARTIDALabel.Size = new System.Drawing.Size(53, 17);
@@ -68,7 +68,7 @@
             // iD_AVIAOLabel
             // 
             iD_AVIAOLabel.AutoSize = true;
-            iD_AVIAOLabel.Location = new System.Drawing.Point(16, 43);
+            iD_AVIAOLabel.Location = new System.Drawing.Point(20, 46);
             iD_AVIAOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iD_AVIAOLabel.Name = "iD_AVIAOLabel";
             iD_AVIAOLabel.Size = new System.Drawing.Size(73, 17);
@@ -78,7 +78,7 @@
             // vAL_PRECOLabel
             // 
             vAL_PRECOLabel.AutoSize = true;
-            vAL_PRECOLabel.Location = new System.Drawing.Point(46, 194);
+            vAL_PRECOLabel.Location = new System.Drawing.Point(47, 197);
             vAL_PRECOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             vAL_PRECOLabel.Name = "vAL_PRECOLabel";
             vAL_PRECOLabel.Size = new System.Drawing.Size(45, 17);
@@ -88,7 +88,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(16, 133);
+            label1.Location = new System.Drawing.Point(38, 133);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(54, 17);
@@ -98,21 +98,31 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(16, 163);
+            label2.Location = new System.Drawing.Point(36, 163);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(56, 17);
             label2.TabIndex = 115;
             label2.Text = "Destino\r\n";
             // 
+            // Chegada
+            // 
+            Chegada.AutoSize = true;
+            Chegada.Location = new System.Drawing.Point(39, 105);
+            Chegada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            Chegada.Name = "Chegada";
+            Chegada.Size = new System.Drawing.Size(53, 17);
+            Chegada.TabIndex = 116;
+            Chegada.Text = "Partida";
+            // 
             // dtpPartida
             // 
-            this.dtpPartida.Location = new System.Drawing.Point(99, 69);
+            this.dtpPartida.Location = new System.Drawing.Point(99, 74);
             this.dtpPartida.Margin = new System.Windows.Forms.Padding(4);
             this.dtpPartida.Name = "dtpPartida";
             this.dtpPartida.Size = new System.Drawing.Size(291, 22);
-            this.dtpPartida.TabIndex = 5;
-            this.dtpPartida.Tag = "DAT_PARTIDA,D";
+            this.dtpPartida.TabIndex = 1;
+            this.dtpPartida.Tag = "1";
             // 
             // txtId
             // 
@@ -135,30 +145,21 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // txtAviao
-            // 
-            this.txtAviao.Location = new System.Drawing.Point(99, 39);
-            this.txtAviao.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAviao.Name = "txtAviao";
-            this.txtAviao.Size = new System.Drawing.Size(79, 22);
-            this.txtAviao.TabIndex = 3;
-            this.txtAviao.Tag = "ID_AVIAO,N";
-            // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(99, 189);
+            this.txtPreco.Location = new System.Drawing.Point(99, 194);
             this.txtPreco.Margin = new System.Windows.Forms.Padding(4);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(79, 22);
-            this.txtPreco.TabIndex = 4;
-            this.txtPreco.Tag = "VAL_PRECO,N";
+            this.txtPreco.TabIndex = 5;
+            this.txtPreco.Tag = "N";
             // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(99, 230);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 111;
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -168,7 +169,7 @@
             this.btnFechar.Location = new System.Drawing.Point(614, 230);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 110;
+            this.btnFechar.TabIndex = 8;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -178,64 +179,64 @@
             this.btnSalvar.Location = new System.Drawing.Point(18, 230);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 109;
+            this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtOrigem
-            // 
-            this.txtOrigem.Location = new System.Drawing.Point(99, 129);
-            this.txtOrigem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOrigem.Name = "txtOrigem";
-            this.txtOrigem.Size = new System.Drawing.Size(79, 22);
-            this.txtOrigem.TabIndex = 112;
-            this.txtOrigem.Tag = "ID_AVIAO,N";
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(99, 159);
-            this.txtDestino.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(79, 22);
-            this.txtDestino.TabIndex = 114;
-            this.txtDestino.Tag = "ID_AVIAO,N";
-            // 
-            // Chegada
-            // 
-            Chegada.AutoSize = true;
-            Chegada.Location = new System.Drawing.Point(16, 105);
-            Chegada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            Chegada.Name = "Chegada";
-            Chegada.Size = new System.Drawing.Size(53, 17);
-            Chegada.TabIndex = 116;
-            Chegada.Text = "Partida";
-            // 
             // dtpChegada
             // 
-            this.dtpChegada.Location = new System.Drawing.Point(99, 99);
+            this.dtpChegada.Location = new System.Drawing.Point(99, 104);
             this.dtpChegada.Margin = new System.Windows.Forms.Padding(4);
             this.dtpChegada.Name = "dtpChegada";
             this.dtpChegada.Size = new System.Drawing.Size(291, 22);
-            this.dtpChegada.TabIndex = 117;
-            this.dtpChegada.Tag = "DAT_PARTIDA,D";
+            this.dtpChegada.TabIndex = 2;
+            this.dtpChegada.Tag = "2";
+            // 
+            // dcbOrigem
+            // 
+            this.dcbOrigem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbOrigem.FormattingEnabled = true;
+            this.dcbOrigem.Location = new System.Drawing.Point(99, 133);
+            this.dcbOrigem.Name = "dcbOrigem";
+            this.dcbOrigem.Size = new System.Drawing.Size(291, 24);
+            this.dcbOrigem.TabIndex = 3;
+            // 
+            // dcbDestino
+            // 
+            this.dcbDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbDestino.FormattingEnabled = true;
+            this.dcbDestino.Location = new System.Drawing.Point(99, 163);
+            this.dcbDestino.Name = "dcbDestino";
+            this.dcbDestino.Size = new System.Drawing.Size(291, 24);
+            this.dcbDestino.TabIndex = 4;
+            // 
+            // dcbAviao
+            // 
+            this.dcbAviao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbAviao.FormattingEnabled = true;
+            this.dcbAviao.Location = new System.Drawing.Point(99, 43);
+            this.dcbAviao.Name = "dcbAviao";
+            this.dcbAviao.Size = new System.Drawing.Size(291, 24);
+            this.dcbAviao.TabIndex = 0;
+            this.dcbAviao.Tag = "";
             // 
             // frmVoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 269);
+            this.Controls.Add(this.dcbAviao);
+            this.Controls.Add(this.dcbDestino);
+            this.Controls.Add(this.dcbOrigem);
             this.Controls.Add(Chegada);
             this.Controls.Add(this.dtpChegada);
-            this.Controls.Add(this.txtDestino);
             this.Controls.Add(label2);
-            this.Controls.Add(this.txtOrigem);
             this.Controls.Add(label1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.txtAviao);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(dAT_PARTIDALabel);
             this.Controls.Add(this.dtpPartida);
@@ -260,11 +261,11 @@
         public System.Windows.Forms.DateTimePicker dtpPartida;
         public UCTextBox txtId;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public UCTextBox txtAviao;
         public UCTextBox txtPreco;
-        public UCTextBox txtOrigem;
-        public UCTextBox txtDestino;
         public System.Windows.Forms.DateTimePicker dtpChegada;
+        public System.Windows.Forms.ComboBox dcbOrigem;
+        public System.Windows.Forms.ComboBox dcbDestino;
+        public System.Windows.Forms.ComboBox dcbAviao;
 
     }
 }

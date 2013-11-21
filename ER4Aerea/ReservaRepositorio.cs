@@ -25,8 +25,8 @@ namespace ER4Aerea
         }
         protected override Dominio mapRow(OleDbDataReader dr)
         {
-            //ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-            //Cliente cliente = (Cliente)clienteRepositorio.obter(int.Parse(dr["ID_CLIENTE"].ToString()));
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            Cliente cliente = (Cliente)clienteRepositorio.obter(int.Parse(dr["ID_CLIENTE"].ToString()));
             //Cliente cliente = new Cliente("");
             //cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
 //            VooRepositorio vooRepositorio = new VooRepositorio();
