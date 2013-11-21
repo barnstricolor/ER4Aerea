@@ -102,7 +102,8 @@ create table VOO
   id_voo      NUMBER not null,
   val_preco   NUMBER,
   id_origem   NUMBER,
-  id_destino  NUMBER
+  id_destino  NUMBER,
+  FLG_PROMOCAO VARCHAR2(100)
 )
 ;
 alter table VOO
