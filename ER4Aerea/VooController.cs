@@ -26,10 +26,10 @@ namespace ER4Aerea
         protected override void salvar_Click(object sender, EventArgs e)
         {
             CidadeRepositorio cidadeRepositorio=new CidadeRepositorio();
-            Cidade origem=(Cidade)cidadeRepositorio.obter(int.Parse(tela().txtOrigem.Text));
-            Cidade destino=(Cidade)cidadeRepositorio.obter(int.Parse(tela().txtDestino.Text));
+            Cidade origem=(Cidade)cidadeRepositorio.obter((int)tela().dcbOrigem.SelectedValue);
+            Cidade destino=(Cidade)cidadeRepositorio.obter((int)(tela().dcbDestino.SelectedValue));
             AviaoRepositorio aviaoRepositorio=new AviaoRepositorio();
-            Aviao aviao = (Aviao)aviaoRepositorio.obter(int.Parse(tela().txtAviao.Text));
+            Aviao aviao = (Aviao)aviaoRepositorio.obter((int)tela().dcbAviao.SelectedValue);
             
             Voo voo = null;
             if (string.IsNullOrEmpty(tela().txtId.Text))
@@ -49,9 +49,9 @@ namespace ER4Aerea
 
             criarTela();
             tela().txtId.Text = voo.id.ToString();
-            tela().txtAviao.Text = voo.aviao.id.ToString();
-            tela().txtOrigem.Text = voo.origem.id.ToString();
-            tela().txtDestino.Text = voo.destino.id.ToString();
+            tela().dcbAviao.SelectedValue = voo.aviao.id.ToString();
+            tela().dcbOrigem.SelectedValue = voo.origem.id.ToString();
+            tela().dcbDestino.SelectedValue = voo.destino.id.ToString();
             tela().txtPreco.Text = voo.preco.ToString();
             tela().dtpPartida.Value = voo.partida;
             tela().dtpChegada.Value = voo.chegada;

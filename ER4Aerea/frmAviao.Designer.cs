@@ -56,7 +56,7 @@
             // nOM_MODELOLabel
             // 
             nOM_MODELOLabel.AutoSize = true;
-            nOM_MODELOLabel.Location = new System.Drawing.Point(209, 38);
+            nOM_MODELOLabel.Location = new System.Drawing.Point(143, 37);
             nOM_MODELOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nOM_MODELOLabel.Name = "nOM_MODELOLabel";
             nOM_MODELOLabel.Size = new System.Drawing.Size(58, 17);
@@ -77,7 +77,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(98, 33);
+            this.txtId.Location = new System.Drawing.Point(596, 186);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 22);
@@ -89,25 +89,25 @@
             this.txtAssento.Location = new System.Drawing.Point(209, 66);
             this.txtAssento.Margin = new System.Windows.Forms.Padding(4);
             this.txtAssento.Name = "txtAssento";
-            this.txtAssento.Size = new System.Drawing.Size(85, 22);
-            this.txtAssento.TabIndex = 47;
+            this.txtAssento.Size = new System.Drawing.Size(157, 22);
+            this.txtAssento.TabIndex = 1;
             this.txtAssento.Tag = "N";
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(277, 34);
+            this.txtModelo.Location = new System.Drawing.Point(209, 34);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(157, 22);
-            this.txtModelo.TabIndex = 45;
-            this.txtModelo.Tag = "NOM_MODELO,C";
+            this.txtModelo.TabIndex = 0;
+            this.txtModelo.Tag = "";
             // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(99, 215);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 52;
+            this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -117,7 +117,7 @@
             this.btnFechar.Location = new System.Drawing.Point(621, 215);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 51;
+            this.btnFechar.TabIndex = 4;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -127,7 +127,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(18, 215);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 50;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);

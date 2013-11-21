@@ -53,7 +53,7 @@ namespace ER4Aerea
             cliente.endereco = dr["NOM_ENDERECO"].ToString();
             cliente.cpf = dr["NUM_CPF"].ToString();
             cliente.celular = dr["NUM_CELULAR"].ToString();
-            cliente.renda = int.Parse(dr["VAL_RENDA"].ToString());
+            cliente.renda = float.Parse(dr["VAL_RENDA"].ToString());
             cliente.ocupacao = dr["NOM_OCUPACAO"].ToString();
             cliente.promocao = dr["FLG_ESPECIAL"].ToString();
             cliente.rg = dr["NUM_RG"].ToString();

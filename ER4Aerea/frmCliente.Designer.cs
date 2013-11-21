@@ -86,7 +86,7 @@ namespace ER4Aerea
             this.chkFeminino.Margin = new System.Windows.Forms.Padding(4);
             this.chkFeminino.Name = "chkFeminino";
             this.chkFeminino.Size = new System.Drawing.Size(86, 21);
-            this.chkFeminino.TabIndex = 3;
+            this.chkFeminino.TabIndex = 2;
             this.chkFeminino.TabStop = true;
             this.chkFeminino.Tag = "SEXO";
             this.chkFeminino.Text = "Feminino";
@@ -99,7 +99,7 @@ namespace ER4Aerea
             this.chkMasculino.Margin = new System.Windows.Forms.Padding(4);
             this.chkMasculino.Name = "chkMasculino";
             this.chkMasculino.Size = new System.Drawing.Size(92, 21);
-            this.chkMasculino.TabIndex = 2;
+            this.chkMasculino.TabIndex = 1;
             this.chkMasculino.TabStop = true;
             this.chkMasculino.Tag = "SEXO";
             this.chkMasculino.Text = "Masculino";
@@ -122,8 +122,8 @@ namespace ER4Aerea
             this.chkReceb.Margin = new System.Windows.Forms.Padding(4);
             this.chkReceb.Name = "chkReceb";
             this.chkReceb.Size = new System.Drawing.Size(296, 21);
-            this.chkReceb.TabIndex = 18;
-            this.chkReceb.Tag = "DESJ_NOV";
+            this.chkReceb.TabIndex = 16;
+            this.chkReceb.Tag = "";
             this.chkReceb.Text = "Desejo receber novidades em meu e-mail.";
             this.chkReceb.UseVisualStyleBackColor = true;
             // 
@@ -200,7 +200,7 @@ namespace ER4Aerea
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 43);
+            this.label5.Location = new System.Drawing.Point(231, 43);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 17);
@@ -254,7 +254,7 @@ namespace ER4Aerea
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.TabIndex = 18;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             // 
@@ -264,7 +264,7 @@ namespace ER4Aerea
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 21;
+            this.btnFechar.TabIndex = 19;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -275,7 +275,7 @@ namespace ER4Aerea
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 19;
+            this.btnSalvar.TabIndex = 17;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
@@ -296,7 +296,8 @@ namespace ER4Aerea
             this.chkEsp.Margin = new System.Windows.Forms.Padding(4);
             this.chkEsp.Name = "chkEsp";
             this.chkEsp.Size = new System.Drawing.Size(142, 21);
-            this.chkEsp.TabIndex = 17;
+            this.chkEsp.TabIndex = 15;
+            this.chkEsp.Tag = "";
             this.chkEsp.Text = "Cliente ESPECIAL";
             this.chkEsp.UseVisualStyleBackColor = true;
             // 
@@ -307,7 +308,7 @@ namespace ER4Aerea
             this.dcbCliente.Location = new System.Drawing.Point(64, 103);
             this.dcbCliente.Name = "dcbCliente";
             this.dcbCliente.Size = new System.Drawing.Size(249, 24);
-            this.dcbCliente.TabIndex = 9;
+            this.dcbCliente.TabIndex = 8;
             // 
             // txtID
             // 
@@ -324,7 +325,8 @@ namespace ER4Aerea
             this.txtRenda.Margin = new System.Windows.Forms.Padding(4);
             this.txtRenda.Name = "txtRenda";
             this.txtRenda.Size = new System.Drawing.Size(143, 22);
-            this.txtRenda.TabIndex = 6;
+            this.txtRenda.TabIndex = 5;
+            this.txtRenda.Tag = "D";
             // 
             // txtEmail
             // 
@@ -332,8 +334,8 @@ namespace ER4Aerea
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(271, 22);
-            this.txtEmail.TabIndex = 16;
-            this.txtEmail.Tag = "NOM_EMAIL";
+            this.txtEmail.TabIndex = 14;
+            this.txtEmail.Tag = "";
             // 
             // txtOcup
             // 
@@ -341,8 +343,8 @@ namespace ER4Aerea
             this.txtOcup.Margin = new System.Windows.Forms.Padding(4);
             this.txtOcup.Name = "txtOcup";
             this.txtOcup.Size = new System.Drawing.Size(236, 22);
-            this.txtOcup.TabIndex = 15;
-            this.txtOcup.Tag = "NOM_CONTTO";
+            this.txtOcup.TabIndex = 13;
+            this.txtOcup.Tag = "";
             // 
             // txtCel
             // 
@@ -350,8 +352,8 @@ namespace ER4Aerea
             this.txtCel.Margin = new System.Windows.Forms.Padding(4);
             this.txtCel.Name = "txtCel";
             this.txtCel.Size = new System.Drawing.Size(132, 22);
-            this.txtCel.TabIndex = 14;
-            this.txtCel.Tag = "NUM_CELULAR";
+            this.txtCel.TabIndex = 12;
+            this.txtCel.Tag = "N";
             // 
             // txtTel
             // 
@@ -359,17 +361,17 @@ namespace ER4Aerea
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(132, 22);
-            this.txtTel.TabIndex = 13;
-            this.txtTel.Tag = "NUM_TELEFONE";
+            this.txtTel.TabIndex = 11;
+            this.txtTel.Tag = "N";
             // 
             // txtRg
             // 
-            this.txtRg.Location = new System.Drawing.Point(265, 39);
+            this.txtRg.Location = new System.Drawing.Point(272, 39);
             this.txtRg.Margin = new System.Windows.Forms.Padding(4);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(169, 22);
-            this.txtRg.TabIndex = 5;
-            this.txtRg.Tag = "NUM_RG";
+            this.txtRg.TabIndex = 4;
+            this.txtRg.Tag = "";
             // 
             // txtCep
             // 
@@ -377,8 +379,8 @@ namespace ER4Aerea
             this.txtCep.Margin = new System.Windows.Forms.Padding(4);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(116, 22);
-            this.txtCep.TabIndex = 12;
-            this.txtCep.Tag = "CAD_CEP";
+            this.txtCep.TabIndex = 10;
+            this.txtCep.Tag = "N";
             // 
             // txtCpf
             // 
@@ -387,8 +389,8 @@ namespace ER4Aerea
             this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(149, 22);
-            this.txtCpf.TabIndex = 4;
-            this.txtCpf.Tag = "NUM_CPF";
+            this.txtCpf.TabIndex = 3;
+            this.txtCpf.Tag = "N";
             // 
             // txtBairro
             // 
@@ -396,8 +398,8 @@ namespace ER4Aerea
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(127, 22);
-            this.txtBairro.TabIndex = 11;
-            this.txtBairro.Tag = "NOM_BAIRRO";
+            this.txtBairro.TabIndex = 9;
+            this.txtBairro.Tag = "";
             // 
             // txtEndereco
             // 
@@ -405,8 +407,8 @@ namespace ER4Aerea
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(424, 22);
-            this.txtEndereco.TabIndex = 7;
-            this.txtEndereco.Tag = "NOM_ENDERECO";
+            this.txtEndereco.TabIndex = 6;
+            this.txtEndereco.Tag = "";
             // 
             // txtNum
             // 
@@ -415,8 +417,8 @@ namespace ER4Aerea
             this.txtNum.MaxLength = 5;
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(116, 22);
-            this.txtNum.TabIndex = 8;
-            this.txtNum.Tag = "NUM_END";
+            this.txtNum.TabIndex = 7;
+            this.txtNum.Tag = "N";
             // 
             // txtNome
             // 
@@ -424,8 +426,8 @@ namespace ER4Aerea
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(375, 22);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.Tag = "NOM_CLIENTE";
+            this.txtNome.TabIndex = 0;
+            this.txtNome.Tag = "";
             // 
             // frmCliente
             // 
