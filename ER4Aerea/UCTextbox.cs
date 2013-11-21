@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 namespace ER4Aerea
 {
-    public class UCTextBox : TextBox
+    public class UCTextBox : System.Windows.Forms.TextBox
     {
 
         public UCTextBox()
@@ -15,39 +16,31 @@ namespace ER4Aerea
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
-
-            if (Char.IsLetter(e.KeyChar))
+            /*if (this.Tag.ToString() == "N")
             {
-
-                // save the current caret position
-
-                int pos = this.SelectionStart;
-
-                // insert the upper case character
-
-
-
-                this.Text = this.Text.Insert(this.SelectionStart,
-
-                Char.ToUpper(e.KeyChar).ToString());
-
-
-
-                // and update the current caret position
-
-                this.SelectionStart = pos + 1;
-
-                e.Handled = true;
-
+                if (!Char.IsDigit(e.KeyChar))//&& !Char.IsControl(e.KeyChar)) 
+                    e.Handled = true;
             }
+            else
+            {
+            */
+                if (Char.IsLetter(e.KeyChar))
+                {
 
+                    int pos = this.SelectionStart;
 
+                    this.Text = this.Text.Insert(this.SelectionStart,
 
-            base.OnKeyPress(e);
+                    Char.ToUpper(e.KeyChar).ToString());
 
+                    this.SelectionStart = pos + 1;
+
+                    e.Handled = true;
+                }
+
+                base.OnKeyPress(e);
+            //}
         }
-
-
 
     }
 }

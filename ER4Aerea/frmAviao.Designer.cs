@@ -91,7 +91,7 @@
             this.txtAssento.Name = "txtAssento";
             this.txtAssento.Size = new System.Drawing.Size(85, 22);
             this.txtAssento.TabIndex = 47;
-            this.txtAssento.Tag = "QTD_ASSENTO,N";
+            this.txtAssento.Tag = "N";
             // 
             // txtModelo
             // 

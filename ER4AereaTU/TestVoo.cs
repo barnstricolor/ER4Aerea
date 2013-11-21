@@ -12,10 +12,10 @@ namespace ER4AereaTU
     public class TestVoo
     {
         private Cliente cliente;
-        private Cliente clienteEspecial;
-        private Cidade rao;
-        private Cidade sao;
-        private Aviao boeing777;
+        //private Cliente clienteEspecial;
+        //private Cidade rao;
+        //private Cidade sao;
+        //private Aviao boeing777;
         private Usuario usuario;
         private Voo raoSao;
         private Voo saoRao777;
@@ -24,7 +24,7 @@ namespace ER4AereaTU
         [TestInitialize]
         public void setUpTest()
         {
-            cliente = new Cliente("Cliente", false);
+            cliente = new Cliente("Cliente");
             new ClienteRepositorio().salvar(cliente);
 
             vooRepositorio = new VooRepositorio();

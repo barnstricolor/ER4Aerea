@@ -1,4 +1,6 @@
-﻿namespace ER4Aerea
+﻿using System.Windows.Forms;
+
+namespace ER4Aerea
 {
     partial class frmLogin
     {

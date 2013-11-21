@@ -38,9 +38,12 @@ namespace ER4Aerea
         {
 
             Cliente cliente = new Cliente(dr["NOM_CLIENTE"].ToString());
-
-            CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-            Cidade cidade = (Cidade)cidadeRepositorio.obter(int.Parse(dr["ID_CIDADE"].ToString()));
+            if (dr["ID_CIDADE"].ToString() != "")
+            {
+                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                Cidade cidade = (Cidade)cidadeRepositorio.obter(int.Parse(dr["ID_CIDADE"].ToString()));
+                cliente.cidade = cidade;
+            }
 
 
             cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
@@ -59,8 +62,7 @@ namespace ER4Aerea
             cliente.bairro = dr["NOM_BAIRRO"].ToString();
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
-            cliente.especial = dr["FLG_ESPECIAL"].ToString();
-            cliente.cidade = cidade;
+            cliente.especial = dr["FLG_ESPECIAL"].ToString();           
 
             return cliente;
         }
