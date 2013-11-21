@@ -62,6 +62,7 @@ alter table USUARIO
 create table VOO
 (
   dat_partida DATE,
+  dat_chegada date,
   id_aviao    NUMBER,
   id_voo      NUMBER not null,
   val_preco   NUMBER,
