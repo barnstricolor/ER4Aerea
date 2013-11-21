@@ -19,10 +19,10 @@ namespace ER4Aerea
             {
                 Credentials = new SingleUserInMemoryCredentials
                 {
-                    ConsumerKey = "QmSPVLJdEPZ6CyIqOXlh1A",
-                    ConsumerSecret = "CItZWCg5gHTclJ6P6YbsVOi0dX8WrUREn0daoOLI",
-                    TwitterAccessToken = "83849807-0OFC4nl1dC2ZMRnhljmU7pdIIrxZuJFIqXNEcU3tK",
-                    TwitterAccessTokenSecret = "edbQkFvSqroxybqee5ISKWWiNq2LxHEa9fh8gzCMDQjwQ"
+                    ConsumerKey = "NIa7b3cyQa4rZ4hqlC4oAQ",
+                    ConsumerSecret = "1cOTHymyK2itKzvNJbSHqVU0BcgDGhXgGiZ5iKxQE",
+                    TwitterAccessToken = "2164976383-XQwGVDO7TO3a8gqxuWcMrTaDo3ST44zj84ewlnt",
+                    TwitterAccessTokenSecret = "HG15JneGyvH6jIW9UdsytxtfvwttpjSwUewWJg4RLpiCc"
                 }
             };
 
@@ -34,7 +34,7 @@ namespace ER4Aerea
         public void postar(string msg)
         {
             autorizar();
-            twitterCtx.UpdateStatus(msg + new DateTime().ToString());
+            twitterCtx.UpdateStatus(msg);
         }
 
     }

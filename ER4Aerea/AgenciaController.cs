@@ -37,20 +37,28 @@ namespace ER4Aerea
 
         protected void mostrarTelaVenda(object sender, EventArgs e)
         {
-            VendaController ctl = new VendaController();
-            VooRepositorio vooRepositorio = new VooRepositorio();
-            Voo partida = null;
-            Voo volta = null;
-            if (tela.grdIda.SelectedRows.Count > 0)
-                partida=(Voo)vooRepositorio.obter((int)tela.grdIda.SelectedRows[0].Cells[0].Value);
+            if ((tela.optIdaVolta.Checked && tela.grdVolta.SelectedRows.Count > 0) || (tela.optIda.Checked && tela.grdIda.SelectedRows.Count > 0))
+            {
+                VendaController ctl = new VendaController();
+                VooRepositorio vooRepositorio = new VooRepositorio();
+                Voo partida = null;
+                Voo volta = null;
+                if (tela.grdIda.SelectedRows.Count > 0)
+                    partida = (Voo)vooRepositorio.obter((int)tela.grdIda.SelectedRows[0].Cells[0].Value);
 
-            if (tela.grdVolta.SelectedRows.Count > 0)
-                volta =(Voo)vooRepositorio.obter((int)tela.grdVolta.SelectedRows[0].Cells[0].Value);
-            ctl.origem=partida;
-            ctl.destino=volta;
-            ctl.assentos = (int)tela.txtAssentos.Value;
-            ctl.mostrarTela(tela.MdiParent);
-            tela.btnPesquisar.PerformClick();
+                if (tela.grdVolta.SelectedRows.Count > 0)
+                    volta = (Voo)vooRepositorio.obter((int)tela.grdVolta.SelectedRows[0].Cells[0].Value);
+                ctl.origem = partida;
+                ctl.destino = volta;
+                ctl.assentos = (int)tela.txtAssentos.Value;
+                ctl.mostrarTela(tela.MdiParent);
+                tela.btnPesquisar.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("Selecione os Voos");
+            }
+            
         }
         protected void carregarCidade(object sender, EventArgs e){
 
@@ -69,23 +77,35 @@ namespace ER4Aerea
             dcb.ValueMember = "Key";            
         }
         protected void pesquisarVoos(object sender, EventArgs e)
-        {   
-            int assentos=(int)tela.txtAssentos.Value;
-
-            tela.grdIda.Rows.Clear();
-            tela.grdVolta.Rows.Clear();
-
-            CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-            Cidade origem=(Cidade)cidadeRepositorio.obter(int.Parse(tela.dcbOrigem.SelectedValue.ToString()));
-            Cidade destino = (Cidade)cidadeRepositorio.obter(int.Parse(tela.dcbDestino.SelectedValue.ToString()));
-            Agencia agencia = new Agencia();
-
-            HashSet<Voo> voosIda = agencia.obterVoos(tela.dtpPartida.Value, origem, destino, assentos);
-            carregarGrid(voosIda, tela.grdIda);
-            if (tela.optIdaVolta.Checked)
+        {
+            if (tela.dcbOrigem.SelectedValue == null) {
+                MessageBox.Show("Selecione o Voo de Ida.");
+                tela.dcbOrigem.Focus();
+            }
+            else if (tela.optIdaVolta.Checked && tela.dcbDestino.SelectedValue == null)
             {
-                HashSet<Voo> voosVolta = agencia.obterVoos(tela.dtpChegada.Value, destino, origem, assentos);
-                carregarGrid(voosVolta, tela.grdVolta);
+                MessageBox.Show("Selecione o Voo de Volta.");
+                tela.dcbDestino.Focus();
+            }
+            else
+            {
+                int assentos = (int)tela.txtAssentos.Value;
+
+                tela.grdIda.Rows.Clear();
+                tela.grdVolta.Rows.Clear();
+
+                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                Cidade origem = (Cidade)cidadeRepositorio.obter(int.Parse(tela.dcbOrigem.SelectedValue.ToString()));
+                Cidade destino = (Cidade)cidadeRepositorio.obter(int.Parse(tela.dcbDestino.SelectedValue.ToString()));
+                Agencia agencia = new Agencia();
+
+                HashSet<Voo> voosIda = agencia.obterVoos(tela.dtpPartida.Value, origem, destino, assentos);
+                carregarGrid(voosIda, tela.grdIda);
+                if (tela.optIdaVolta.Checked)
+                {
+                    HashSet<Voo> voosVolta = agencia.obterVoos(tela.dtpChegada.Value, destino, origem, assentos);
+                    carregarGrid(voosVolta, tela.grdVolta);
+                }
             }
         }
         protected void carregarGrid(HashSet<Voo> lista, DataGridView grid)

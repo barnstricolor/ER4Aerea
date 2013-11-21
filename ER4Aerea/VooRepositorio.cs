@@ -10,7 +10,7 @@ namespace ER4Aerea
         protected override string colunaId() { return "ID_VOO"; }
         protected override string[] colunas()
         {             
-            return new string[] {colunaId(),"VAL_PRECO","ID_ORIGEM","ID_DESTINO","ID_AVIAO","DAT_PARTIDA"}; 
+            return new string[] {colunaId(),"VAL_PRECO","ID_ORIGEM","ID_DESTINO","ID_AVIAO","DAT_PARTIDA","DAT_CHEGADA","FLG_PROMOCAO"}; 
         }
         
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
@@ -22,6 +22,8 @@ namespace ER4Aerea
             d.Add("ID_DESTINO", voo.destino.id);
             d.Add("ID_AVIAO", voo.aviao.id);
             d.Add("DAT_PARTIDA", voo.partida);
+            d.Add("DAT_CHEGADA", voo.chegada);
+            d.Add("FLG_PROMOCAO", voo.promocao);
 
         }
         protected override Dominio mapRow(OleDbDataReader dr)
@@ -37,6 +39,8 @@ namespace ER4Aerea
 
             Voo voo = new Voo(aviao,origem,destino,partida,preco);
             voo.id = int.Parse(dr["ID_VOO"].ToString());
+            voo.chegada = DateTime.Parse(dr["DAT_CHEGADA"].ToString());
+            voo.promocao = dr["FLG_PROMOCAO"].ToString();
 
             ReservaRepositorio reservaRepositorio = new ReservaRepositorio();
             HashSet<Reserva> reservas = reservaRepositorio.obterByVoo(voo.id);

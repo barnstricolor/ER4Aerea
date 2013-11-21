@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Authentication;
+using System.Windows.Forms;
 
 namespace ER4Aerea
 {
@@ -17,8 +18,12 @@ namespace ER4Aerea
             MailMessage mensagem = new MailMessage(
                 "er4aerea@gmail.com",
                 email,
-                "Promoção",
-                "vou levar... te levar daquiiiiiii");
+                "Saldão ER4Aérea - Passagens Nacionais com até 60% de desconto‏",
+                "Aproveite...");
+            
+            //Attachment anexo = new Attachment(((ListBoxItem)item).Content.ToString());
+            //mail.Attachments.Add(anexo);
+            
             SmtpClient envio = new SmtpClient("smtp.gmail.com");
             envio.Port = 25;
             envio.Timeout = 10;
@@ -28,5 +33,6 @@ namespace ER4Aerea
             envio.EnableSsl = true;
             envio.Send(mensagem);
         }
+
     }
 }

@@ -37,6 +37,16 @@ namespace ER4Aerea
 
         }
 
+        private void optIdaVolta_CheckedChanged(object sender, EventArgs e)
+        {
+            btnPesquisar.PerformClick();
+        }
+
+        private void optIda_CheckedChanged(object sender, EventArgs e)
+        {
+            btnPesquisar.PerformClick();
+        }
+
 
     }
 }

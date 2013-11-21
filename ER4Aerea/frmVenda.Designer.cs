@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblAssentos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlVolta = new System.Windows.Forms.Panel();
             this.lblPrecoVolta = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPartidaVolta = new System.Windows.Forms.Label();
@@ -58,12 +58,13 @@
             this.lblEspecial = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlVolta.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.lblPrecoIda);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.lblPartidaIda);
@@ -151,19 +152,20 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Assentos:";
             // 
-            // panel2
+            // pnlVolta
             // 
-            this.panel2.Controls.Add(this.lblPrecoVolta);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.lblPartidaVolta);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblAviaoVolta);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Location = new System.Drawing.Point(12, 147);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1060, 70);
-            this.panel2.TabIndex = 7;
+            this.pnlVolta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnlVolta.Controls.Add(this.lblPrecoVolta);
+            this.pnlVolta.Controls.Add(this.label7);
+            this.pnlVolta.Controls.Add(this.lblPartidaVolta);
+            this.pnlVolta.Controls.Add(this.label9);
+            this.pnlVolta.Controls.Add(this.lblAviaoVolta);
+            this.pnlVolta.Controls.Add(this.label11);
+            this.pnlVolta.Controls.Add(this.label12);
+            this.pnlVolta.Location = new System.Drawing.Point(12, 147);
+            this.pnlVolta.Name = "pnlVolta";
+            this.pnlVolta.Size = new System.Drawing.Size(1060, 70);
+            this.pnlVolta.TabIndex = 7;
             // 
             // lblPrecoVolta
             // 
@@ -171,7 +173,7 @@
             this.lblPrecoVolta.Name = "lblPrecoVolta";
             this.lblPrecoVolta.Size = new System.Drawing.Size(250, 23);
             this.lblPrecoVolta.TabIndex = 12;
-            this.lblPrecoVolta.Text = "1";
+            this.lblPrecoVolta.Text = "0\r\n";
             // 
             // label7
             // 
@@ -188,7 +190,7 @@
             this.lblPartidaVolta.Name = "lblPartidaVolta";
             this.lblPartidaVolta.Size = new System.Drawing.Size(250, 23);
             this.lblPartidaVolta.TabIndex = 10;
-            this.lblPartidaVolta.Text = "1";
+            this.lblPartidaVolta.Text = "0\r\n";
             // 
             // label9
             // 
@@ -205,7 +207,7 @@
             this.lblAviaoVolta.Name = "lblAviaoVolta";
             this.lblAviaoVolta.Size = new System.Drawing.Size(250, 23);
             this.lblAviaoVolta.TabIndex = 8;
-            this.lblAviaoVolta.Text = "1";
+            this.lblAviaoVolta.Text = "0\r\n";
             // 
             // label11
             // 
@@ -226,6 +228,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
             this.panel3.Controls.Add(this.btnReservar);
             this.panel3.Controls.Add(this.lblPrecoFinal);
             this.panel3.Controls.Add(this.lblDesconto);
@@ -264,7 +267,7 @@
             this.lblDesconto.Name = "lblDesconto";
             this.lblDesconto.Size = new System.Drawing.Size(250, 23);
             this.lblDesconto.TabIndex = 19;
-            this.lblDesconto.Text = "R$ 0,00";
+            this.lblDesconto.Text = "0";
             // 
             // lblTotal
             // 
@@ -289,7 +292,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 23);
             this.label10.TabIndex = 16;
-            this.label10.Text = "Desconto:";
+            this.label10.Text = "Desconto\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
@@ -298,7 +301,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 23);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Total:";
+            this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // dcbCliente
@@ -312,6 +315,7 @@
             // 
             // lblEspecial
             // 
+            this.lblEspecial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecial.ForeColor = System.Drawing.Color.Red;
             this.lblEspecial.Location = new System.Drawing.Point(481, 26);
             this.lblEspecial.Name = "lblEspecial";
@@ -333,10 +337,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1079, 413);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlVolta);
             this.Controls.Add(this.lblAssentos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -344,7 +348,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVenda";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlVolta.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -362,7 +366,7 @@
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label lblPartidaIda;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel pnlVolta;
         public System.Windows.Forms.Label lblPrecoVolta;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label lblPartidaVolta;

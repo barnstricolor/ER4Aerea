@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.grdVolta = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,9 +121,9 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -142,9 +142,9 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle2.Format = "t";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "t";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn5.HeaderText = "Partida";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -189,7 +189,9 @@
             // 
             // txtAssentos
             // 
-            this.txtAssentos.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtAssentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAssentos.Location = new System.Drawing.Point(224, 34);
             this.txtAssentos.Minimum = new decimal(new int[] {
             1,
@@ -240,7 +242,9 @@
             // 
             // optIda
             // 
-            this.optIda.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.optIda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.optIda.AutoSize = true;
             this.optIda.Location = new System.Drawing.Point(224, 9);
             this.optIda.Margin = new System.Windows.Forms.Padding(4);
@@ -249,6 +253,7 @@
             this.optIda.TabIndex = 11;
             this.optIda.Text = "Somente ida";
             this.optIda.UseVisualStyleBackColor = true;
+            this.optIda.CheckedChanged += new System.EventHandler(this.optIda_CheckedChanged);
             // 
             // optIdaVolta
             // 
@@ -262,6 +267,7 @@
             this.optIdaVolta.TabStop = true;
             this.optIdaVolta.Text = "Ida e volta";
             this.optIdaVolta.UseVisualStyleBackColor = true;
+            this.optIdaVolta.CheckedChanged += new System.EventHandler(this.optIdaVolta_CheckedChanged);
             // 
             // label4
             // 
@@ -380,9 +386,9 @@
             // 
             // preco
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.preco.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.preco.DefaultCellStyle = dataGridViewCellStyle7;
             this.preco.HeaderText = "Preço";
             this.preco.Name = "preco";
             this.preco.ReadOnly = true;
@@ -401,9 +407,9 @@
             // 
             // partida
             // 
-            dataGridViewCellStyle4.Format = "t";
-            dataGridViewCellStyle4.NullValue = null;
-            this.partida.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Format = "t";
+            dataGridViewCellStyle8.NullValue = null;
+            this.partida.DefaultCellStyle = dataGridViewCellStyle8;
             this.partida.HeaderText = "Partida";
             this.partida.Name = "partida";
             this.partida.ReadOnly = true;
@@ -424,7 +430,7 @@
             // btnReservar
             // 
             this.btnReservar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReservar.Location = new System.Drawing.Point(256, 3);
+            this.btnReservar.Location = new System.Drawing.Point(256, 15);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(76, 27);
             this.btnReservar.TabIndex = 16;

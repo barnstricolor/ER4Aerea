@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace ER4Aerea
 {
@@ -36,8 +37,18 @@ namespace ER4Aerea
                 voo = new Voo(aviao,origem,destino,DateTime.Parse(tela().dtpPartida.Text),float.Parse(tela().txtPreco.Text));
             else
                 voo = (Voo)repositorio().obter(int.Parse(tela().txtId.Text));
+            voo.chegada = DateTime.Parse(tela().dtpChegada.Text);
+            if (tela().chkPromocao.Checked)
+                voo.promocao = "S";
+            else
+                voo.promocao = "N";
 
             repositorio().salvar(voo);
+
+            if (voo.promocao == "S") {
+                enviarPromocao(voo);
+            }
+
             tela().Close();
             pesquisaTela.btnPesquisar.PerformClick();
         }
@@ -55,13 +66,18 @@ namespace ER4Aerea
             tela().txtPreco.Text = voo.preco.ToString();
             tela().dtpPartida.Value = voo.partida;
             tela().dtpChegada.Value = voo.chegada;
-            tela().ShowDialog();                         
+            if (voo.promocao == "S")
+                tela().chkPromocao.Checked = true;
+            else
+                tela().chkPromocao.Checked = false;
+            tela().ShowDialog();                        
             
         }
        
         protected override Form criarTela() {
             this.frmTela = new frmVoo();
             frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
+            frmTela.dcbOrigem.Click += new EventHandler(this.carregarCidade);
             frmTela.Text = "Cadastro de Voo";
             return frmTela;
         }
@@ -69,5 +85,48 @@ namespace ER4Aerea
         protected override Repositorio repositorio() {
             return new VooRepositorio();
         }
+
+        public void enviarPromocao(Voo voo)
+        {
+            Email email = new Email();
+            ClienteRepositorio repo = new ClienteRepositorio();
+            HashSet<Cliente> result = new HashSet<Cliente>();
+            int i = 0;
+            foreach (Dominio dominio in repo.obterPromocao())
+            {
+                email.enviar(((Cliente)dominio).email);
+                i++;
+            }
+            Twitter twitter = new Twitter();
+            twitter.postar("?");
+            MessageBox.Show("Emails enviados: " + i + " e Twitter Atualizado.");
+        }
+        protected void carregarCidade(object sender, EventArgs e)
+        {
+            CidadeRepositorio repo = new CidadeRepositorio();
+            HashSet<Dominio> lista = repo.obterTodos();
+            carregarDataCombo(lista, (ComboBox)sender);
+        }
+
+        protected void carregarCidade(ComboBox cbo)
+        {
+            CidadeRepositorio repo = new CidadeRepositorio();
+            HashSet<Dominio> lista = repo.obterTodos();
+            carregarDataCombo(lista, cbo);
+        }
+        protected void carregarDataCombo(HashSet<Dominio> lista, ComboBox dcb)
+        {
+            Hashtable table = new Hashtable();
+            foreach (Dominio dominio in lista)
+            {
+                Cidade cidade = (Cidade)dominio;
+                table.Add(cidade.id, cidade.nome);
+            }
+            dcb.DataSource = new BindingSource(table, null);
+            dcb.DisplayMember = "Value";
+            dcb.ValueMember = "Key";
+        }
+
+
     }
 }

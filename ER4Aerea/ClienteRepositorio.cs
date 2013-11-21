@@ -9,7 +9,7 @@ namespace ER4Aerea
         protected override string colunaId() { return "ID_CLIENTE"; }
         protected override string[] colunas()
         {             
-            return new string[] {colunaId(),"NOM_CLIENTE","FLG_PROMOCAO","NOM_EMAIL","NOM_ENDERECO", "NUM_CPF", "NUM_CELULAR", "VAL_RENDA", "NOM_OCUPACAO", "FLG_ESPECIAL", "NUM_RG", "SEXO", "NUM_END", "NOM_BAIRRO", "CAD_CEP", "NUM_TELEFONE","ID_CIDADE"}; 
+            return new string[] {colunaId(),"NOM_CLIENTE","FLG_PROMOCAO","NOM_EMAIL","NOM_ENDERECO", "NUM_CPF", "NUM_CELULAR", "VAL_RENDA", "NOM_OCUPACAO", "FLG_ESPECIAL", "NUM_RG", "SEXO", "NUM_END", "NOM_BAIRRO", "CAD_CEP", "NUM_TELEFONE","ID_CIDADE","PER_DESCONTO"}; 
         }
         //PROTECTED
         protected override void valuesMap(Dictionary<string, object> d, Dominio dominio)
@@ -32,6 +32,7 @@ namespace ER4Aerea
             d.Add("CAD_CEP", cliente.cep);
             d.Add("NUM_TELEFONE", cliente.telefone);
             d.Add("ID_CIDADE", cliente.cidade.id);
+            d.Add("PER_DESCONTO", cliente.desconto);
 
         }
         protected override Dominio mapRow(OleDbDataReader dr)
@@ -63,6 +64,7 @@ namespace ER4Aerea
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
             cliente.especial = dr["FLG_ESPECIAL"].ToString();
+            cliente.desconto = float.Parse(dr["PER_DESCONTO"].ToString());
             //dr.Close();
             return cliente;
         }
@@ -74,5 +76,20 @@ namespace ER4Aerea
         public override string montarWhereByFiltroString(string filtro){
             return "NOM_CLIENTE LIKE '%" + filtro + "%'";
         }
+        public HashSet<Dominio> obterPromocao()
+        {
+            OleDbDataReader dr = executeQuery(montarSelect("FLG_PROMOCAO = 'S' And NOM_EMAIL IS NOT NULL"));
+
+            HashSet<Dominio> lista = new HashSet<Dominio>();
+
+            while (dr.Read())
+            {
+                lista.Add(mapRow(dr));
+            }
+            dr.Close();
+
+            return lista;
+        }
+
     }
 }

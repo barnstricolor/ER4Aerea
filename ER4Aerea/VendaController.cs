@@ -39,9 +39,13 @@ namespace ER4Aerea
             tela.lblPartidaIda.Text = this.origem.partida.Hour + ":" + this.origem.partida.Minute;
             tela.lblPrecoIda.Text = this.origem.preco.ToString("C2");
             tela.lblAviaoIda.Text = this.origem.aviao.modelo;
-            tela.lblPartidaVolta.Text = this.destino.partida.Hour + ":" + this.destino.partida.Minute;
-            tela.lblPrecoVolta.Text = this.destino.preco.ToString("C2");
-            tela.lblAviaoVolta.Text = this.destino.aviao.modelo;
+            if (destino != null)
+            {
+                tela.lblPartidaVolta.Text = this.destino.partida.Hour + ":" + this.destino.partida.Minute;
+                tela.lblPrecoVolta.Text = this.destino.preco.ToString("C2");
+                tela.lblAviaoVolta.Text = this.destino.aviao.modelo;
+            }
+            else { tela.pnlVolta.Enabled = false; }
             tela.Text = "Reserva de Passagem Aérea";
             return tela;
         }
@@ -54,16 +58,23 @@ namespace ER4Aerea
 
                 ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
                 Cliente cliente = (Cliente)clienteRepositorio.obter((int)tela.dcbCliente.SelectedValue);
+                
                 desconto=cliente.getDesconto();
 
                 tela.lblEspecial.Visible = cliente.isEspecial();
 
-                total = origem.preco * assentos + (destino.preco) * assentos;
-                
-                final=total-desconto;
 
-                tela.lblTotal.Text = total.ToString("C2"); ;
-                tela.lblDesconto.Text = desconto.ToString("C2");
+                total += origem.preco * assentos;
+                
+                if(destino!=null)
+                    total += destino.preco * assentos;
+                
+                final = total - (total * desconto / 100);
+
+                tela.lblTotal.Text = total.ToString("C2");
+
+                desconto = desconto / 100;
+                tela.lblDesconto.Text = desconto.ToString("p");
                 tela.lblPrecoFinal.Text = final.ToString("C2");
             }
             else

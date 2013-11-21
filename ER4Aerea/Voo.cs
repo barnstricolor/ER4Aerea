@@ -16,7 +16,7 @@ namespace ER4Aerea
         public float preco { get; set; }
         public DateTime chegada { get; set; }
         public HashSet<Reserva> reservas = new HashSet<Reserva>();
-	
+        public string promocao { get; set; }
 	    public Voo(Aviao aviao, Cidade origem, Cidade destino, DateTime partida, float preco){
 		    this.aviao = aviao;
 		    this.origem = origem;

@@ -17,7 +17,7 @@ namespace ER4AereaTU
         public void postar()
         {
             Twitter twitter = new Twitter();
-            twitter.postar("Teste");
+            twitter.postar("te leva nas nuvi");
         }
         
     }
