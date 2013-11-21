@@ -16,14 +16,14 @@ namespace ER4Aerea
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
-            /*if (this.Tag.ToString() == "N")
+            if (this.Tag != null)
             {
-                if (!Char.IsDigit(e.KeyChar))//&& !Char.IsControl(e.KeyChar)) 
+                if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar)) 
                     e.Handled = true;
             }
             else
             {
-            */
+            
                 if (Char.IsLetter(e.KeyChar))
                 {
 
@@ -39,7 +39,7 @@ namespace ER4Aerea
                 }
 
                 base.OnKeyPress(e);
-            //}
+            }
         }
 
     }
