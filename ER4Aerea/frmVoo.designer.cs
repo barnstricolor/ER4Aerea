@@ -46,6 +46,7 @@
             this.dcbOrigem = new System.Windows.Forms.ComboBox();
             this.dcbDestino = new System.Windows.Forms.ComboBox();
             this.dcbAviao = new System.Windows.Forms.ComboBox();
+            this.chkPromocao = new System.Windows.Forms.CheckBox();
             dAT_PARTIDALabel = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
             vAL_PRECOLabel = new System.Windows.Forms.Label();
@@ -108,12 +109,12 @@
             // Chegada
             // 
             Chegada.AutoSize = true;
-            Chegada.Location = new System.Drawing.Point(39, 105);
+            Chegada.Location = new System.Drawing.Point(28, 104);
             Chegada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Chegada.Name = "Chegada";
-            Chegada.Size = new System.Drawing.Size(53, 17);
+            Chegada.Size = new System.Drawing.Size(65, 17);
             Chegada.TabIndex = 116;
-            Chegada.Text = "Partida";
+            Chegada.Text = "Chegada";
             // 
             // dtpPartida
             // 
@@ -221,11 +222,26 @@
             this.dcbAviao.TabIndex = 0;
             this.dcbAviao.Tag = "";
             // 
+            // chkPromocao
+            // 
+            this.chkPromocao.AutoSize = true;
+            this.chkPromocao.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkPromocao.Location = new System.Drawing.Point(296, 195);
+            this.chkPromocao.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPromocao.Name = "chkPromocao";
+            this.chkPromocao.Size = new System.Drawing.Size(94, 21);
+            this.chkPromocao.TabIndex = 117;
+            this.chkPromocao.Tag = "";
+            this.chkPromocao.Text = "Promoção";
+            this.chkPromocao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkPromocao.UseVisualStyleBackColor = true;
+            // 
             // frmVoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 269);
+            this.Controls.Add(this.chkPromocao);
             this.Controls.Add(this.dcbAviao);
             this.Controls.Add(this.dcbDestino);
             this.Controls.Add(this.dcbOrigem);
@@ -266,6 +282,7 @@
         public System.Windows.Forms.ComboBox dcbOrigem;
         public System.Windows.Forms.ComboBox dcbDestino;
         public System.Windows.Forms.ComboBox dcbAviao;
+        public System.Windows.Forms.CheckBox chkPromocao;
 
     }
 }
