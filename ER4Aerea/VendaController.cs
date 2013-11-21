@@ -37,10 +37,10 @@ namespace ER4Aerea
             tela.lblAssentos.Text = this.assentos.ToString();
             tela.lblAviaoIda.Text = this.origem.aviao.modelo;
             tela.lblPartidaIda.Text = this.origem.partida.Hour + ":" + this.origem.partida.Minute;
-            tela.lblPrecoIda.Text = this.origem.preco.ToString();
+            tela.lblPrecoIda.Text = this.origem.preco.ToString("C2");
             tela.lblAviaoIda.Text = this.origem.aviao.modelo;
             tela.lblPartidaVolta.Text = this.destino.partida.Hour + ":" + this.destino.partida.Minute;
-            tela.lblPrecoVolta.Text = this.destino.preco.ToString();
+            tela.lblPrecoVolta.Text = this.destino.preco.ToString("C2");
             tela.lblAviaoVolta.Text = this.destino.aviao.modelo;
             tela.Text = "Reserva de Passagem Aérea";
             return tela;

@@ -83,7 +83,7 @@ namespace ER4Aerea
                 cliente.especial = "S";
             else
                 cliente.especial = "N";
-
+            cliente.desconto = float.Parse(tela().txtDesconto.Text);
             cliente.numero = int.Parse(tela().txtNum.Text);
             cliente.telefone = tela().txtTel.Text;
             cliente.rg = tela().txtRg.Text;         
@@ -124,7 +124,7 @@ namespace ER4Aerea
                 tela().chkMasculino.Checked = true;
             else
                 tela().chkFeminino.Checked = true;
-
+            tela().txtDesconto.Text = cliente.desconto.ToString();
             tela().ShowDialog();
         }
         protected override Form criarTela()

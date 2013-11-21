@@ -38,7 +38,8 @@ create table CLIENTE
   num_end        NUMBER,
   nom_bairro     VARCHAR2(100),
   cad_cep        VARCHAR2(100),
-  num_telefone   VARCHAR2(100)
+  num_telefone   VARCHAR2(100),
+  PER_DESCONTO   NUMBER
 )
 ;
 alter table CLIENTE

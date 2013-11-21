@@ -66,13 +66,15 @@ namespace ER4Aerea
             this.txtEndereco = new ER4Aerea.UCTextBox();
             this.txtNum = new ER4Aerea.UCTextBox();
             this.txtNome = new ER4Aerea.UCTextBox();
+            this.txtDesconto = new ER4Aerea.UCTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(349, 171);
+            this.label13.Location = new System.Drawing.Point(324, 212);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 17);
@@ -82,7 +84,7 @@ namespace ER4Aerea
             // chkFeminino
             // 
             this.chkFeminino.AutoSize = true;
-            this.chkFeminino.Location = new System.Drawing.Point(603, 9);
+            this.chkFeminino.Location = new System.Drawing.Point(606, 49);
             this.chkFeminino.Margin = new System.Windows.Forms.Padding(4);
             this.chkFeminino.Name = "chkFeminino";
             this.chkFeminino.Size = new System.Drawing.Size(86, 21);
@@ -95,7 +97,7 @@ namespace ER4Aerea
             // chkMasculino
             // 
             this.chkMasculino.AutoSize = true;
-            this.chkMasculino.Location = new System.Drawing.Point(497, 9);
+            this.chkMasculino.Location = new System.Drawing.Point(500, 49);
             this.chkMasculino.Margin = new System.Windows.Forms.Padding(4);
             this.chkMasculino.Name = "chkMasculino";
             this.chkMasculino.Size = new System.Drawing.Size(92, 21);
@@ -108,7 +110,7 @@ namespace ER4Aerea
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(452, 11);
+            this.label12.Location = new System.Drawing.Point(455, 51);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 17);
@@ -118,7 +120,7 @@ namespace ER4Aerea
             // chkReceb
             // 
             this.chkReceb.AutoSize = true;
-            this.chkReceb.Location = new System.Drawing.Point(13, 228);
+            this.chkReceb.Location = new System.Drawing.Point(96, 266);
             this.chkReceb.Margin = new System.Windows.Forms.Padding(4);
             this.chkReceb.Name = "chkReceb";
             this.chkReceb.Size = new System.Drawing.Size(296, 21);
@@ -130,7 +132,7 @@ namespace ER4Aerea
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 171);
+            this.label10.Location = new System.Drawing.Point(12, 211);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 17);
@@ -140,7 +142,7 @@ namespace ER4Aerea
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 139);
+            this.label2.Location = new System.Drawing.Point(323, 173);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
@@ -150,7 +152,7 @@ namespace ER4Aerea
             // nome_cli
             // 
             this.nome_cli.AutoSize = true;
-            this.nome_cli.Location = new System.Drawing.Point(9, 13);
+            this.nome_cli.Location = new System.Drawing.Point(31, 51);
             this.nome_cli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nome_cli.Name = "nome_cli";
             this.nome_cli.Size = new System.Drawing.Size(49, 17);
@@ -160,7 +162,7 @@ namespace ER4Aerea
             // num_end
             // 
             this.num_end.AutoSize = true;
-            this.num_end.Location = new System.Drawing.Point(532, 75);
+            this.num_end.Location = new System.Drawing.Point(535, 115);
             this.num_end.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.num_end.Name = "num_end";
             this.num_end.Size = new System.Drawing.Size(21, 17);
@@ -170,7 +172,7 @@ namespace ER4Aerea
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 107);
+            this.label8.Location = new System.Drawing.Point(12, 147);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
@@ -180,7 +182,7 @@ namespace ER4Aerea
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(513, 107);
+            this.label7.Location = new System.Drawing.Point(516, 147);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 17);
@@ -190,7 +192,7 @@ namespace ER4Aerea
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 43);
+            this.label6.Location = new System.Drawing.Point(42, 80);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 17);
@@ -200,7 +202,7 @@ namespace ER4Aerea
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(231, 43);
+            this.label5.Location = new System.Drawing.Point(269, 81);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 17);
@@ -210,7 +212,7 @@ namespace ER4Aerea
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 139);
+            this.label4.Location = new System.Drawing.Point(12, 179);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
@@ -220,7 +222,7 @@ namespace ER4Aerea
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(320, 107);
+            this.label3.Location = new System.Drawing.Point(323, 147);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
@@ -230,7 +232,7 @@ namespace ER4Aerea
             // ende_cli
             // 
             this.ende_cli.AutoSize = true;
-            this.ende_cli.Location = new System.Drawing.Point(9, 75);
+            this.ende_cli.Location = new System.Drawing.Point(12, 115);
             this.ende_cli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ende_cli.Name = "ende_cli";
             this.ende_cli.Size = new System.Drawing.Size(73, 17);
@@ -240,7 +242,7 @@ namespace ER4Aerea
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(700, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(703, 42);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 289);
@@ -250,7 +252,7 @@ namespace ER4Aerea
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(93, 268);
+            this.btnLimpar.Location = new System.Drawing.Point(96, 308);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
@@ -260,7 +262,7 @@ namespace ER4Aerea
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(605, 268);
+            this.btnFechar.Location = new System.Drawing.Point(608, 308);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
@@ -271,7 +273,7 @@ namespace ER4Aerea
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(13, 268);
+            this.btnSalvar.Location = new System.Drawing.Point(16, 308);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
@@ -282,7 +284,7 @@ namespace ER4Aerea
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(468, 42);
+            this.label1.Location = new System.Drawing.Point(501, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
@@ -292,7 +294,7 @@ namespace ER4Aerea
             // chkEsp
             // 
             this.chkEsp.AutoSize = true;
-            this.chkEsp.Location = new System.Drawing.Point(13, 199);
+            this.chkEsp.Location = new System.Drawing.Point(96, 237);
             this.chkEsp.Margin = new System.Windows.Forms.Padding(4);
             this.chkEsp.Name = "chkEsp";
             this.chkEsp.Size = new System.Drawing.Size(142, 21);
@@ -305,15 +307,15 @@ namespace ER4Aerea
             // 
             this.dcbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dcbCliente.FormattingEnabled = true;
-            this.dcbCliente.Location = new System.Drawing.Point(64, 103);
+            this.dcbCliente.Location = new System.Drawing.Point(96, 143);
             this.dcbCliente.Name = "dcbCliente";
-            this.dcbCliente.Size = new System.Drawing.Size(249, 24);
+            this.dcbCliente.Size = new System.Drawing.Size(220, 24);
             this.dcbCliente.TabIndex = 8;
             // 
             // txtID
             // 
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(635, 240);
+            this.txtID.Location = new System.Drawing.Point(638, 280);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(44, 22);
@@ -321,52 +323,52 @@ namespace ER4Aerea
             // 
             // txtRenda
             // 
-            this.txtRenda.Location = new System.Drawing.Point(536, 38);
+            this.txtRenda.Location = new System.Drawing.Point(566, 78);
             this.txtRenda.Margin = new System.Windows.Forms.Padding(4);
             this.txtRenda.Name = "txtRenda";
-            this.txtRenda.Size = new System.Drawing.Size(143, 22);
+            this.txtRenda.Size = new System.Drawing.Size(116, 22);
             this.txtRenda.TabIndex = 5;
             this.txtRenda.Tag = "D";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(408, 167);
+            this.txtEmail.Location = new System.Drawing.Point(383, 207);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(271, 22);
+            this.txtEmail.Size = new System.Drawing.Size(299, 22);
             this.txtEmail.TabIndex = 14;
             this.txtEmail.Tag = "";
             // 
             // txtOcup
             // 
-            this.txtOcup.Location = new System.Drawing.Point(104, 167);
+            this.txtOcup.Location = new System.Drawing.Point(96, 207);
             this.txtOcup.Margin = new System.Windows.Forms.Padding(4);
             this.txtOcup.Name = "txtOcup";
-            this.txtOcup.Size = new System.Drawing.Size(236, 22);
+            this.txtOcup.Size = new System.Drawing.Size(220, 22);
             this.txtOcup.TabIndex = 13;
             this.txtOcup.Tag = "";
             // 
             // txtCel
             // 
-            this.txtCel.Location = new System.Drawing.Point(311, 135);
+            this.txtCel.Location = new System.Drawing.Point(383, 173);
             this.txtCel.Margin = new System.Windows.Forms.Padding(4);
             this.txtCel.Name = "txtCel";
-            this.txtCel.Size = new System.Drawing.Size(132, 22);
+            this.txtCel.Size = new System.Drawing.Size(118, 22);
             this.txtCel.TabIndex = 12;
             this.txtCel.Tag = "N";
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(93, 135);
+            this.txtTel.Location = new System.Drawing.Point(96, 175);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(132, 22);
+            this.txtTel.Size = new System.Drawing.Size(220, 22);
             this.txtTel.TabIndex = 11;
             this.txtTel.Tag = "N";
             // 
             // txtRg
             // 
-            this.txtRg.Location = new System.Drawing.Point(272, 39);
+            this.txtRg.Location = new System.Drawing.Point(324, 79);
             this.txtRg.Margin = new System.Windows.Forms.Padding(4);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(169, 22);
@@ -375,7 +377,7 @@ namespace ER4Aerea
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(563, 103);
+            this.txtCep.Location = new System.Drawing.Point(566, 143);
             this.txtCep.Margin = new System.Windows.Forms.Padding(4);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(116, 22);
@@ -384,7 +386,7 @@ namespace ER4Aerea
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(64, 39);
+            this.txtCpf.Location = new System.Drawing.Point(96, 77);
             this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
             this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
@@ -394,25 +396,25 @@ namespace ER4Aerea
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(377, 103);
+            this.txtBairro.Location = new System.Drawing.Point(383, 142);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(127, 22);
+            this.txtBairro.Size = new System.Drawing.Size(118, 22);
             this.txtBairro.TabIndex = 9;
             this.txtBairro.Tag = "";
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(99, 71);
+            this.txtEndereco.Location = new System.Drawing.Point(96, 111);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(424, 22);
+            this.txtEndereco.Size = new System.Drawing.Size(402, 22);
             this.txtEndereco.TabIndex = 6;
             this.txtEndereco.Tag = "";
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(563, 71);
+            this.txtNum.Location = new System.Drawing.Point(566, 111);
             this.txtNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtNum.MaxLength = 5;
             this.txtNum.Name = "txtNum";
@@ -422,18 +424,39 @@ namespace ER4Aerea
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(66, 7);
+            this.txtNome.Location = new System.Drawing.Point(96, 47);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(375, 22);
+            this.txtNome.Size = new System.Drawing.Size(348, 22);
             this.txtNome.TabIndex = 0;
             this.txtNome.Tag = "";
+            // 
+            // txtDesconto
+            // 
+            this.txtDesconto.Location = new System.Drawing.Point(566, 175);
+            this.txtDesconto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDesconto.Name = "txtDesconto";
+            this.txtDesconto.Size = new System.Drawing.Size(115, 22);
+            this.txtDesconto.TabIndex = 13;
+            this.txtDesconto.Tag = "D";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(501, 178);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 17);
+            this.label9.TabIndex = 144;
+            this.label9.Text = "% Desc.";
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 306);
+            this.ClientSize = new System.Drawing.Size(959, 344);
+            this.Controls.Add(this.txtDesconto);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dcbCliente);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.chkEsp);
@@ -518,5 +541,7 @@ namespace ER4Aerea
         public System.Windows.Forms.CheckBox chkEsp;
         public UCTextBox txtID;
         public System.Windows.Forms.ComboBox dcbCliente;
+        public UCTextBox txtDesconto;
+        public System.Windows.Forms.Label label9;
     }
 }

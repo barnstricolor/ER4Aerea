@@ -28,8 +28,9 @@ namespace ER4Aerea
         public string especial { get; set; }
         public string promocao { get; set; }
         public string rg { get; set; }
-	
-	    private static float DESCONTO = (float) 0.3;
+        public float desconto { get; set; }
+
+	    //private static float DESCONTO = (float) 0.3;
 
         public Cliente(String nome)
         {
@@ -51,7 +52,7 @@ namespace ER4Aerea
 	    }*/
 
 	    public  float getDesconto() {
-		    return (float) (this.isEspecial() == true ? DESCONTO : 0.0);
+		    return (float) (this.isEspecial() == true ? desconto : 0.0);
 	    }
 
 	    private  String getNome() {
