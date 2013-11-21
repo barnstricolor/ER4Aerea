@@ -42,7 +42,7 @@ namespace ER4Aerea
             HashSet<Reserva> reservas = reservaRepositorio.obterByVoo(voo.id);
             //BUGSLIFE
             voo.reservas = reservas;
-
+            //dr.Close();
             return voo;
         }
         public override object[] extrairValores(Dominio dominio)

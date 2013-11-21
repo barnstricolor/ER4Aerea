@@ -38,7 +38,7 @@ namespace ER4Aerea
             Reserva reserva = new Reserva(null, int.Parse(dr["QTD_ASSENTO"].ToString()), float.Parse(dr["VAL_PRECO"].ToString()), null, null);
 
             reserva.id = int.Parse(dr["ID_RESERVA"].ToString());
-
+            //dr.Close();
             return reserva;
         }
         public override object[] extrairValores(Dominio dominio)

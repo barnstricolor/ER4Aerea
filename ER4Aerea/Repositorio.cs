@@ -75,9 +75,11 @@ namespace ER4Aerea
 
             dr.Read();
 
+            Dominio dominio = mapRow(dr);
+
             dr.Close();
 
-            return mapRow(dr);
+            return dominio;
         }
         public Dominio obter(string usuario,string senha)
         {
@@ -88,9 +90,12 @@ namespace ER4Aerea
 
             dr.Read();
 
+            Dominio dominio = mapRow(dr);
+
             dr.Close();
 
-            return mapRow(dr);
+            return dominio;
+
         }
         public HashSet<Dominio> obterTodos()
         {

@@ -40,11 +40,11 @@ namespace ER4Aerea
             Cliente cliente = new Cliente(dr["NOM_CLIENTE"].ToString());
             if (dr["ID_CIDADE"].ToString() != "")
             {
-                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-                Cidade cidade = (Cidade)cidadeRepositorio.obter(int.Parse(dr["ID_CIDADE"].ToString()));
+                //CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                Cidade cidade = new Cidade("","");//(Cidade)cidadeRepositorio.obter(int.Parse(dr["ID_CIDADE"].ToString()));
+                cidade.id = int.Parse(dr["ID_CIDADE"].ToString());
                 cliente.cidade = cidade;
             }
-
 
             cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
             cliente.nome = dr["NOM_CLIENTE"].ToString();
@@ -62,8 +62,8 @@ namespace ER4Aerea
             cliente.bairro = dr["NOM_BAIRRO"].ToString();
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();
-            cliente.especial = dr["FLG_ESPECIAL"].ToString();           
-
+            cliente.especial = dr["FLG_ESPECIAL"].ToString();
+            //dr.Close();
             return cliente;
         }
         public override object[] extrairValores(Dominio dominio)

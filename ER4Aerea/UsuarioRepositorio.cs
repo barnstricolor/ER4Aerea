@@ -30,7 +30,7 @@ namespace ER4Aerea
             usuario.nome = dr["NOM_USUARIO"].ToString();
             usuario.login = dr["NOM_LOGIN"].ToString();
             usuario.senha = dr["NOM_SENHA"].ToString();
-
+            //dr.Close();
             return usuario;
         }
         public override object[] extrairValores(Dominio dominio)

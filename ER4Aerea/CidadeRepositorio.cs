@@ -28,7 +28,7 @@ namespace ER4Aerea
             cidade.id = int.Parse(dr["ID_CIDADE"].ToString());
             cidade.nome = dr["NOM_CIDADE"].ToString();
             cidade.cep = dr["NUM_CEP"].ToString();
-
+            //dr.Close();
             return cidade;
         }
         public override object[] extrairValores(Dominio dominio)

@@ -20,7 +20,7 @@ namespace ER4Aerea
             aviao.id = int.Parse(dr["ID_AVIAO"].ToString());
             aviao.modelo = dr["NOM_MODELO"].ToString();
             aviao.assentos = int.Parse(dr["QTD_ASSENTO"].ToString());
-
+            //dr.Close();
             return aviao;
         }
 

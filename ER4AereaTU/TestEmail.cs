@@ -17,7 +17,7 @@ namespace ER4AereaTU
         public void enviar()
         {
             Email email = new Email();
-            email.enviar("celio@hadrion.com.br");
+            email.enviar("rollan_paiva@hadrion.com.br");
         }
         
     }
