@@ -9,7 +9,7 @@ using System.Security.Authentication;
 
 namespace ER4Aerea
 {
-    class Email
+    public class Email
     {
 
         public void enviar(string email)

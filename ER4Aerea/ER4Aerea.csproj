@@ -53,6 +53,9 @@
     <StartupObject>ER4Aerea.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinqToTwitter">
+      <HintPath>..\packages\linqtotwitter.2.1.10\lib\net45\LinqToTwitter.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -84,6 +87,7 @@
     <Compile Include="Cidade.cs" />
     <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
+    <Compile Include="Twitter.cs" />
     <Compile Include="UCTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
