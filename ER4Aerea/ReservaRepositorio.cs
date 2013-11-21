@@ -61,7 +61,7 @@ namespace ER4Aerea
                 lista.Add((Reserva)mapRow(dr));
 
             }
-
+            dr.Close();
             return lista;
         }
     }

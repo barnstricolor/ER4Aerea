@@ -79,8 +79,8 @@ namespace ER4Aerea
             OleDbCommand cmd = new OleDbCommand("Select " + sequence + ".nextval from dual", obterConexao());
             
             OleDbDataReader dr = cmd.ExecuteReader();
-            cmd.Dispose();
             dr.Read();
+            dr.Close();
             string valor=dr[0].ToString();
             return Int32.Parse(valor);
         }

@@ -75,6 +75,8 @@ namespace ER4Aerea
 
             dr.Read();
 
+            dr.Close();
+
             return mapRow(dr);
         }
         public Dominio obter(string usuario,string senha)
@@ -85,6 +87,8 @@ namespace ER4Aerea
             if (!dr.HasRows) return null;
 
             dr.Read();
+
+            dr.Close();
 
             return mapRow(dr);
         }
@@ -100,6 +104,7 @@ namespace ER4Aerea
                 lista.Add(mapRow(dr));
 
             }
+            dr.Close();
 
             return lista;
         }
@@ -114,6 +119,7 @@ namespace ER4Aerea
                 lista.Add(mapRow(dr));
 
             }
+            dr.Close();
 
             return lista;
         }
