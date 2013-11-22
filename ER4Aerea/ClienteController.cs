@@ -48,50 +48,70 @@ namespace ER4Aerea
             dcb.ValueMember = "Key";
         }
         
+        private bool validaTela() {
+            foreach (Control x in tela().Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
+                        {
+                            MessageBox.Show("Informe todos os valores");
+                            return false;
+                        }                        
+                }
+            }
+            return true;
+
+        }
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = null;
-            if (string.IsNullOrEmpty(tela().txtID.Text))
-                cliente = new Cliente(tela().txtNome.Text);
-            else
-                cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
-            
-            if (tela().dcbCidade.SelectedValue.ToString() != "")
+            if (validaTela())
             {
-                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-                Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
-                cliente.cidade = cidade;
+
+                Cliente cliente = null;
+                if (string.IsNullOrEmpty(tela().txtID.Text))
+                    cliente = new Cliente(tela().txtNome.Text);
+                else
+                    cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
+
+                if (tela().dcbCidade.SelectedValue.ToString() != "")
+                {
+                    CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                    Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
+                    cliente.cidade = cidade;
+                }
+
+                cliente.nome = tela().txtNome.Text;
+                cliente.bairro = tela().txtBairro.Text;
+                cliente.celular = tela().txtCel.Text;
+                cliente.cep = tela().txtCep.Text;
+                cliente.cpf = tela().txtCpf.Text;
+                cliente.email = tela().txtEmail.Text;
+                cliente.endereco = tela().txtEndereco.Text;
+                cliente.ocupacao = tela().txtOcup.Text;
+                cliente.renda = float.Parse(tela().txtRenda.Text);
+                if (tela().chkMasculino.Checked)
+                    cliente.sexo = "M";
+                else
+                    cliente.sexo = "F";
+                if (tela().chkReceb.Checked)
+                    cliente.promocao = "S";
+                else
+                    cliente.promocao = "N";
+                if (tela().chkEsp.Checked)
+                    cliente.especial = "S";
+                else
+                    cliente.especial = "N";
+                cliente.desconto = float.Parse(tela().txtDesconto.Text);
+                cliente.numero = int.Parse(tela().txtNum.Text);
+                cliente.telefone = tela().txtTel.Text;
+                cliente.rg = tela().txtRg.Text;
+
+                repositorio().salvar(cliente);
+                tela().Close();
+                pesquisaTela.btnPesquisar.PerformClick();
             }
-
-            cliente.nome = tela().txtNome.Text;
-            cliente.bairro = tela().txtBairro.Text;
-            cliente.celular = tela().txtCel.Text;
-            cliente.cep = tela().txtCep.Text;            
-            cliente.cpf = tela().txtCpf.Text;
-            cliente.email = tela().txtEmail.Text;
-            cliente.endereco = tela().txtEndereco.Text;
-            cliente.ocupacao = tela().txtOcup.Text;
-            cliente.renda = float.Parse(tela().txtRenda.Text);
-            if (tela().chkMasculino.Checked)
-                cliente.sexo = "M";
-            else
-                cliente.sexo = "F";
-            if (tela().chkReceb.Checked)
-                cliente.promocao = "S";
-            else
-                cliente.promocao = "N";
-            if (tela().chkEsp.Checked)
-                cliente.especial = "S";
-            else
-                cliente.especial = "N";
-            cliente.desconto = float.Parse(tela().txtDesconto.Text);
-            cliente.numero = int.Parse(tela().txtNum.Text);
-            cliente.telefone = tela().txtTel.Text;
-            cliente.rg = tela().txtRg.Text;         
-
-            repositorio().salvar(cliente);
-            tela().Close();
-            pesquisaTela.btnPesquisar.PerformClick();
         }
         protected override void editar_Click(object sender, EventArgs e)
         {

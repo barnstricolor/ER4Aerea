@@ -29,33 +29,54 @@ namespace ER4Aerea
             pesquisaTela.grd.Columns[5].Name = "Chegada";
         }
 
+        private bool validaTela() {
+            foreach (Control x in tela().Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
+                        {
+                            MessageBox.Show("Informe todos os valores");
+                            return false;
+                        }                        
+                }
+            }
+            return true;
+
+        }
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            CidadeRepositorio cidadeRepositorio=new CidadeRepositorio();
-            Cidade origem=(Cidade)cidadeRepositorio.obter((int)tela().dcbOrigem.SelectedValue);
-            Cidade destino=(Cidade)cidadeRepositorio.obter((int)(tela().dcbDestino.SelectedValue));
-            AviaoRepositorio aviaoRepositorio=new AviaoRepositorio();
-            Aviao aviao = (Aviao)aviaoRepositorio.obter((int)tela().dcbAviao.SelectedValue);
-            
-            Voo voo = null;
-            if (string.IsNullOrEmpty(tela().txtId.Text))
-                voo = new Voo(aviao,origem,destino,DateTime.Parse(tela().dtpPartida.Text),float.Parse(tela().txtPreco.Text));
-            else
-                voo = (Voo)repositorio().obter(int.Parse(tela().txtId.Text));
-            voo.chegada = DateTime.Parse(tela().dtpChegada.Text);
-            if (tela().chkPromocao.Checked)
-                voo.promocao = "S";
-            else
-                voo.promocao = "N";
+            if (validaTela())
+            {
 
-            repositorio().salvar(voo);
+                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                Cidade origem = (Cidade)cidadeRepositorio.obter((int)tela().dcbOrigem.SelectedValue);
+                Cidade destino = (Cidade)cidadeRepositorio.obter((int)(tela().dcbDestino.SelectedValue));
+                AviaoRepositorio aviaoRepositorio = new AviaoRepositorio();
+                Aviao aviao = (Aviao)aviaoRepositorio.obter((int)tela().dcbAviao.SelectedValue);
 
-            if (voo.promocao == "S") {
-                enviarPromocao(voo);
+                Voo voo = null;
+                if (string.IsNullOrEmpty(tela().txtId.Text))
+                    voo = new Voo(aviao, origem, destino, DateTime.Parse(tela().dtpPartida.Text), float.Parse(tela().txtPreco.Text));
+                else
+                    voo = (Voo)repositorio().obter(int.Parse(tela().txtId.Text));
+                voo.chegada = DateTime.Parse(tela().dtpChegada.Text);
+                if (tela().chkPromocao.Checked)
+                    voo.promocao = "S";
+                else
+                    voo.promocao = "N";
+
+                repositorio().salvar(voo);
+
+                if (voo.promocao == "S")
+                {
+                    enviarPromocao(voo);
+                }
+
+                tela().Close();
+                pesquisaTela.btnPesquisar.PerformClick();
             }
-
-            tela().Close();
-            pesquisaTela.btnPesquisar.PerformClick();
         }
 
         protected override void editar_Click(object sender, EventArgs e)

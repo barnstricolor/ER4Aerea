@@ -20,20 +20,39 @@ namespace ER4Aerea
         {
             pesquisaTela.Text = "Cadastro de Avião";
         }
+        private bool validaTela() {
+            foreach (Control x in tela().Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
+                        {
+                            MessageBox.Show("Informe todos os valores");
+                            return false;
+                        }                        
+                }
+            }
+            return true;
 
+        }
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            Aviao aviao = null;
-            if (string.IsNullOrEmpty(tela().txtId.Text))
-                aviao = new Aviao(tela().txtModelo.Text, int.Parse(tela().txtAssento.Text));
-            else
-                aviao = (Aviao)repositorio().obter(int.Parse(tela().txtId.Text));
+            if (validaTela())
+            {
 
-            aviao.modelo = tela().txtModelo.Text;
-            aviao.assentos = int.Parse(tela().txtAssento.Text);
-            repositorio().salvar(aviao);
-            tela().Close();
-            pesquisaTela.btnPesquisar.PerformClick();
+                Aviao aviao = null;
+                if (string.IsNullOrEmpty(tela().txtId.Text))
+                    aviao = new Aviao(tela().txtModelo.Text, int.Parse(tela().txtAssento.Text));
+                else
+                    aviao = (Aviao)repositorio().obter(int.Parse(tela().txtId.Text));
+
+                aviao.modelo = tela().txtModelo.Text;
+                aviao.assentos = int.Parse(tela().txtAssento.Text);
+                repositorio().salvar(aviao);
+                tela().Close();
+                pesquisaTela.btnPesquisar.PerformClick();
+            }
         }
 
         protected override void editar_Click(object sender, EventArgs e)

@@ -23,19 +23,39 @@ namespace ER4Aerea
             pesquisaTela.Text = "Cadastro de Cidade";
         }
         
+        private bool validaTela() {
+            foreach (Control x in tela().Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
+                        {
+                            MessageBox.Show("Informe todos os valores");
+                            return false;
+                        }                        
+                }
+            }
+            return true;
+
+        }
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            Cidade cidade = null;
-            if (string.IsNullOrEmpty(tela().txtId.Text))
-                cidade = new Cidade(tela().txtNome.Text, tela().txtCep.Text);
-            else
-                cidade = (Cidade)repositorio().obter(int.Parse(tela().txtId.Text));
+            if (validaTela())
+            {
 
-            cidade.nome = tela().txtNome.Text;
-            cidade.cep = tela().txtCep.Text;
-            repositorio().salvar(cidade);
-            tela().Close();
-            pesquisaTela.btnPesquisar.PerformClick();
+                Cidade cidade = null;
+                if (string.IsNullOrEmpty(tela().txtId.Text))
+                    cidade = new Cidade(tela().txtNome.Text, tela().txtCep.Text);
+                else
+                    cidade = (Cidade)repositorio().obter(int.Parse(tela().txtId.Text));
+
+                cidade.nome = tela().txtNome.Text;
+                cidade.cep = tela().txtCep.Text;
+                repositorio().salvar(cidade);
+                tela().Close();
+                pesquisaTela.btnPesquisar.PerformClick();
+            }
         }
         protected override void editar_Click(object sender, EventArgs e)
         {

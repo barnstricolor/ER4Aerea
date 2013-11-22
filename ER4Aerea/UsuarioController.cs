@@ -22,31 +22,51 @@ namespace ER4Aerea
         {
             pesquisaTela.Text = "Cadastro de Usuários";
         }
+        private bool validaTela() {
+            foreach (Control x in tela().Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (((TextBox)x).Name != "txtId")
+                        if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
+                        {
+                            MessageBox.Show("Informe todos os valores");
+                            return false;
+                        }                        
+                }
+            }
+            return true;
+
+        }
         protected override void salvar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = null;
-            if (string.IsNullOrEmpty(tela().txtId.Text))
-                usuario = new Usuario();
-            else
-                usuario = (Usuario)repositorio().obter(int.Parse(tela().txtId.Text));
-
-            if (tela().dcbCidade.SelectedValue.ToString() != "")
+            if (validaTela())
             {
-                CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-                Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
-                usuario.cidade = cidade;
+
+                Usuario usuario = null;
+                if (string.IsNullOrEmpty(tela().txtId.Text))
+                    usuario = new Usuario();
+                else
+                    usuario = (Usuario)repositorio().obter(int.Parse(tela().txtId.Text));
+
+                if (tela().dcbCidade.SelectedValue.ToString() != "")
+                {
+                    CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+                    Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
+                    usuario.cidade = cidade;
+                }
+
+                usuario.nome = tela().txtNome.Text;
+                usuario.login = tela().txtLogin.Text;
+                usuario.senha = tela().txtSenha.Text;
+                usuario.cpf = tela().txtCpf.Text;
+                usuario.endereco = tela().txtEndereco.Text;
+                usuario.numero = int.Parse(tela().txtNumero.Text);
+
+                repositorio().salvar(usuario);
+                tela().Close();
+                pesquisaTela.btnPesquisar.PerformClick();
             }
-
-            usuario.nome = tela().txtNome.Text;
-            usuario.login = tela().txtLogin.Text;
-            usuario.senha = tela().txtSenha.Text;
-            usuario.cpf = tela().txtCpf.Text;
-            usuario.endereco = tela().txtEndereco.Text;
-            usuario.numero = int.Parse(tela().txtNumero.Text);
-
-            repositorio().salvar(usuario);
-            tela().Close();
-            pesquisaTela.btnPesquisar.PerformClick();
         }
 
         protected override void editar_Click(object sender, EventArgs e)
