@@ -53,6 +53,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.cancelarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +82,8 @@
             this.usuárioToolStripMenuItem,
             this.vôoToolStripMenuItem,
             this.toolStripSeparator1,
-            this.reservaToolStripMenuItem});
+            this.reservaToolStripMenuItem,
+            this.cancelarReservaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -89,48 +91,48 @@
             // cidadeToolStripMenuItem
             // 
             this.cidadeToolStripMenuItem.Name = "cidadeToolStripMenuItem";
-            this.cidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cidadeToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.cidadeToolStripMenuItem.Text = "Cidade";
             this.cidadeToolStripMenuItem.Click += new System.EventHandler(this.cidadeToolStripMenuItem_Click);
             // 
             // aviãoToolStripMenuItem
             // 
             this.aviãoToolStripMenuItem.Name = "aviãoToolStripMenuItem";
-            this.aviãoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.aviãoToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.aviãoToolStripMenuItem.Text = "Avião";
             this.aviãoToolStripMenuItem.Click += new System.EventHandler(this.aviãoToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // vôoToolStripMenuItem
             // 
             this.vôoToolStripMenuItem.Name = "vôoToolStripMenuItem";
-            this.vôoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.vôoToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.vôoToolStripMenuItem.Text = "Voo";
             this.vôoToolStripMenuItem.Click += new System.EventHandler(this.vôoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
             // 
             // reservaToolStripMenuItem
             // 
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.reservaToolStripMenuItem.Text = "Reserva";
             this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
@@ -233,6 +235,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // cancelarReservaToolStripMenuItem
+            // 
+            this.cancelarReservaToolStripMenuItem.Name = "cancelarReservaToolStripMenuItem";
+            this.cancelarReservaToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
+            this.cancelarReservaToolStripMenuItem.Text = "Cancelar Reserva";
+            this.cancelarReservaToolStripMenuItem.Click += new System.EventHandler(this.cancelarReservaToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,6 +292,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cidadeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cancelarReservaToolStripMenuItem;
     }
 }
 

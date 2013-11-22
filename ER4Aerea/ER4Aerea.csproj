@@ -87,10 +87,17 @@
     <Compile Include="Cidade.cs" />
     <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
+    <Compile Include="CancelarReservaController.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelarReserva.Designer.cs">
+      <DependentUpon>frmCancelarReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Twitter.cs" />
     <Compile Include="UCTextbox.cs">
@@ -192,6 +199,9 @@
     <Compile Include="Voo.cs" />
     <EmbeddedResource Include="frmAviao.resx">
       <DependentUpon>frmAviao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelarReserva.resx">
+      <DependentUpon>frmCancelarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCidade.resx">
       <DependentUpon>frmCidade.cs</DependentUpon>

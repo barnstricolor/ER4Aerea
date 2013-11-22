@@ -98,5 +98,11 @@ namespace ER4Aerea
 
         }
 
+        private void cancelarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CancelarReservaController controller = CancelarReservaController.criar();
+            controller.mostrarTela(this);
+        }
+
     }
 }

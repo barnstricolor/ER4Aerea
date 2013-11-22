@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.OleDb;
+using System;
 
 namespace ER4Aerea
 {
@@ -23,6 +24,7 @@ namespace ER4Aerea
             d.Add("ID_VOO", reserva.voo.id);
 
         }
+
         protected override Dominio mapRow(OleDbDataReader dr)
         {
             ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
@@ -51,6 +53,21 @@ namespace ER4Aerea
         public HashSet<Reserva> obterByVoo(int idVoo)
         {
             OleDbDataReader dr = executeQuery(montarSelect("ID_VOO = " + idVoo.ToString()));
+
+            HashSet<Reserva> lista = new HashSet<Reserva>();
+
+            while (dr.Read())
+            {
+                lista.Add((Reserva)mapRow(dr));
+
+            }
+            dr.Close();
+            return lista;
+        }
+
+        public HashSet<Reserva> obterByCliente(int idCliente)
+        {
+            OleDbDataReader dr = executeQuery(montarSelect("ID_CLIENTE = " + idCliente.ToString()));
 
             HashSet<Reserva> lista = new HashSet<Reserva>();
 

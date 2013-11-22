@@ -69,5 +69,20 @@ namespace ER4Aerea
                 }
             }        
         }
+        public Voo obterVooByReserva(int idReserva) {
+            OleDbDataReader dr = executeQuery(montarSelect(
+                "(Select Count(1) From RESERVA X Where X.ID_VOO = ID_VOO And X.ID_RESERVA = " + idReserva.ToString()+") > 0"));
+
+            List<Voo> lista = new List<Voo>();
+
+            while (dr.Read())
+            {
+                lista.Add((Voo)mapRow(dr));
+
+            }
+            dr.Close();
+            return lista[0];
+        }
+
     }
 }
