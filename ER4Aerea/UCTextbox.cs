@@ -16,14 +16,17 @@ namespace ER4Aerea
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(this.Tag.ToString()))
+            if (this.Tag!=null)
             {
                 if (this.Tag.ToString() == "N")
                     if (!(e.KeyChar >= '0' && e.KeyChar <= '9'))
-                        e.Handled = true;
+                        if (e.KeyChar != (char)Keys.Back)
+                            e.Handled = true;
+
                 if (this.Tag.ToString() == "D")
-                    if (!((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == ','))
-                        e.Handled = true;
+                    if ((!(e.KeyChar >= '0' && e.KeyChar <= '9') && e.KeyChar != ','))
+                        if (e.KeyChar != (char)Keys.Back)
+                            e.Handled = true;
                 //if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && !Char.IsSeparator(e.KeyChar)) 
             }
             else
