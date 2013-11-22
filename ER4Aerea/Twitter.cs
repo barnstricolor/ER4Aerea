@@ -34,7 +34,7 @@ namespace ER4Aerea
         public void postar(string msg)
         {
             autorizar();
-            twitterCtx.UpdateStatus(msg);
+            twitterCtx.UpdateStatus(DateTime.Now +  msg);
         }
 
     }

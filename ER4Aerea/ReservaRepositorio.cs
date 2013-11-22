@@ -27,15 +27,13 @@ namespace ER4Aerea
         {
             ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
             Cliente cliente = (Cliente)clienteRepositorio.obter(int.Parse(dr["ID_CLIENTE"].ToString()));
-            //Cliente cliente = new Cliente("");
-            //cliente.id = int.Parse(dr["ID_CLIENTE"].ToString());
-//            VooRepositorio vooRepositorio = new VooRepositorio();
+            //VooRepositorio vooRepositorio = new VooRepositorio();
             //Voo voo = (Voo)vooRepositorio.obter(int.Parse(dr["ID_VOO"].ToString()));
             //voo.id = int.Parse(dr["ID_CLIENTE"].ToString());
-            //UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
-            //Usuario usuario = (Usuario)usuarioRepositorio.obter(int.Parse(dr["ID_USUARIO"].ToString()));
+            UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
+            Usuario usuario = (Usuario)usuarioRepositorio.obter(int.Parse(dr["ID_USUARIO"].ToString()));
 
-            Reserva reserva = new Reserva(null, int.Parse(dr["QTD_ASSENTO"].ToString()), float.Parse(dr["VAL_PRECO"].ToString()), null, null);
+            Reserva reserva = new Reserva(null, int.Parse(dr["QTD_ASSENTO"].ToString()), float.Parse(dr["VAL_PRECO"].ToString()),null, usuario);
 
             reserva.id = int.Parse(dr["ID_RESERVA"].ToString());
             //dr.Close();

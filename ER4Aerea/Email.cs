@@ -18,7 +18,7 @@ namespace ER4Aerea
             MailMessage mensagem = new MailMessage(
                 "er4aerea@gmail.com",
                 email,
-                "Saldão ER4Aérea - Passagens Nacionais com até 60% de desconto‏",
+                "",//Saldão ER4Aérea - Passagens Nacionais até pela metade do preço‏",
                 "Aproveite...");
             
             //Attachment anexo = new Attachment(((ListBoxItem)item).Content.ToString());
@@ -31,7 +31,7 @@ namespace ER4Aerea
             envio.Credentials = new NetworkCredential("er4aerea","peludinha");
             
             envio.EnableSsl = true;
-            envio.Send(mensagem);
+            envio.SendAsync(mensagem,null);
         }
 
     }

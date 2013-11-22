@@ -118,9 +118,12 @@
             // 
             // dtpPartida
             // 
+            this.dtpPartida.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpPartida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpPartida.Location = new System.Drawing.Point(99, 74);
             this.dtpPartida.Margin = new System.Windows.Forms.Padding(4);
             this.dtpPartida.Name = "dtpPartida";
+            this.dtpPartida.ShowUpDown = true;
             this.dtpPartida.Size = new System.Drawing.Size(291, 22);
             this.dtpPartida.TabIndex = 1;
             this.dtpPartida.Tag = "1";

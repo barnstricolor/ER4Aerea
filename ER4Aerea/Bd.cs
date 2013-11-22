@@ -80,8 +80,8 @@ namespace ER4Aerea
             
             OleDbDataReader dr = cmd.ExecuteReader();
             dr.Read();
-            dr.Close();
             string valor=dr[0].ToString();
+            dr.Close();
             return Int32.Parse(valor);
         }
 

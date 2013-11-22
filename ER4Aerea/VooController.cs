@@ -59,10 +59,15 @@ namespace ER4Aerea
             Voo voo = (Voo)repositorio().obter(id);
 
             criarTela();
+
+            carregarCidade(tela().dcbOrigem);
+            carregarCidade(tela().dcbDestino);
+            carregarAviao(tela().dcbAviao);
+
             tela().txtId.Text = voo.id.ToString();
-            tela().dcbAviao.SelectedValue = voo.aviao.id.ToString();
-            tela().dcbOrigem.SelectedValue = voo.origem.id.ToString();
-            tela().dcbDestino.SelectedValue = voo.destino.id.ToString();
+            tela().dcbAviao.SelectedValue = voo.aviao.id;
+            tela().dcbOrigem.SelectedValue = voo.origem.id;
+            tela().dcbDestino.SelectedValue = voo.destino.id;
             tela().txtPreco.Text = voo.preco.ToString();
             tela().dtpPartida.Value = voo.partida;
             tela().dtpChegada.Value = voo.chegada;
@@ -78,6 +83,8 @@ namespace ER4Aerea
             this.frmTela = new frmVoo();
             frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
             frmTela.dcbOrigem.Click += new EventHandler(this.carregarCidade);
+            frmTela.dcbDestino.Click += new EventHandler(this.carregarCidade);
+            frmTela.dcbAviao.Click += new EventHandler(this.carregarAviao);
             frmTela.Text = "Cadastro de Voo";
             return frmTela;
         }
@@ -98,23 +105,26 @@ namespace ER4Aerea
                 i++;
             }
             Twitter twitter = new Twitter();
-            twitter.postar("?");
+            string post = "Saldão ER4Aérea - Passagens Nacionais até pela metade do preço‏ ";
+            post += "De:" + voo.origem.nome + " a " + voo.destino.nome +" por " + voo.preco.ToString("C2");
+
+            twitter.postar(post);
             MessageBox.Show("Emails enviados: " + i + " e Twitter Atualizado.");
         }
         protected void carregarCidade(object sender, EventArgs e)
         {
             CidadeRepositorio repo = new CidadeRepositorio();
             HashSet<Dominio> lista = repo.obterTodos();
-            carregarDataCombo(lista, (ComboBox)sender);
+            carregarDataComboCidade(lista, (ComboBox)sender);
         }
 
         protected void carregarCidade(ComboBox cbo)
         {
             CidadeRepositorio repo = new CidadeRepositorio();
             HashSet<Dominio> lista = repo.obterTodos();
-            carregarDataCombo(lista, cbo);
+            carregarDataComboCidade(lista, cbo);
         }
-        protected void carregarDataCombo(HashSet<Dominio> lista, ComboBox dcb)
+        protected void carregarDataComboCidade(HashSet<Dominio> lista, ComboBox dcb)
         {
             Hashtable table = new Hashtable();
             foreach (Dominio dominio in lista)
@@ -127,6 +137,33 @@ namespace ER4Aerea
             dcb.ValueMember = "Key";
         }
 
+
+
+        protected void carregarAviao(object sender, EventArgs e)
+        {
+            AviaoRepositorio repo = new AviaoRepositorio();
+            HashSet<Dominio> lista = repo.obterTodos();
+            carregarDataComboAviao(lista, (ComboBox)sender);
+        }
+
+        protected void carregarAviao(ComboBox cbo)
+        {
+            AviaoRepositorio repo = new AviaoRepositorio();
+            HashSet<Dominio> lista = repo.obterTodos();
+            carregarDataComboAviao(lista, cbo);
+        }
+        protected void carregarDataComboAviao(HashSet<Dominio> lista, ComboBox dcb)
+        {
+            Hashtable table = new Hashtable();
+            foreach (Dominio dominio in lista)
+            {
+                Aviao aviao = (Aviao)dominio;
+                table.Add(aviao.id, aviao.modelo);
+            }
+            dcb.DataSource = new BindingSource(table, null);
+            dcb.DisplayMember = "Value";
+            dcb.ValueMember = "Key";
+        }
 
     }
 }

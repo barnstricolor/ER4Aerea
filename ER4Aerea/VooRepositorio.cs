@@ -62,8 +62,11 @@ namespace ER4Aerea
             ReservaRepositorio reservaRepositorio = new ReservaRepositorio();
             Voo voo=(Voo)dominio;
             foreach (Reserva reserva in voo.reservas) {
-                reserva.voo = voo;
-                reservaRepositorio.salvar(reserva);
+                if (reserva.id == 0)
+                {
+                    reserva.voo = voo;
+                    reservaRepositorio.salvar(reserva);
+                }
             }        
         }
     }
