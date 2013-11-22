@@ -47,6 +47,11 @@ namespace ER4Aerea
             btnPesquisar.PerformClick();
         }
 
+        private void dtpPartida_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
