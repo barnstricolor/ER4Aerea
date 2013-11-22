@@ -60,19 +60,9 @@ namespace ER4Aerea
             btnEditar.PerformClick();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

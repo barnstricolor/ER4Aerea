@@ -16,7 +16,7 @@ namespace ER4Aerea
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
-            if (this.Tag != null)
+            if (!string.IsNullOrWhiteSpace(this.Tag.ToString()))
             {
                 if (this.Tag.ToString() == "N")
                     if (!(e.KeyChar >= '0' && e.KeyChar <= '9'))

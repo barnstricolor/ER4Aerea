@@ -22,11 +22,6 @@ namespace ER4Aerea
             this.Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             foreach (Control x in this.Controls)

@@ -32,12 +32,12 @@
             System.Windows.Forms.Label nOM_MODELOLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAviao));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtId = new ER4Aerea.UCTextBox();
-            this.txtAssento = new ER4Aerea.UCTextBox();
-            this.txtModelo = new ER4Aerea.UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtId = new ER4Aerea.UCTextBox();
+            this.txtAssento = new ER4Aerea.UCTextBox();
+            this.txtModelo = new ER4Aerea.UCTextBox();
             qTD_ASSENTOLabel = new System.Windows.Forms.Label();
             nOM_MODELOLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,65 +46,40 @@
             // qTD_ASSENTOLabel
             // 
             qTD_ASSENTOLabel.AutoSize = true;
-            qTD_ASSENTOLabel.Location = new System.Drawing.Point(26, 57);
+            qTD_ASSENTOLabel.Location = new System.Drawing.Point(35, 70);
+            qTD_ASSENTOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             qTD_ASSENTOLabel.Name = "qTD_ASSENTOLabel";
-            qTD_ASSENTOLabel.Size = new System.Drawing.Size(125, 13);
+            qTD_ASSENTOLabel.Size = new System.Drawing.Size(167, 17);
             qTD_ASSENTOLabel.TabIndex = 46;
             qTD_ASSENTOLabel.Text = "Quantidade de assentos:";
             // 
             // nOM_MODELOLabel
             // 
             nOM_MODELOLabel.AutoSize = true;
-            nOM_MODELOLabel.Location = new System.Drawing.Point(107, 30);
+            nOM_MODELOLabel.Location = new System.Drawing.Point(143, 37);
+            nOM_MODELOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nOM_MODELOLabel.Name = "nOM_MODELOLabel";
-            nOM_MODELOLabel.Size = new System.Drawing.Size(45, 13);
+            nOM_MODELOLabel.Size = new System.Drawing.Size(58, 17);
             nOM_MODELOLabel.TabIndex = 48;
             nOM_MODELOLabel.Text = "Modelo:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(376, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(253, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(396, 131);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(76, 20);
-            this.txtId.TabIndex = 44;
-            this.txtId.Tag = "ID_AVIAO,N";
-            // 
-            // txtAssento
-            // 
-            this.txtAssento.Location = new System.Drawing.Point(157, 54);
-            this.txtAssento.MaxLength = 4;
-            this.txtAssento.Name = "txtAssento";
-            this.txtAssento.Size = new System.Drawing.Size(119, 20);
-            this.txtAssento.TabIndex = 1;
-            this.txtAssento.Tag = "N";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Location = new System.Drawing.Point(157, 28);
-            this.txtModelo.MaxLength = 50;
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(119, 20);
-            this.txtModelo.TabIndex = 0;
-            this.txtModelo.TabStop = false;
-            this.txtModelo.Tag = "";
-            // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(74, 156);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpar.Location = new System.Drawing.Point(99, 192);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(56, 19);
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -112,10 +87,10 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(416, 156);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechar.Location = new System.Drawing.Point(555, 192);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(56, 19);
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 4;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
@@ -123,19 +98,49 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(14, 156);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalvar.Location = new System.Drawing.Point(19, 192);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(56, 19);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(528, 161);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 22);
+            this.txtId.TabIndex = 44;
+            this.txtId.Tag = "ID_AVIAO,N";
+            // 
+            // txtAssento
+            // 
+            this.txtAssento.Location = new System.Drawing.Point(209, 66);
+            this.txtAssento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAssento.MaxLength = 4;
+            this.txtAssento.Name = "txtAssento";
+            this.txtAssento.Size = new System.Drawing.Size(157, 22);
+            this.txtAssento.TabIndex = 1;
+            this.txtAssento.Tag = "N";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Location = new System.Drawing.Point(209, 34);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModelo.MaxLength = 5;
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(157, 22);
+            this.txtModelo.TabIndex = 0;
+            this.txtModelo.Tag = "";
+            // 
             // frmAviao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 186);
+            this.ClientSize = new System.Drawing.Size(641, 229);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnSalvar);
@@ -145,7 +150,7 @@
             this.Controls.Add(this.txtAssento);
             this.Controls.Add(nOM_MODELOLabel);
             this.Controls.Add(this.txtModelo);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAviao";
             this.Text = "frmAviao";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

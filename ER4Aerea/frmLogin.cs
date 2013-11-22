@@ -42,11 +42,6 @@ namespace ER4Aerea
             this.DialogResult = DialogResult.Abort;
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
+        
     }
 }
