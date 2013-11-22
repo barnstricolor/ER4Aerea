@@ -46,7 +46,7 @@ namespace ER4Aerea
 	
 	    private Boolean temDisponibilidade(int assentos){
 		
-		    return assentosDisponiveis() - assentos > 0;
+		    return assentosDisponiveis() - assentos >= 0;
 	
 	    }
 	
