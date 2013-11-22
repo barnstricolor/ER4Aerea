@@ -106,14 +106,16 @@ namespace ER4Aerea
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
             Usuario usuario = (Usuario)usuarioRepositorio.obter(Bd.ID_USUARIO_LOGADO);
 
-            origem.novaReserva(cliente, assentos, usuario);
-            if (destino!=null)
-                destino.novaReserva(cliente, assentos, usuario);
-
             VooRepositorio vooRepositorio = new VooRepositorio();
+
+            origem.novaReserva(cliente, assentos, usuario);
             vooRepositorio.salvar(origem);
+
             if (destino != null)
+            {
+                destino.novaReserva(cliente, assentos, usuario);
                 vooRepositorio.salvar(destino);
+            }
 
             tela.Close();
         }        

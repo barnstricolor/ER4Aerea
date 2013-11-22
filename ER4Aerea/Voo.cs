@@ -40,7 +40,7 @@ namespace ER4Aerea
 	
 	    private float calcularPreco(float perDesconto){
 		
-		    return preco * (1 - perDesconto);
+		    return preco * (1 - perDesconto/100);
 	
 	    }
 	
