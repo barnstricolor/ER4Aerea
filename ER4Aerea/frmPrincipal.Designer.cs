@@ -145,8 +145,8 @@
             // cidadeToolStripMenuItem1
             // 
             this.cidadeToolStripMenuItem1.Name = "cidadeToolStripMenuItem1";
-            this.cidadeToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
-            this.cidadeToolStripMenuItem1.Text = "Cidade";
+            this.cidadeToolStripMenuItem1.Size = new System.Drawing.Size(176, 24);
+            this.cidadeToolStripMenuItem1.Text = "Ocupação Voo";
             this.cidadeToolStripMenuItem1.Click += new System.EventHandler(this.cidadeToolStripMenuItem1_Click);
             // 
             // windowsMenu

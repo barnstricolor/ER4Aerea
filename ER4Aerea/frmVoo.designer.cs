@@ -156,7 +156,7 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(79, 22);
             this.txtPreco.TabIndex = 5;
-            this.txtPreco.Tag = "N";
+            this.txtPreco.Tag = "D";
             // 
             // btnLimpar
             // 
@@ -190,6 +190,8 @@
             // 
             // dtpChegada
             // 
+            this.dtpChegada.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpChegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpChegada.Location = new System.Drawing.Point(99, 104);
             this.dtpChegada.Margin = new System.Windows.Forms.Padding(4);
             this.dtpChegada.Name = "dtpChegada";

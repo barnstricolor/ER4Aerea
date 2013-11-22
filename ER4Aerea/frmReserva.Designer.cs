@@ -40,10 +40,10 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtValor = new ER4Aerea.UCTextBox();
-            this.txtCliente = new ER4Aerea.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtId = new ER4Aerea.UCTextBox();
-            this.txtUsuario = new ER4Aerea.UCTextBox();
+            this.dcbCliente = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             label2 = new System.Windows.Forms.Label();
             txtAssento = new System.Windows.Forms.Label();
             iD_AVIAOLabel = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             // 
             // txtVoo
             // 
-            this.txtVoo.Location = new System.Drawing.Point(91, 131);
+            this.txtVoo.Location = new System.Drawing.Point(91, 135);
             this.txtVoo.Margin = new System.Windows.Forms.Padding(4);
             this.txtVoo.Name = "txtVoo";
             this.txtVoo.Size = new System.Drawing.Size(79, 22);
@@ -113,7 +113,7 @@
             // 
             // txtAssentos
             // 
-            this.txtAssentos.Location = new System.Drawing.Point(91, 101);
+            this.txtAssentos.Location = new System.Drawing.Point(91, 106);
             this.txtAssentos.Margin = new System.Windows.Forms.Padding(4);
             this.txtAssentos.Name = "txtAssentos";
             this.txtAssentos.Size = new System.Drawing.Size(79, 22);
@@ -152,21 +152,12 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(91, 161);
+            this.txtValor.Location = new System.Drawing.Point(91, 165);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(79, 22);
             this.txtValor.TabIndex = 118;
             this.txtValor.Tag = "VAL_PRECO,N";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(91, 41);
-            this.txtCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(79, 22);
-            this.txtCliente.TabIndex = 117;
-            this.txtCliente.Tag = "ID_AVIAO,N";
             // 
             // pictureBox1
             // 
@@ -189,21 +180,31 @@
             this.txtId.TabIndex = 116;
             this.txtId.Tag = "ID_VOO,N";
             // 
-            // txtUsuario
+            // dcbCliente
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(91, 71);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(79, 22);
-            this.txtUsuario.TabIndex = 131;
-            this.txtUsuario.Tag = "ID_AVIAO,N";
+            this.dcbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbCliente.FormattingEnabled = true;
+            this.dcbCliente.Location = new System.Drawing.Point(91, 42);
+            this.dcbCliente.Name = "dcbCliente";
+            this.dcbCliente.Size = new System.Drawing.Size(338, 24);
+            this.dcbCliente.TabIndex = 133;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(91, 75);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(338, 24);
+            this.comboBox1.TabIndex = 134;
             // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 246);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dcbCliente);
             this.Controls.Add(label3);
             this.Controls.Add(this.txtVoo);
             this.Controls.Add(label2);
@@ -213,7 +214,6 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(iD_AVIAOLabel);
             this.Controls.Add(this.txtId);
@@ -234,9 +234,9 @@
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnSalvar;
         public UCTextBox txtValor;
-        public UCTextBox txtCliente;
         public System.Windows.Forms.PictureBox pictureBox1;
         public UCTextBox txtId;
-        public UCTextBox txtUsuario;
+        public System.Windows.Forms.ComboBox dcbCliente;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

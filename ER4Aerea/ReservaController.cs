@@ -28,13 +28,13 @@ namespace ER4Aerea
             VooRepositorio vooRepositorio = new VooRepositorio();
             Voo voo = (Voo)vooRepositorio.obter(int.Parse(tela().txtVoo.Text));
             ClienteRepositorio clienteRepositorio=new ClienteRepositorio();
-            Cliente cliente = (Cliente)clienteRepositorio.obter(int.Parse(tela().txtCliente.Text));
+            //Cliente cliente = (Cliente)clienteRepositorio.obter(int.Parse(tela().txtCliente.Text));
             UsuarioRepositorio usuarioRepositorio=new UsuarioRepositorio();
             Usuario usuario=(Usuario)usuarioRepositorio.obter(Bd.ID_USUARIO_LOGADO);
             
             Reserva reserva = null;
             if (string.IsNullOrEmpty(tela().txtId.Text))
-                reserva = new Reserva(cliente,int.Parse(tela().txtAssentos.Text),float.Parse(tela().txtValor.Text),voo,usuario);
+                reserva = new Reserva(null,int.Parse(tela().txtAssentos.Text),float.Parse(tela().txtValor.Text),voo,usuario);
             else
                 reserva = (Reserva)repositorio().obter(int.Parse(tela().txtId.Text));
 
@@ -50,7 +50,7 @@ namespace ER4Aerea
 
             criarTela();
             tela().txtId.Text = reserva.id.ToString();
-            tela().txtCliente.Text = reserva.cliente.id.ToString();
+            //tela().txtCliente.Text = reserva.cliente.id.ToString();
             tela().txtAssentos.Text = reserva.assentos.ToString();
             tela().txtVoo.Text = reserva.voo.id.ToString();
             tela().txtValor.Text = reserva.preco.ToString();
