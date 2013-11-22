@@ -32,11 +32,11 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.txtNomOrigem = new ER4Aerea.UCTextBox();
             this.grd = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,19 @@
             this.grd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
             this.grd.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellDoubleClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descrição";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 500;
+            // 
             // btnNovo
             // 
             this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -135,19 +148,6 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descrição";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 500;
-            // 
             // frmPesquisa
             // 
             this.AcceptButton = this.btnPesquisar;
@@ -179,7 +179,6 @@
         #endregion
 
         private UCTextBox txtNomOrigem;
-        private System.Windows.Forms.DataGridView grd;
         public System.Windows.Forms.Button btnPesquisar;
         public System.Windows.Forms.Button btnNovo;
         public System.Windows.Forms.Button btnFechar;
@@ -187,5 +186,6 @@
         public System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        public System.Windows.Forms.DataGridView grd;
     }
 }

@@ -22,6 +22,11 @@ namespace ER4Aerea
         protected override void configurarPesquisaTela(frmPesquisa pesquisaTela, Form mdi)
         {
             pesquisaTela.Text = "Cadastro de Voo";
+            pesquisaTela.grd.ColumnCount = 6;
+            pesquisaTela.grd.Columns[2].Name = "Origem";
+            pesquisaTela.grd.Columns[3].Name = "Destino";
+            pesquisaTela.grd.Columns[4].Name = "Partida";
+            pesquisaTela.grd.Columns[5].Name = "Chegada";
         }
 
         protected override void salvar_Click(object sender, EventArgs e)
@@ -136,9 +141,6 @@ namespace ER4Aerea
             dcb.DisplayMember = "Value";
             dcb.ValueMember = "Key";
         }
-
-
-
         protected void carregarAviao(object sender, EventArgs e)
         {
             AviaoRepositorio repo = new AviaoRepositorio();
