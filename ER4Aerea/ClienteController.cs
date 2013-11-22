@@ -53,12 +53,21 @@ namespace ER4Aerea
             {
                 if (x is TextBox)
                 {
-                    if (((TextBox)x).Name != "txtId")
+                    if (((TextBox)x).Name.ToUpper() != "txtId".ToUpper())
                         if (string.IsNullOrWhiteSpace(((TextBox)x).Text))
                         {
                             MessageBox.Show("Informe todos os valores");
+                            x.Focus();
                             return false;
-                        }                        
+                        }
+                }
+                else if (x is ComboBox) {
+                    if (((ComboBox)x).SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Informe todos os valores");
+                        x.Focus();
+                        return false;
+                    }
                 }
             }
             return true;
@@ -75,7 +84,7 @@ namespace ER4Aerea
                 else
                     cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
 
-                if (tela().dcbCidade.SelectedValue.ToString() != "")
+                if (tela().dcbCidade.SelectedIndex != -1)
                 {
                     CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
                     Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);

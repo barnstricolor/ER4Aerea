@@ -24,9 +24,13 @@ namespace ER4Aerea
             pesquisaTela.Text = "Cadastro de Voo";
             pesquisaTela.grd.ColumnCount = 6;
             pesquisaTela.grd.Columns[2].Name = "Origem";
+            pesquisaTela.grd.Columns[2].Width = 200;
             pesquisaTela.grd.Columns[3].Name = "Destino";
+            pesquisaTela.grd.Columns[3].Width = 200;
             pesquisaTela.grd.Columns[4].Name = "Partida";
+            pesquisaTela.grd.Columns[4].Width = 200;
             pesquisaTela.grd.Columns[5].Name = "Chegada";
+            pesquisaTela.grd.Columns[5].Width = 200;
         }
 
         private bool validaTela() {

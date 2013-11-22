@@ -52,7 +52,12 @@ namespace ER4Aerea
         public override object[] extrairValores(Dominio dominio)
         {
             Voo voo = (Voo)dominio;
-            return new object[] { voo.id, voo.preco, voo.origem.id, voo.destino.id, voo.aviao.id,voo.partida,voo.chegada};
+            CidadeRepositorio repo = new CidadeRepositorio();
+            Cidade cidade = (Cidade)repo.obter(voo.origem.id);
+            string origem = cidade.nome;
+            cidade = (Cidade)repo.obter(voo.destino.id);
+            string destino = cidade.nome;
+            return new object[] { voo.id, origem + "=>" + destino, origem, destino, voo.partida, voo.chegada };
         }
         public override string montarWhereByFiltroString(string filtro){
             return "";

@@ -46,8 +46,7 @@ create table CIDADE
 (
   id_cidade  NUMBER not null,
   nom_cidade VARCHAR2(100) not null,
-  num_cep    NUMBER not null,
-  nom_uf     VARCHAR2(2) not null
+  num_cep    NUMBER not null
 )
 ;
 alter table CIDADE
@@ -67,8 +66,7 @@ create table CLIENTE
   nom_ocupacao   VARCHAR2(100) not null,
   flg_especial   VARCHAR2(100) not null,
   num_rg         VARCHAR2(100) not null,
-  sexo           VARCHAR2(100) not null,
-  dta_nascimento DATE not null,
+  sexo           VARCHAR2(100) not null,  
   num_end        NUMBER not null,
   nom_bairro     VARCHAR2(100) not null,
   cad_cep        VARCHAR2(100) not null,
@@ -91,8 +89,7 @@ create table USUARIO
   NUM_CPF     NUMBER not null,
   NOM_ENDERECO VARCHAR2(100) not null,
   NUM_ENDERE  NUMBER not null,
-  ID_CIDADE   NUMBER not null,
-  NOM_UF      VARCHAR2(100) not null
+  ID_CIDADE   NUMBER not null
 )
 ;
 alter table USUARIO
@@ -185,11 +182,9 @@ A.ID_AVIAO = D.ID_AVIAO ;
 INSERT INTO CIDADE(
 ID_CIDADE,
 NOM_CIDADE,
-NUM_CEP,
-NOM_UF) VALUES (1,
+NUM_CEP) VALUES (1,
 'RIBEIRAO PRETO',
-14100,
-'SP');
+14100);
 
 insert into USUARIO(ID_USUARIO,
 NOM_LOGIN,

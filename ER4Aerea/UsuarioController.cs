@@ -32,7 +32,16 @@ namespace ER4Aerea
                         {
                             MessageBox.Show("Informe todos os valores");
                             return false;
-                        }                        
+                        }
+                }
+                else if (x is ComboBox)
+                {
+                    if (((ComboBox)x).SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Informe todos os valores");
+                        x.Focus();
+                        return false;
+                    }
                 }
             }
             return true;
@@ -49,7 +58,7 @@ namespace ER4Aerea
                 else
                     usuario = (Usuario)repositorio().obter(int.Parse(tela().txtId.Text));
 
-                if (tela().dcbCidade.SelectedValue.ToString() != "")
+                if (tela().dcbCidade.SelectedIndex != -1)
                 {
                     CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
                     Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
