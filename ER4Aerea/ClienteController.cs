@@ -113,7 +113,7 @@ namespace ER4Aerea
                 else
                     cliente.especial = "N";
                 cliente.desconto = float.Parse(tela().txtDesconto.Text);
-                cliente.numero = int.Parse(tela().txtNum.Text);
+                cliente.numero = tela().txtNum.Text;
                 cliente.telefone = tela().txtTel.Text;
                 cliente.rg = tela().txtRg.Text;
 

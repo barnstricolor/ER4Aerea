@@ -59,7 +59,7 @@ namespace ER4Aerea
             cliente.promocao = dr["FLG_ESPECIAL"].ToString();
             cliente.rg = dr["NUM_RG"].ToString();
             cliente.sexo = dr["SEXO"].ToString();
-            cliente.numero = int.Parse(dr["NUM_END"].ToString());
+            cliente.numero = dr["NUM_END"].ToString();
             cliente.bairro = dr["NOM_BAIRRO"].ToString();
             cliente.cep = dr["CAD_CEP"].ToString();
             cliente.telefone = dr["NUM_TELEFONE"].ToString();

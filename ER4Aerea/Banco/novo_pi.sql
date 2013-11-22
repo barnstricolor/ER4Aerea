@@ -67,7 +67,7 @@ create table CLIENTE
   flg_especial   VARCHAR2(100) not null,
   num_rg         VARCHAR2(100) not null,
   sexo           VARCHAR2(100) not null,  
-  num_end        NUMBER not null,
+  num_end        VARCHAR2(100) not null,
   nom_bairro     VARCHAR2(100) not null,
   cad_cep        VARCHAR2(100) not null,
   num_telefone   VARCHAR2(100) not null,

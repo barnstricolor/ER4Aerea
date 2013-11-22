@@ -15,7 +15,7 @@ namespace ER4Aerea
         public string cpf { get; set; }
         public Cidade cidade { get; set; }
         public string sexo { get; set; }
-        public int numero { get; set; }
+        public string numero { get; set; }
         public string bairro { get; set; }
         public string cep { get; set; }
         public string telefone { get; set; }
