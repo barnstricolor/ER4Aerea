@@ -149,11 +149,11 @@ create sequence SQ_AVIAO;
 
 create sequence SQ_CIDADE;
 
-create sequence SQ_CLIENTE;
+create sequence SQ_CLIENTE start with 2;
 
 create sequence SQ_RESERVA;
 
-create sequence SQ_USUARIO;
+create sequence SQ_USUARIO start with 2;
 
 create sequence SQ_VOO;
 
