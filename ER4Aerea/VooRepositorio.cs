@@ -52,7 +52,7 @@ namespace ER4Aerea
         public override object[] extrairValores(Dominio dominio)
         {
             Voo voo = (Voo)dominio;
-            return new object[] { voo.id, voo.preco, voo.origem.id, voo.destino.id, voo.aviao.id,voo.partida};
+            return new object[] { voo.id, voo.preco, voo.origem.id, voo.destino.id, voo.aviao.id,voo.partida,voo.chegada};
         }
         public override string montarWhereByFiltroString(string filtro){
             return "";

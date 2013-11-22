@@ -133,7 +133,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DESTINO</Value>
+                              <Value>PARTIDA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -193,7 +193,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NOM MODELO</Value>
+                              <Value>AVIÃO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -795,7 +795,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.8cm</Height>
-        <Width>25.94083cm</Width>
+        <Width>25.94084cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

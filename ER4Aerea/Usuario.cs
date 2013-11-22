@@ -10,10 +10,12 @@ namespace ER4Aerea
     {
 
         public string nome{get;set;}
+        public string senha { get; set; }
         public string login { get; set; }
-        public string senha { get; set; }  
+        public string cpf { get; set; }
+        public int numero { get; set; }
+        public Cidade cidade { get; set; }
         public string endereco { get; set; }
-        public string cpf { get; set; }  
 
     }
 }

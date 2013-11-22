@@ -55,10 +55,11 @@ namespace ER4Aerea
                 cliente = new Cliente(tela().txtNome.Text);
             else
                 cliente = (Cliente)repositorio().obter(int.Parse(tela().txtID.Text));
-            if (tela().dcbCliente.SelectedValue.ToString() != "")
+            
+            if (tela().dcbCidade.SelectedValue.ToString() != "")
             {
                 CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
-                Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCliente.SelectedValue);
+                Cidade cidade = (Cidade)cidadeRepositorio.obter((int)tela().dcbCidade.SelectedValue);
                 cliente.cidade = cidade;
             }
 
@@ -98,13 +99,13 @@ namespace ER4Aerea
             Cliente cliente = (Cliente)repositorio().obter(id);
 
             criarTela();
-            carregarCidade(tela().dcbCliente);
+            carregarCidade(tela().dcbCidade);
             tela().txtID.Text = cliente.id.ToString();
             tela().txtNome.Text = cliente.nome;
             tela().txtBairro.Text = cliente.bairro;
             tela().txtCel.Text = cliente.celular;
             tela().txtCep.Text = cliente.cep;
-            tela().dcbCliente.SelectedValue = cliente.cidade.id;
+            tela().dcbCidade.SelectedValue = cliente.cidade.id;
             tela().txtCpf.Text = cliente.cpf;
             tela().txtEmail.Text = cliente.email;
             tela().txtEndereco.Text = cliente.endereco;
@@ -131,7 +132,7 @@ namespace ER4Aerea
         {
             this.frmTela = new frmCliente();
             frmTela.btnSalvar.Click += new EventHandler(this.salvar_Click);
-            frmTela.dcbCliente.Click += new EventHandler(this.carregarCidade);
+            frmTela.dcbCidade.Click += new EventHandler(this.carregarCidade);
             frmTela.Text = "Cadastro de Clientes";
             return frmTela;
         }
