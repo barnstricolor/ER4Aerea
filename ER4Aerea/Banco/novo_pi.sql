@@ -27,8 +27,8 @@ DROP TABLE VOO CASCADE CONSTRAINTS;
 create table AVIAO
 (
   id_aviao    NUMBER not null,
-  qtd_assento NUMBER,
-  nom_modelo  VARCHAR2(100)
+  qtd_assento NUMBER not null,
+  nom_modelo  VARCHAR2(100) not null
 )
 ;
 alter table AVIAO
@@ -37,9 +37,9 @@ alter table AVIAO
 create table CIDADE
 (
   id_cidade  NUMBER not null,
-  nom_cidade VARCHAR2(100),
-  num_cep    NUMBER,
-  nom_uf     VARCHAR2(2)
+  nom_cidade VARCHAR2(100) not null,
+  num_cep    NUMBER not null,
+  nom_uf     VARCHAR2(2) not null
 )
 ;
 alter table CIDADE
@@ -48,24 +48,24 @@ alter table CIDADE
 create table CLIENTE
 (
   id_cliente     NUMBER not null,
-  flg_promocao   VARCHAR2(100),
-  nom_cliente    VARCHAR2(100),
-  nom_email      VARCHAR2(100),
-  nom_endereco   VARCHAR2(100),
-  num_cpf        NUMBER,
-  id_cidade      NUMBER,
-  num_celular    VARCHAR2(100),
-  val_renda      NUMBER,
-  nom_ocupacao   VARCHAR2(100),
-  flg_especial   VARCHAR2(100),
-  num_rg         VARCHAR2(100),
-  sexo           VARCHAR2(100),
-  dta_nascimento DATE,
-  num_end        NUMBER,
-  nom_bairro     VARCHAR2(100),
-  cad_cep        VARCHAR2(100),
-  num_telefone   VARCHAR2(100),
-  PER_DESCONTO   NUMBER
+  flg_promocao   VARCHAR2(100) not null,
+  nom_cliente    VARCHAR2(100) not null,
+  nom_email      VARCHAR2(100) not null,
+  nom_endereco   VARCHAR2(100) not null,
+  num_cpf        NUMBER not null,
+  id_cidade      NUMBER not null,
+  num_celular    VARCHAR2(100) not null,
+  val_renda      NUMBER not null,
+  nom_ocupacao   VARCHAR2(100) not null,
+  flg_especial   VARCHAR2(100) not null,
+  num_rg         VARCHAR2(100) not null,
+  sexo           VARCHAR2(100) not null,
+  dta_nascimento DATE not null,
+  num_end        NUMBER not null,
+  nom_bairro     VARCHAR2(100) not null,
+  cad_cep        VARCHAR2(100) not null,
+  num_telefone   VARCHAR2(100) not null,
+  PER_DESCONTO   NUMBER not null
 )
 ;
 alter table CLIENTE
@@ -77,14 +77,14 @@ alter table CLIENTE
 create table USUARIO
 (
   id_usuario  NUMBER not null,
-  nom_usuario VARCHAR2(100),
-  nom_senha   VARCHAR2(100),
-  nom_login   VARCHAR2(100),
-  NUM_CPF     NUMBER,
-  NOM_ENDERECO VARCHAR2(100),
-  NUM_ENDERE  NUMBER,
-  ID_CIDADE   NUMBER,
-  NOM_UF      VARCHAR2(100)
+  nom_usuario VARCHAR2(100) not null,
+  nom_senha   VARCHAR2(100) not null,
+  nom_login   VARCHAR2(100) not null,
+  NUM_CPF     NUMBER not null,
+  NOM_ENDERECO VARCHAR2(100) not null,
+  NUM_ENDERE  NUMBER not null,
+  ID_CIDADE   NUMBER not null,
+  NOM_UF      VARCHAR2(100) not null
 )
 ;
 alter table USUARIO
@@ -96,14 +96,14 @@ ALTER TABLE USUARIO
    
 create table VOO
 (
-  dat_partida DATE,
-  dat_chegada date,
-  id_aviao    NUMBER,
+  dat_partida DATE not null,
+  dat_chegada date not null,
+  id_aviao    NUMBER not null,
   id_voo      NUMBER not null,
-  val_preco   NUMBER,
-  id_origem   NUMBER,
-  id_destino  NUMBER,
-  FLG_PROMOCAO VARCHAR2(100)
+  val_preco   NUMBER not null,
+  id_origem   NUMBER not null,
+  id_destino  NUMBER not null,
+  FLG_PROMOCAO VARCHAR2(100) not null
 )
 ;
 alter table VOO
@@ -121,11 +121,11 @@ alter table VOO
 create table RESERVA
 (
   id_reserva  NUMBER not null,
-  id_cliente  NUMBER,
-  id_usuario  NUMBER,
-  val_preco   NUMBER,
-  qtd_assento NUMBER,
-  id_voo      NUMBER
+  id_cliente  NUMBER not null,
+  id_usuario  NUMBER not null,
+  val_preco   NUMBER not null,
+  qtd_assento NUMBER not null,
+  id_voo      NUMBER not null
 )
 ;
 alter table RESERVA
