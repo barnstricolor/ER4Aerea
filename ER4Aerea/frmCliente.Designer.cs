@@ -52,7 +52,7 @@ namespace ER4Aerea
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.chkEsp = new System.Windows.Forms.CheckBox();
-            this.dcbCliente = new System.Windows.Forms.ComboBox();
+            this.dcbCidade = new System.Windows.Forms.ComboBox();
             this.txtID = new ER4Aerea.UCTextBox();
             this.txtRenda = new ER4Aerea.UCTextBox();
             this.txtEmail = new ER4Aerea.UCTextBox();
@@ -303,14 +303,14 @@ namespace ER4Aerea
             this.chkEsp.Text = "Cliente ESPECIAL";
             this.chkEsp.UseVisualStyleBackColor = true;
             // 
-            // dcbCliente
+            // dcbCidade
             // 
-            this.dcbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dcbCliente.FormattingEnabled = true;
-            this.dcbCliente.Location = new System.Drawing.Point(96, 143);
-            this.dcbCliente.Name = "dcbCliente";
-            this.dcbCliente.Size = new System.Drawing.Size(220, 24);
-            this.dcbCliente.TabIndex = 8;
+            this.dcbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbCidade.FormattingEnabled = true;
+            this.dcbCidade.Location = new System.Drawing.Point(96, 143);
+            this.dcbCidade.Name = "dcbCidade";
+            this.dcbCidade.Size = new System.Drawing.Size(220, 24);
+            this.dcbCidade.TabIndex = 8;
             // 
             // txtID
             // 
@@ -457,7 +457,7 @@ namespace ER4Aerea
             this.ClientSize = new System.Drawing.Size(959, 344);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dcbCliente);
+            this.Controls.Add(this.dcbCidade);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.chkEsp);
             this.Controls.Add(this.txtRenda);
@@ -540,7 +540,7 @@ namespace ER4Aerea
         public UCTextBox txtRenda;
         public System.Windows.Forms.CheckBox chkEsp;
         public UCTextBox txtID;
-        public System.Windows.Forms.ComboBox dcbCliente;
+        public System.Windows.Forms.ComboBox dcbCidade;
         public UCTextBox txtDesconto;
         public System.Windows.Forms.Label label9;
     }

@@ -117,7 +117,7 @@ namespace ER4Aerea
         }
         private void preencherRow(Voo voo,DataGridView grid)
         {
-            object[] valores = new object[] { voo.id, voo.preco, voo.aviao.modelo, voo.assentosDisponiveis(), voo.partida.Hour + ":" + voo.partida.Minute };
+            object[] valores = new object[] { voo.id, voo.preco, voo.aviao.modelo, voo.assentosDisponiveis(), voo.partida.Hour + ":" + voo.partida.Minute, voo.chegada.Hour + ":" + voo.chegada.Minute };
             grid.Rows.Add(valores);            
         }
     }

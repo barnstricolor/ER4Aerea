@@ -34,29 +34,26 @@
             System.Windows.Forms.Label nUM_CPFLabel;
             System.Windows.Forms.Label nOM_LOGINLabel;
             System.Windows.Forms.Label label1;
-            System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.txtId = new ER4Aerea.UCTextBox();
-            this.nOM_ENDERECOTextBox = new ER4Aerea.UCTextBox();
+            this.txtEndereco = new ER4Aerea.UCTextBox();
             this.txtNome = new ER4Aerea.UCTextBox();
             this.txtSenha = new ER4Aerea.UCTextBox();
-            this.nUM_CPFTextBox = new ER4Aerea.UCTextBox();
+            this.txtCpf = new ER4Aerea.UCTextBox();
             this.txtLogin = new ER4Aerea.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new ER4Aerea.UCTextBox();
-            this.textBox3 = new ER4Aerea.UCTextBox();
+            this.txtNumero = new ER4Aerea.UCTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dcbCliente = new System.Windows.Forms.ComboBox();
+            this.dcbCidade = new System.Windows.Forms.ComboBox();
             nOM_ENDERECOLabel = new System.Windows.Forms.Label();
             nOM_USUARIOLabel = new System.Windows.Forms.Label();
             nOM_SENHALabel = new System.Windows.Forms.Label();
             nUM_CPFLabel = new System.Windows.Forms.Label();
             nOM_LOGINLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -119,7 +116,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(100, 75);
+            label1.Location = new System.Drawing.Point(139, 74);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(56, 17);
@@ -127,21 +124,10 @@
             label1.Tag = "";
             label1.Text = "Cidade:";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(375, 75);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(30, 17);
-            label2.TabIndex = 17;
-            label2.Tag = "";
-            label2.Text = "UF:";
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(16, 75);
+            label3.Location = new System.Drawing.Point(27, 72);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(27, 17);
@@ -159,14 +145,14 @@
             this.txtId.TabIndex = 1;
             this.txtId.Tag = "";
             // 
-            // nOM_ENDERECOTextBox
+            // txtEndereco
             // 
-            this.nOM_ENDERECOTextBox.Location = new System.Drawing.Point(281, 39);
-            this.nOM_ENDERECOTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nOM_ENDERECOTextBox.Name = "nOM_ENDERECOTextBox";
-            this.nOM_ENDERECOTextBox.Size = new System.Drawing.Size(167, 22);
-            this.nOM_ENDERECOTextBox.TabIndex = 2;
-            this.nOM_ENDERECOTextBox.Tag = "";
+            this.txtEndereco.Location = new System.Drawing.Point(281, 39);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(167, 22);
+            this.txtEndereco.TabIndex = 2;
+            this.txtEndereco.Tag = "";
             // 
             // txtNome
             // 
@@ -184,18 +170,18 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(149, 22);
-            this.txtSenha.TabIndex = 7;
+            this.txtSenha.TabIndex = 6;
             this.txtSenha.Tag = "";
             // 
-            // nUM_CPFTextBox
+            // txtCpf
             // 
-            this.nUM_CPFTextBox.Location = new System.Drawing.Point(76, 39);
-            this.nUM_CPFTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nUM_CPFTextBox.MaxLength = 11;
-            this.nUM_CPFTextBox.Name = "nUM_CPFTextBox";
-            this.nUM_CPFTextBox.Size = new System.Drawing.Size(113, 22);
-            this.nUM_CPFTextBox.TabIndex = 1;
-            this.nUM_CPFTextBox.Tag = "N";
+            this.txtCpf.Location = new System.Drawing.Point(76, 39);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCpf.MaxLength = 11;
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(113, 22);
+            this.txtCpf.TabIndex = 1;
+            this.txtCpf.Tag = "N";
             // 
             // txtLogin
             // 
@@ -203,7 +189,7 @@
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(151, 22);
-            this.txtLogin.TabIndex = 6;
+            this.txtLogin.TabIndex = 5;
             this.txtLogin.Tag = "";
             // 
             // pictureBox1
@@ -218,30 +204,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
             // 
-            // textBox2
+            // txtNumero
             // 
-            this.textBox2.Location = new System.Drawing.Point(415, 71);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(33, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Tag = "";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(53, 71);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(37, 22);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Tag = "N";
+            this.txtNumero.Location = new System.Drawing.Point(76, 69);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(37, 22);
+            this.txtNumero.TabIndex = 3;
+            this.txtNumero.Tag = "N";
             // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(93, 206);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 9;
+            this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Tag = "";
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -252,7 +229,7 @@
             this.btnFechar.Location = new System.Drawing.Point(578, 206);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 10;
+            this.btnFechar.TabIndex = 9;
             this.btnFechar.Tag = "";
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
@@ -263,45 +240,43 @@
             this.btnSalvar.Location = new System.Drawing.Point(12, 206);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 8;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Tag = "";
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // dcbCliente
+            // dcbCidade
             // 
-            this.dcbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dcbCliente.FormattingEnabled = true;
-            this.dcbCliente.Location = new System.Drawing.Point(159, 72);
-            this.dcbCliente.Name = "dcbCliente";
-            this.dcbCliente.Size = new System.Drawing.Size(209, 24);
-            this.dcbCliente.TabIndex = 4;
-            this.dcbCliente.Tag = "";
+            this.dcbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dcbCidade.FormattingEnabled = true;
+            this.dcbCidade.Location = new System.Drawing.Point(202, 68);
+            this.dcbCidade.Name = "dcbCidade";
+            this.dcbCidade.Size = new System.Drawing.Size(248, 24);
+            this.dcbCidade.TabIndex = 4;
+            this.dcbCidade.Tag = "";
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 241);
-            this.Controls.Add(this.dcbCliente);
+            this.Controls.Add(this.dcbCidade);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(label3);
-            this.Controls.Add(label2);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(nOM_ENDERECOLabel);
-            this.Controls.Add(this.nOM_ENDERECOTextBox);
+            this.Controls.Add(this.txtEndereco);
             this.Controls.Add(nOM_USUARIOLabel);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(nOM_SENHALabel);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(nUM_CPFLabel);
-            this.Controls.Add(this.nUM_CPFTextBox);
+            this.Controls.Add(this.txtCpf);
             this.Controls.Add(nOM_LOGINLabel);
             this.Controls.Add(this.txtLogin);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -320,14 +295,13 @@
         public System.Windows.Forms.Button btnFechar;
         public System.Windows.Forms.Button btnSalvar;
         public UCTextBox txtId;
-        public UCTextBox nOM_ENDERECOTextBox;
+        public UCTextBox txtEndereco;
         public UCTextBox txtNome;
         public UCTextBox txtSenha;
-        public UCTextBox nUM_CPFTextBox;
+        public UCTextBox txtCpf;
         public UCTextBox txtLogin;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public UCTextBox textBox2;
-        public UCTextBox textBox3;
-        public System.Windows.Forms.ComboBox dcbCliente;
+        public UCTextBox txtNumero;
+        public System.Windows.Forms.ComboBox dcbCidade;
     }
 }
