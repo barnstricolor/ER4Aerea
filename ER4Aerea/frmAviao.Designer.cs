@@ -83,6 +83,7 @@
             // txtAssento
             // 
             this.txtAssento.Location = new System.Drawing.Point(157, 54);
+            this.txtAssento.MaxLength = 4;
             this.txtAssento.Name = "txtAssento";
             this.txtAssento.Size = new System.Drawing.Size(119, 20);
             this.txtAssento.TabIndex = 1;
@@ -91,15 +92,17 @@
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(157, 28);
+            this.txtModelo.MaxLength = 50;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(119, 20);
             this.txtModelo.TabIndex = 0;
+            this.txtModelo.TabStop = false;
             this.txtModelo.Tag = "";
             // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(74, 156);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(56, 19);
             this.btnLimpar.TabIndex = 3;
@@ -110,7 +113,7 @@
             // btnFechar
             // 
             this.btnFechar.Location = new System.Drawing.Point(416, 156);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(56, 19);
             this.btnFechar.TabIndex = 4;
@@ -121,7 +124,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(14, 156);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(56, 19);
             this.btnSalvar.TabIndex = 2;
@@ -143,7 +146,7 @@
             this.Controls.Add(this.txtAssento);
             this.Controls.Add(nOM_MODELOLabel);
             this.Controls.Add(this.txtModelo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAviao";
             this.Text = "frmAviao";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
