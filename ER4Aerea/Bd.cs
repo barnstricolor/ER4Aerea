@@ -6,6 +6,7 @@ namespace ER4Aerea
 {
     public class Bd
     {
+        //Teste
         private OleDbConnection conn;
         private string usuario { get; set; }
         private string senha { get; set; }
