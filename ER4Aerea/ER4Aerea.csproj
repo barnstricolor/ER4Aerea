@@ -84,7 +84,9 @@
     <Compile Include="Aviao.cs" />
     <Compile Include="AviaoRepositorio.cs" />
     <Compile Include="Bd.cs" />
-    <Compile Include="Cidade.cs" />
+    <Compile Include="Cidade.cs">
+      <DependentUpon>ER4AereaEF.tt</DependentUpon>
+    </Compile>
     <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
     <Compile Include="CancelarReservaController.cs" />
@@ -92,6 +94,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ER4AereaEF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ER4AereaEF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ER4AereaEF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ER4AereaEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ER4AereaEF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ER4AereaEF.edmx</DependentUpon>
     </Compile>
     <Compile Include="frmCancelarReserva.cs">
       <SubType>Form</SubType>
@@ -257,6 +274,23 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="ER4AereaEF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ER4AereaEF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ER4AereaEF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ER4AereaEF.edmx</DependentUpon>
+      <LastGenOutput>ER4AereaEF.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ER4AereaEF.edmx.diagram">
+      <DependentUpon>ER4AereaEF.edmx</DependentUpon>
+    </None>
+    <None Include="ER4AereaEF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ER4AereaEF.edmx</DependentUpon>
+      <LastGenOutput>ER4AereaEF.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
