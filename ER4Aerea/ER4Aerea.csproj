@@ -84,6 +84,7 @@
     <Compile Include="Aviao.cs" />
     <Compile Include="AviaoRepositorio.cs" />
     <Compile Include="Bd.cs" />
+    <Compile Include="Cidade.cs" />
     <Compile Include="CidadeController.cs" />
     <Compile Include="CidadeRepositorio.cs" />
     <Compile Include="CancelarReservaController.cs" />

@@ -12,10 +12,15 @@ namespace ER4Aerea
     using System;
     using System.Collections.Generic;
     
-    public partial class Cidade
+    public partial class Cidade:Dominio
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string nome { get; set; }
         public string cep { get; set; }
+
+        public Cidade(string nome, string cep) {
+            this.nome = nome;
+            this.cep = cep;
+        }
     }
 }
