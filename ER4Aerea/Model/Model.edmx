@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="AVIAO" EntityType="Model.Store.AVIAO" store:Type="Tables" Schema="PI" />
+          <EntitySet Name="CIDADE" EntityType="Model.Store.CIDADE" store:Type="Tables" Schema="PI" />
+          <EntitySet Name="CLIENTE" EntityType="Model.Store.CLIENTE" store:Type="Tables" Schema="PI" />
+          <EntitySet Name="RESERVA" EntityType="Model.Store.RESERVA" store:Type="Tables" Schema="PI" />
+          <EntitySet Name="USUARIO" EntityType="Model.Store.USUARIO" store:Type="Tables" Schema="PI" />
+          <EntitySet Name="VOO" EntityType="Model.Store.VOO" store:Type="Tables" Schema="PI" />
+          <AssociationSet Name="FK_CAD_CIDADE#ID_DESTINO" Association="Model.Store.FK_CAD_CIDADE#ID_DESTINO">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAD_CIDADE#ID_ORIGEM" Association="Model.Store.FK_CAD_CIDADE#ID_ORIGEM">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VOO#ID_VOO" Association="Model.Store.FK_VOO#ID_VOO">
+            <End Role="VOO" EntitySet="VOO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005147" Association="Model.Store.SYS_C005147">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005158" Association="Model.Store.SYS_C005158">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005170" Association="Model.Store.SYS_C005170">
+            <End Role="AVIAO" EntitySet="AVIAO" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005179" Association="Model.Store.SYS_C005179">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005180" Association="Model.Store.SYS_C005180">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AVIAO">
+          <Key>
+            <PropertyRef Name="ID_AVIAO" />
+          </Key>
+          <Property Name="ID_AVIAO" Type="number" Nullable="false" />
+          <Property Name="QTD_ASSENTO" Type="number" Nullable="false" />
+          <Property Name="NOM_MODELO" Type="varchar2" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CIDADE">
+          <Key>
+            <PropertyRef Name="ID_CIDADE" />
+          </Key>
+          <Property Name="ID_CIDADE" Type="number" Nullable="false" />
+          <Property Name="NOM_CIDADE" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_CEP" Type="number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="number" Nullable="false" />
+          <Property Name="FLG_PROMOCAO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NOM_CLIENTE" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NOM_EMAIL" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NOM_ENDERECO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_CPF" Type="number" Nullable="false" />
+          <Property Name="ID_CIDADE" Type="number" Nullable="false" />
+          <Property Name="NUM_CELULAR" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="VAL_RENDA" Type="number" Nullable="false" />
+          <Property Name="NOM_OCUPACAO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="FLG_ESPECIAL" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_RG" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="SEXO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_END" Type="number" Nullable="false" />
+          <Property Name="NOM_BAIRRO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="CAD_CEP" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_TELEFONE" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="PER_DESCONTO" Type="number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="number" Nullable="false" />
+          <Property Name="ID_CLIENTE" Type="number" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="number" Nullable="false" />
+          <Property Name="VAL_PRECO" Type="number" Nullable="false" />
+          <Property Name="QTD_ASSENTO" Type="number" Nullable="false" />
+          <Property Name="ID_VOO" Type="number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="number" Nullable="false" />
+          <Property Name="NOM_USUARIO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NOM_SENHA" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NOM_LOGIN" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_CPF" Type="number" Nullable="false" />
+          <Property Name="NOM_ENDERECO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="NUM_ENDERE" Type="number" Nullable="false" />
+          <Property Name="ID_CIDADE" Type="number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VOO">
+          <Key>
+            <PropertyRef Name="ID_VOO" />
+          </Key>
+          <Property Name="DAT_PARTIDA" Type="date" Nullable="false" />
+          <Property Name="DAT_CHEGADA" Type="date" Nullable="false" />
+          <Property Name="ID_AVIAO" Type="number" Nullable="false" />
+          <Property Name="ID_VOO" Type="number" Nullable="false" />
+          <Property Name="VAL_PRECO" Type="number" Nullable="false" />
+          <Property Name="ID_ORIGEM" Type="number" Nullable="false" />
+          <Property Name="ID_DESTINO" Type="number" Nullable="false" />
+          <Property Name="FLG_PROMOCAO" Type="varchar2" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_CAD_CIDADE#ID_DESTINO">
+          <End Role="CIDADE" Type="Model.Store.CIDADE" Multiplicity="1" />
+          <End Role="VOO" Type="Model.Store.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAD_CIDADE#ID_ORIGEM">
+          <End Role="CIDADE" Type="Model.Store.CIDADE" Multiplicity="1" />
+          <End Role="VOO" Type="Model.Store.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_ORIGEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VOO#ID_VOO">
+          <End Role="VOO" Type="Model.Store.VOO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.Store.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOO">
+              <PropertyRef Name="ID_VOO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_VOO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005147">
+          <End Role="CIDADE" Type="Model.Store.CIDADE" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Model.Store.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005158">
+          <End Role="CIDADE" Type="Model.Store.CIDADE" Multiplicity="1" />
+          <End Role="USUARIO" Type="Model.Store.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="ID_CIDADE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005170">
+          <End Role="AVIAO" Type="Model.Store.AVIAO" Multiplicity="1" />
+          <End Role="VOO" Type="Model.Store.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AVIAO">
+              <PropertyRef Name="ID_AVIAO" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_AVIAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005179">
+          <End Role="CLIENTE" Type="Model.Store.CLIENTE" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.Store.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005180">
+          <End Role="USUARIO" Type="Model.Store.USUARIO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.Store.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities2" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="AVIAO" EntityType="Model.AVIAO" />
+          <EntitySet Name="CIDADE" EntityType="Model.CIDADE" />
+          <EntitySet Name="CLIENTE" EntityType="Model.CLIENTE" />
+          <EntitySet Name="RESERVA" EntityType="Model.RESERVA" />
+          <EntitySet Name="USUARIO" EntityType="Model.USUARIO" />
+          <EntitySet Name="VOO" EntityType="Model.VOO" />
+          <AssociationSet Name="SYS_C005170" Association="Model.SYS_C005170">
+            <End Role="AVIAO" EntitySet="AVIAO" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAD_CIDADE_ID_DESTINO" Association="Model.FK_CAD_CIDADE_ID_DESTINO">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAD_CIDADE_ID_ORIGEM" Association="Model.FK_CAD_CIDADE_ID_ORIGEM">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="VOO" EntitySet="VOO" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005147" Association="Model.SYS_C005147">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005158" Association="Model.SYS_C005158">
+            <End Role="CIDADE" EntitySet="CIDADE" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005179" Association="Model.SYS_C005179">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VOO_ID_VOO" Association="Model.FK_VOO_ID_VOO">
+            <End Role="VOO" EntitySet="VOO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="SYS_C005180" Association="Model.SYS_C005180">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AVIAO">
+          <Key>
+            <PropertyRef Name="ID_AVIAO" />
+          </Key>
+          <Property Name="ID_AVIAO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="QTD_ASSENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_MODELO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="VOO" Relationship="Model.SYS_C005170" FromRole="AVIAO" ToRole="VOO" />
+        </EntityType>
+        <EntityType Name="CIDADE">
+          <Key>
+            <PropertyRef Name="ID_CIDADE" />
+          </Key>
+          <Property Name="ID_CIDADE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_CIDADE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_CEP" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="VOO" Relationship="Model.FK_CAD_CIDADE_ID_DESTINO" FromRole="CIDADE" ToRole="VOO" />
+          <NavigationProperty Name="VOO1" Relationship="Model.FK_CAD_CIDADE_ID_ORIGEM" FromRole="CIDADE" ToRole="VOO" />
+          <NavigationProperty Name="CLIENTE" Relationship="Model.SYS_C005147" FromRole="CIDADE" ToRole="CLIENTE" />
+          <NavigationProperty Name="USUARIO" Relationship="Model.SYS_C005158" FromRole="CIDADE" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="FLG_PROMOCAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_CLIENTE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_EMAIL" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_ENDERECO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_CPF" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_CIDADE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NUM_CELULAR" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="VAL_RENDA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_OCUPACAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FLG_ESPECIAL" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_RG" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SEXO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_END" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_BAIRRO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CAD_CEP" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_TELEFONE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DESCONTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="CIDADE" Relationship="Model.SYS_C005147" FromRole="CLIENTE" ToRole="CIDADE" />
+          <NavigationProperty Name="RESERVA" Relationship="Model.SYS_C005179" FromRole="CLIENTE" ToRole="RESERVA" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_CLIENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_USUARIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VAL_PRECO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="QTD_ASSENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_VOO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="CLIENTE" Relationship="Model.SYS_C005179" FromRole="RESERVA" ToRole="CLIENTE" />
+          <NavigationProperty Name="VOO" Relationship="Model.FK_VOO_ID_VOO" FromRole="RESERVA" ToRole="VOO" />
+          <NavigationProperty Name="USUARIO" Relationship="Model.SYS_C005180" FromRole="RESERVA" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_USUARIO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_SENHA" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_LOGIN" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_CPF" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOM_ENDERECO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NUM_ENDERE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_CIDADE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="CIDADE" Relationship="Model.SYS_C005158" FromRole="USUARIO" ToRole="CIDADE" />
+          <NavigationProperty Name="RESERVA" Relationship="Model.SYS_C005180" FromRole="USUARIO" ToRole="RESERVA" />
+        </EntityType>
+        <EntityType Name="VOO">
+          <Key>
+            <PropertyRef Name="ID_VOO" />
+          </Key>
+          <Property Name="DAT_PARTIDA" Type="DateTime" Nullable="false" />
+          <Property Name="DAT_CHEGADA" Type="DateTime" Nullable="false" />
+          <Property Name="ID_AVIAO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_VOO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VAL_PRECO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_ORIGEM" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID_DESTINO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="FLG_PROMOCAO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AVIAO" Relationship="Model.SYS_C005170" FromRole="VOO" ToRole="AVIAO" />
+          <NavigationProperty Name="CIDADE" Relationship="Model.FK_CAD_CIDADE_ID_DESTINO" FromRole="VOO" ToRole="CIDADE" />
+          <NavigationProperty Name="CIDADE1" Relationship="Model.FK_CAD_CIDADE_ID_ORIGEM" FromRole="VOO" ToRole="CIDADE" />
+          <NavigationProperty Name="RESERVA" Relationship="Model.FK_VOO_ID_VOO" FromRole="VOO" ToRole="RESERVA" />
+        </EntityType>
+        <Association Name="SYS_C005170">
+          <End Role="AVIAO" Type="Model.AVIAO" Multiplicity="1" />
+          <End Role="VOO" Type="Model.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AVIAO">
+              <PropertyRef Name="ID_AVIAO" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_AVIAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAD_CIDADE_ID_DESTINO">
+          <End Role="CIDADE" Type="Model.CIDADE" Multiplicity="1" />
+          <End Role="VOO" Type="Model.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAD_CIDADE_ID_ORIGEM">
+          <End Role="CIDADE" Type="Model.CIDADE" Multiplicity="1" />
+          <End Role="VOO" Type="Model.VOO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="VOO">
+              <PropertyRef Name="ID_ORIGEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005147">
+          <End Role="CIDADE" Type="Model.CIDADE" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Model.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005158">
+          <End Role="CIDADE" Type="Model.CIDADE" Multiplicity="1" />
+          <End Role="USUARIO" Type="Model.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIDADE">
+              <PropertyRef Name="ID_CIDADE" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="ID_CIDADE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005179">
+          <End Role="CLIENTE" Type="Model.CLIENTE" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VOO_ID_VOO">
+          <End Role="VOO" Type="Model.VOO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VOO">
+              <PropertyRef Name="ID_VOO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_VOO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SYS_C005180">
+          <End Role="USUARIO" Type="Model.USUARIO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Model.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities2">
+          <EntitySetMapping Name="AVIAO">
+            <EntityTypeMapping TypeName="Model.AVIAO">
+              <MappingFragment StoreEntitySet="AVIAO">
+                <ScalarProperty Name="ID_AVIAO" ColumnName="ID_AVIAO" />
+                <ScalarProperty Name="QTD_ASSENTO" ColumnName="QTD_ASSENTO" />
+                <ScalarProperty Name="NOM_MODELO" ColumnName="NOM_MODELO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CIDADE">
+            <EntityTypeMapping TypeName="Model.CIDADE">
+              <MappingFragment StoreEntitySet="CIDADE">
+                <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
+                <ScalarProperty Name="NOM_CIDADE" ColumnName="NOM_CIDADE" />
+                <ScalarProperty Name="NUM_CEP" ColumnName="NUM_CEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="Model.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="FLG_PROMOCAO" ColumnName="FLG_PROMOCAO" />
+                <ScalarProperty Name="NOM_CLIENTE" ColumnName="NOM_CLIENTE" />
+                <ScalarProperty Name="NOM_EMAIL" ColumnName="NOM_EMAIL" />
+                <ScalarProperty Name="NOM_ENDERECO" ColumnName="NOM_ENDERECO" />
+                <ScalarProperty Name="NUM_CPF" ColumnName="NUM_CPF" />
+                <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
+                <ScalarProperty Name="NUM_CELULAR" ColumnName="NUM_CELULAR" />
+                <ScalarProperty Name="VAL_RENDA" ColumnName="VAL_RENDA" />
+                <ScalarProperty Name="NOM_OCUPACAO" ColumnName="NOM_OCUPACAO" />
+                <ScalarProperty Name="FLG_ESPECIAL" ColumnName="FLG_ESPECIAL" />
+                <ScalarProperty Name="NUM_RG" ColumnName="NUM_RG" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="NUM_END" ColumnName="NUM_END" />
+                <ScalarProperty Name="NOM_BAIRRO" ColumnName="NOM_BAIRRO" />
+                <ScalarProperty Name="CAD_CEP" ColumnName="CAD_CEP" />
+                <ScalarProperty Name="NUM_TELEFONE" ColumnName="NUM_TELEFONE" />
+                <ScalarProperty Name="PER_DESCONTO" ColumnName="PER_DESCONTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESERVA">
+            <EntityTypeMapping TypeName="Model.RESERVA">
+              <MappingFragment StoreEntitySet="RESERVA">
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="VAL_PRECO" ColumnName="VAL_PRECO" />
+                <ScalarProperty Name="QTD_ASSENTO" ColumnName="QTD_ASSENTO" />
+                <ScalarProperty Name="ID_VOO" ColumnName="ID_VOO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="Model.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="NOM_USUARIO" ColumnName="NOM_USUARIO" />
+                <ScalarProperty Name="NOM_SENHA" ColumnName="NOM_SENHA" />
+                <ScalarProperty Name="NOM_LOGIN" ColumnName="NOM_LOGIN" />
+                <ScalarProperty Name="NUM_CPF" ColumnName="NUM_CPF" />
+                <ScalarProperty Name="NOM_ENDERECO" ColumnName="NOM_ENDERECO" />
+                <ScalarProperty Name="NUM_ENDERE" ColumnName="NUM_ENDERE" />
+                <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VOO">
+            <EntityTypeMapping TypeName="Model.VOO">
+              <MappingFragment StoreEntitySet="VOO">
+                <ScalarProperty Name="DAT_PARTIDA" ColumnName="DAT_PARTIDA" />
+                <ScalarProperty Name="DAT_CHEGADA" ColumnName="DAT_CHEGADA" />
+                <ScalarProperty Name="ID_AVIAO" ColumnName="ID_AVIAO" />
+                <ScalarProperty Name="ID_VOO" ColumnName="ID_VOO" />
+                <ScalarProperty Name="VAL_PRECO" ColumnName="VAL_PRECO" />
+                <ScalarProperty Name="ID_ORIGEM" ColumnName="ID_ORIGEM" />
+                <ScalarProperty Name="ID_DESTINO" ColumnName="ID_DESTINO" />
+                <ScalarProperty Name="FLG_PROMOCAO" ColumnName="FLG_PROMOCAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

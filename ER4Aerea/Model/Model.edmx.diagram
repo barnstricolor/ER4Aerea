@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24232287c5a148aead6bea5180246b0b" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.AVIAO" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CIDADE" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CLIENTE" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RESERVA" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.USUARIO" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VOO" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.SYS_C005170" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CAD_CIDADE_ID_DESTINO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CAD_CIDADE_ID_ORIGEM" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C005147" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C005158" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C005179" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_VOO_ID_VOO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C005180" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
