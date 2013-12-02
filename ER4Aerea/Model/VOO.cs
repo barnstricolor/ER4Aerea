@@ -16,7 +16,7 @@ namespace ER4Aerea.Model
     {
         public VOO()
         {
-            this.RESERVA = new HashSet<RESERVA>();
+            this.RESERVAs = new HashSet<RESERVA>();
         }
     
         public System.DateTime DAT_PARTIDA { get; set; }
@@ -31,6 +31,6 @@ namespace ER4Aerea.Model
         public virtual AVIAO AVIAO { get; set; }
         public virtual CIDADE CIDADE { get; set; }
         public virtual CIDADE CIDADE1 { get; set; }
-        public virtual ICollection<RESERVA> RESERVA { get; set; }
+        public virtual ICollection<RESERVA> RESERVAs { get; set; }
     }
 }

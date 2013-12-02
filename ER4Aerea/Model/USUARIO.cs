@@ -16,7 +16,7 @@ namespace ER4Aerea.Model
     {
         public USUARIO()
         {
-            this.RESERVA = new HashSet<RESERVA>();
+            this.RESERVAs = new HashSet<RESERVA>();
         }
     
         public decimal ID_USUARIO { get; set; }
@@ -29,6 +29,6 @@ namespace ER4Aerea.Model
         public decimal ID_CIDADE { get; set; }
     
         public virtual CIDADE CIDADE { get; set; }
-        public virtual ICollection<RESERVA> RESERVA { get; set; }
+        public virtual ICollection<RESERVA> RESERVAs { get; set; }
     }
 }

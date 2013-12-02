@@ -13,10 +13,10 @@ namespace ER4Aerea.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities2 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities2()
-            : base("name=Entities2")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -25,11 +25,11 @@ namespace ER4Aerea.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<AVIAO> AVIAO { get; set; }
-        public DbSet<CIDADE> CIDADE { get; set; }
-        public DbSet<CLIENTE> CLIENTE { get; set; }
-        public DbSet<RESERVA> RESERVA { get; set; }
-        public DbSet<USUARIO> USUARIO { get; set; }
-        public DbSet<VOO> VOO { get; set; }
+        public DbSet<AVIAO> AVIAOs { get; set; }
+        public DbSet<CIDADE> CIDADEs { get; set; }
+        public DbSet<CLIENTE> CLIENTEs { get; set; }
+        public DbSet<RESERVA> RESERVAs { get; set; }
+        public DbSet<USUARIO> USUARIOs { get; set; }
+        public DbSet<VOO> VOOs { get; set; }
     }
 }

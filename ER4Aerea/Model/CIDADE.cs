@@ -16,19 +16,19 @@ namespace ER4Aerea.Model
     {
         public CIDADE()
         {
-            this.VOO = new HashSet<VOO>();
-            this.VOO1 = new HashSet<VOO>();
-            this.CLIENTE = new HashSet<CLIENTE>();
-            this.USUARIO = new HashSet<USUARIO>();
+            this.VOOs = new HashSet<VOO>();
+            this.VOOs1 = new HashSet<VOO>();
+            this.CLIENTEs = new HashSet<CLIENTE>();
+            this.USUARIOs = new HashSet<USUARIO>();
         }
     
         public decimal ID_CIDADE { get; set; }
         public string NOM_CIDADE { get; set; }
         public decimal NUM_CEP { get; set; }
     
-        public virtual ICollection<VOO> VOO { get; set; }
-        public virtual ICollection<VOO> VOO1 { get; set; }
-        public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        public virtual ICollection<USUARIO> USUARIO { get; set; }
+        public virtual ICollection<VOO> VOOs { get; set; }
+        public virtual ICollection<VOO> VOOs1 { get; set; }
+        public virtual ICollection<CLIENTE> CLIENTEs { get; set; }
+        public virtual ICollection<USUARIO> USUARIOs { get; set; }
     }
 }

@@ -14,7 +14,6 @@ namespace ER4Aerea
     
     public partial class Cidade:Dominio
     {
-        public int id { get; set; }
         public string nome { get; set; }
         public string cep { get; set; }
 

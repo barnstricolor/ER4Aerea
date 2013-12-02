@@ -16,13 +16,13 @@ namespace ER4Aerea.Model
     {
         public AVIAO()
         {
-            this.VOO = new HashSet<VOO>();
+            this.VOOs = new HashSet<VOO>();
         }
     
         public decimal ID_AVIAO { get; set; }
         public decimal QTD_ASSENTO { get; set; }
         public string NOM_MODELO { get; set; }
     
-        public virtual ICollection<VOO> VOO { get; set; }
+        public virtual ICollection<VOO> VOOs { get; set; }
     }
 }

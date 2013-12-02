@@ -26,22 +26,22 @@ namespace ER4Aerea.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=MSDAORA.1;Data Source=xe;Persist Security Info=True;Password=PI;User ID=" +
-            "PI")]
-        public string XE {
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=MSDAORA;Data Source=xe;Persist Security Info=True;Password=pi;User ID=pi" +
+            "")]
+        public string ConnectionString {
             get {
-                return ((string)(this["XE"]));
+                return ((string)(this["ConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=MSDAORA;Data Source=xe;Persist Security Info=True;Password=pi;User ID=pi" +
-            "")]
-        public string ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=MSDAORA.1;Data Source=LOCAL;Persist Security Info=True;Password=PI;User " +
+            "ID=PI")]
+        public string XE {
             get {
-                return ((string)(this["ConnectionString"]));
+                return ((string)(this["XE"]));
             }
         }
     }

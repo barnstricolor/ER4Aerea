@@ -222,44 +222,44 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Entities2" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="AVIAO" EntityType="Model.AVIAO" />
-          <EntitySet Name="CIDADE" EntityType="Model.CIDADE" />
-          <EntitySet Name="CLIENTE" EntityType="Model.CLIENTE" />
-          <EntitySet Name="RESERVA" EntityType="Model.RESERVA" />
-          <EntitySet Name="USUARIO" EntityType="Model.USUARIO" />
-          <EntitySet Name="VOO" EntityType="Model.VOO" />
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="AVIAOs" EntityType="Model.AVIAO" />
+          <EntitySet Name="CIDADEs" EntityType="Model.CIDADE" />
+          <EntitySet Name="CLIENTEs" EntityType="Model.CLIENTE" />
+          <EntitySet Name="RESERVAs" EntityType="Model.RESERVA" />
+          <EntitySet Name="USUARIOs" EntityType="Model.USUARIO" />
+          <EntitySet Name="VOOs" EntityType="Model.VOO" />
           <AssociationSet Name="SYS_C005170" Association="Model.SYS_C005170">
-            <End Role="AVIAO" EntitySet="AVIAO" />
-            <End Role="VOO" EntitySet="VOO" />
+            <End Role="AVIAO" EntitySet="AVIAOs" />
+            <End Role="VOO" EntitySet="VOOs" />
           </AssociationSet>
           <AssociationSet Name="FK_CAD_CIDADE_ID_DESTINO" Association="Model.FK_CAD_CIDADE_ID_DESTINO">
-            <End Role="CIDADE" EntitySet="CIDADE" />
-            <End Role="VOO" EntitySet="VOO" />
+            <End Role="CIDADE" EntitySet="CIDADEs" />
+            <End Role="VOO" EntitySet="VOOs" />
           </AssociationSet>
           <AssociationSet Name="FK_CAD_CIDADE_ID_ORIGEM" Association="Model.FK_CAD_CIDADE_ID_ORIGEM">
-            <End Role="CIDADE" EntitySet="CIDADE" />
-            <End Role="VOO" EntitySet="VOO" />
+            <End Role="CIDADE" EntitySet="CIDADEs" />
+            <End Role="VOO" EntitySet="VOOs" />
           </AssociationSet>
           <AssociationSet Name="SYS_C005147" Association="Model.SYS_C005147">
-            <End Role="CIDADE" EntitySet="CIDADE" />
-            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="CIDADE" EntitySet="CIDADEs" />
+            <End Role="CLIENTE" EntitySet="CLIENTEs" />
           </AssociationSet>
           <AssociationSet Name="SYS_C005158" Association="Model.SYS_C005158">
-            <End Role="CIDADE" EntitySet="CIDADE" />
-            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="CIDADE" EntitySet="CIDADEs" />
+            <End Role="USUARIO" EntitySet="USUARIOs" />
           </AssociationSet>
           <AssociationSet Name="SYS_C005179" Association="Model.SYS_C005179">
-            <End Role="CLIENTE" EntitySet="CLIENTE" />
-            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="CLIENTE" EntitySet="CLIENTEs" />
+            <End Role="RESERVA" EntitySet="RESERVAs" />
           </AssociationSet>
           <AssociationSet Name="FK_VOO_ID_VOO" Association="Model.FK_VOO_ID_VOO">
-            <End Role="VOO" EntitySet="VOO" />
-            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="VOO" EntitySet="VOOs" />
+            <End Role="RESERVA" EntitySet="RESERVAs" />
           </AssociationSet>
           <AssociationSet Name="SYS_C005180" Association="Model.SYS_C005180">
-            <End Role="USUARIO" EntitySet="USUARIO" />
-            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="USUARIO" EntitySet="USUARIOs" />
+            <End Role="RESERVA" EntitySet="RESERVAs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="AVIAO">
@@ -269,7 +269,7 @@
           <Property Name="ID_AVIAO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="QTD_ASSENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="NOM_MODELO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="VOO" Relationship="Model.SYS_C005170" FromRole="AVIAO" ToRole="VOO" />
+          <NavigationProperty Name="VOOs" Relationship="Model.SYS_C005170" FromRole="AVIAO" ToRole="VOO" />
         </EntityType>
         <EntityType Name="CIDADE">
           <Key>
@@ -278,10 +278,10 @@
           <Property Name="ID_CIDADE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="NOM_CIDADE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NUM_CEP" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
-          <NavigationProperty Name="VOO" Relationship="Model.FK_CAD_CIDADE_ID_DESTINO" FromRole="CIDADE" ToRole="VOO" />
-          <NavigationProperty Name="VOO1" Relationship="Model.FK_CAD_CIDADE_ID_ORIGEM" FromRole="CIDADE" ToRole="VOO" />
-          <NavigationProperty Name="CLIENTE" Relationship="Model.SYS_C005147" FromRole="CIDADE" ToRole="CLIENTE" />
-          <NavigationProperty Name="USUARIO" Relationship="Model.SYS_C005158" FromRole="CIDADE" ToRole="USUARIO" />
+          <NavigationProperty Name="VOOs" Relationship="Model.FK_CAD_CIDADE_ID_DESTINO" FromRole="CIDADE" ToRole="VOO" />
+          <NavigationProperty Name="VOOs1" Relationship="Model.FK_CAD_CIDADE_ID_ORIGEM" FromRole="CIDADE" ToRole="VOO" />
+          <NavigationProperty Name="CLIENTEs" Relationship="Model.SYS_C005147" FromRole="CIDADE" ToRole="CLIENTE" />
+          <NavigationProperty Name="USUARIOs" Relationship="Model.SYS_C005158" FromRole="CIDADE" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="CLIENTE">
           <Key>
@@ -306,7 +306,7 @@
           <Property Name="NUM_TELEFONE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="PER_DESCONTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="CIDADE" Relationship="Model.SYS_C005147" FromRole="CLIENTE" ToRole="CIDADE" />
-          <NavigationProperty Name="RESERVA" Relationship="Model.SYS_C005179" FromRole="CLIENTE" ToRole="RESERVA" />
+          <NavigationProperty Name="RESERVAs" Relationship="Model.SYS_C005179" FromRole="CLIENTE" ToRole="RESERVA" />
         </EntityType>
         <EntityType Name="RESERVA">
           <Key>
@@ -335,7 +335,7 @@
           <Property Name="NUM_ENDERE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="ID_CIDADE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <NavigationProperty Name="CIDADE" Relationship="Model.SYS_C005158" FromRole="USUARIO" ToRole="CIDADE" />
-          <NavigationProperty Name="RESERVA" Relationship="Model.SYS_C005180" FromRole="USUARIO" ToRole="RESERVA" />
+          <NavigationProperty Name="RESERVAs" Relationship="Model.SYS_C005180" FromRole="USUARIO" ToRole="RESERVA" />
         </EntityType>
         <EntityType Name="VOO">
           <Key>
@@ -352,7 +352,7 @@
           <NavigationProperty Name="AVIAO" Relationship="Model.SYS_C005170" FromRole="VOO" ToRole="AVIAO" />
           <NavigationProperty Name="CIDADE" Relationship="Model.FK_CAD_CIDADE_ID_DESTINO" FromRole="VOO" ToRole="CIDADE" />
           <NavigationProperty Name="CIDADE1" Relationship="Model.FK_CAD_CIDADE_ID_ORIGEM" FromRole="VOO" ToRole="CIDADE" />
-          <NavigationProperty Name="RESERVA" Relationship="Model.FK_VOO_ID_VOO" FromRole="VOO" ToRole="RESERVA" />
+          <NavigationProperty Name="RESERVAs" Relationship="Model.FK_VOO_ID_VOO" FromRole="VOO" ToRole="RESERVA" />
         </EntityType>
         <Association Name="SYS_C005170">
           <End Role="AVIAO" Type="Model.AVIAO" Multiplicity="1" />
@@ -455,8 +455,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities2">
-          <EntitySetMapping Name="AVIAO">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="AVIAOs">
             <EntityTypeMapping TypeName="Model.AVIAO">
               <MappingFragment StoreEntitySet="AVIAO">
                 <ScalarProperty Name="ID_AVIAO" ColumnName="ID_AVIAO" />
@@ -465,7 +465,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CIDADE">
+          <EntitySetMapping Name="CIDADEs">
             <EntityTypeMapping TypeName="Model.CIDADE">
               <MappingFragment StoreEntitySet="CIDADE">
                 <ScalarProperty Name="ID_CIDADE" ColumnName="ID_CIDADE" />
@@ -474,7 +474,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CLIENTE">
+          <EntitySetMapping Name="CLIENTEs">
             <EntityTypeMapping TypeName="Model.CLIENTE">
               <MappingFragment StoreEntitySet="CLIENTE">
                 <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
@@ -498,7 +498,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="RESERVA">
+          <EntitySetMapping Name="RESERVAs">
             <EntityTypeMapping TypeName="Model.RESERVA">
               <MappingFragment StoreEntitySet="RESERVA">
                 <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
@@ -510,7 +510,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="USUARIO">
+          <EntitySetMapping Name="USUARIOs">
             <EntityTypeMapping TypeName="Model.USUARIO">
               <MappingFragment StoreEntitySet="USUARIO">
                 <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
@@ -524,7 +524,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="VOO">
+          <EntitySetMapping Name="VOOs">
             <EntityTypeMapping TypeName="Model.VOO">
               <MappingFragment StoreEntitySet="VOO">
                 <ScalarProperty Name="DAT_PARTIDA" ColumnName="DAT_PARTIDA" />

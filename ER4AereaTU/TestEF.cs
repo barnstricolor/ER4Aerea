@@ -16,15 +16,8 @@ namespace ER4AereaTU
         [TestMethod]
         public void ef()
         {
-            Entities2 e = new Entities2();
-            List<CIDADE> lista = new List<CIDADE>();
-            IQueryable<CIDADE> cidadeQuery = from cidade in e.CIDADE
-                                                select cidade;
-            Console.WriteLine("Cidades:");
-            foreach (var c in cidadeQuery)
-            {
-                Console.WriteLine(c.NOM_CIDADE);
-            }
+            AviaoController controller = new AviaoController();
+            controller.testeEF();
         }
 
 

@@ -4,14 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ER4Aerea.Model;
 
 namespace ER4Aerea
 {
-    class AviaoController:Controller
+    public class AviaoController:Controller
     {
         public static AviaoController criar() { return new AviaoController(); }
         
         protected frmAviao frmTela { get; set; }
+
+        public void testeEF() {
+            Entities e = new Entities();
+
+            e.CIDADEs.ToList().Count();
+            List<CIDADE> lista = new List<CIDADE>();
+            IQueryable<CIDADE> cidadeQuery = from cidade in e.CIDADEs
+                                             select cidade;
+            Console.WriteLine("Cidades:");
+            foreach (var c in cidadeQuery)
+            {
+                Console.WriteLine(c.NOM_CIDADE);
+            }
+
+        }
 
         protected frmAviao tela() {
             return frmTela;

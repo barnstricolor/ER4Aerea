@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace ER4Aerea
 {
@@ -19,6 +20,9 @@ namespace ER4Aerea
             this.usuario = usuario;
             this.senha = senha;
             string strConexao = "Provider=MSDAORA;Data Source=XE;User Id=" + usuario + ";Password=" + senha + ";";
+            //string strConexao = ConfigurationManager.ConnectionStrings["ER4Aerea.Properties.Settings.XE"].ToString();
+            
+
             this.conn = new OleDbConnection();
             this.conn.ConnectionString = strConexao;
             try

@@ -56,7 +56,8 @@ namespace ER4Aerea
 
         private void aviãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller controller = AviaoController.criar();
+            AviaoController controller = AviaoController.criar();
+            controller.testeEF();
             controller.mostrarPesquisa(this);
         }
 
