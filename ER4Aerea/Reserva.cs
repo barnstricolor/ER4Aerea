@@ -23,13 +23,5 @@ namespace ER4Aerea
 		    this.usuario = usuario;
 	    }
 
-	    public int getAssentos() {
-		    return assentos;
-	    }
-	
-	    public float getPreco(){
-		    return this.preco;
-	    }
-	
     }
 }

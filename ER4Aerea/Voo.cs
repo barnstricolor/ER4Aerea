@@ -53,7 +53,7 @@ namespace ER4Aerea
 	
 	    public int assentosDisponiveis(){
 		
-		    return aviao.getAssentos() - assentosReservados();
+		    return aviao.assentos - assentosReservados();
 	
 	    }
 	
@@ -63,7 +63,7 @@ namespace ER4Aerea
 		    int result = 0;
 		
 		    foreach (Reserva reserva in reservas)
-			    result += reserva.getAssentos(); 
+			    result += reserva.assentos; 
 		
 			    return result;
 	

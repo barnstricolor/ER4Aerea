@@ -15,10 +15,5 @@ namespace ER4Aerea
             this.modelo = modelo;
             this.assentos = assentos;
         }
-        public int getAssentos()
-        {
-            return assentos;
-        }
-
     }
 }

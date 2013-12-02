@@ -24,19 +24,18 @@ namespace ER4AereaTU
         [TestInitialize]
         public void setUpTest()
         {
-            cliente = new Cliente("Cliente");
-            new ClienteRepositorio().salvar(cliente);
+            CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
+            Cidade cidade = (Cidade)cidadeRepositorio.obter(1);
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+
+            cliente = (Cliente)clienteRepositorio.obter(4);
 
             vooRepositorio = new VooRepositorio();
             raoSao = (Voo)vooRepositorio.obter(1);
             saoRao777 = (Voo)vooRepositorio.obter(2);
 
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
-            usuario = new Usuario();
-            usuario.nome = "Teste";
-            usuario.login = "login";
-            usuario.senha = "senha";
-            usuarioRepositorio.salvar(usuario);
+            usuario = (Usuario)usuarioRepositorio.obter(1); 
 
             agencia = new Agencia();
             agencia.addVoo(raoSao);

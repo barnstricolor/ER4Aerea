@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ER4Aerea
 {
-    public  class Cliente:Dominio
+    public class Cliente : Dominio
     {
         //private  int id { get; set; }
-        public  string nome { get; set; }      
+        public string nome { get; set; }
         public string email { get; set; }
         public string endereco { get; set; }
         public string cpf { get; set; }
@@ -30,20 +30,20 @@ namespace ER4Aerea
         public string rg { get; set; }
         public float desconto { get; set; }
 
-	    //private static float DESCONTO = (float) 0.3;
+        //private static float DESCONTO = (float) 0.3;
 
         public Cliente(String nome)
         {
             this.nome = nome;
         }
-        
+
         public Boolean isEspecial()
         {
             if (this.especial == "S")
                 return true;
             else
                 return false;
-	    }
+        }
 
 
         /*private void setEspecial(Boolean especial)
@@ -51,17 +51,11 @@ namespace ER4Aerea
 		    this.especial = especial;
 	    }*/
 
-	    public  float getDesconto() {
-		    return (float) (this.isEspecial() == true ? desconto : 0.0);
-	    }
+        public float getDesconto()
+        {
+            return (float)(this.isEspecial() == true ? desconto : 0.0);
+        }
 
-	    private  String getNome() {
-		    return nome;
-	    }
-
-	    private  void setNome(String nome) {
-		    this.nome = nome;
-	    }
     }
     
 }
