@@ -65,7 +65,14 @@ namespace ER4Aerea
                     voo = new Voo(aviao, origem, destino, DateTime.Parse(tela().dtpPartida.Text), float.Parse(tela().txtPreco.Text));
                 else
                     voo = (Voo)repositorio().obter(int.Parse(tela().txtId.Text));
+                voo.aviao.id = (int)tela().dcbAviao.SelectedValue;
+                voo.origem.id = (int)tela().dcbOrigem.SelectedValue;
+                voo.destino.id = (int)tela().dcbDestino.SelectedValue;
+                voo.preco = float.Parse(tela().txtPreco.Text);
+                voo.partida = tela().dtpPartida.Value;
+                
                 voo.chegada = DateTime.Parse(tela().dtpChegada.Text);
+
                 if (tela().chkPromocao.Checked)
                     voo.promocao = "S";
                 else
@@ -128,15 +135,17 @@ namespace ER4Aerea
             Email email = new Email();
             ClienteRepositorio repo = new ClienteRepositorio();
             HashSet<Cliente> result = new HashSet<Cliente>();
+            
+            string post = "Saldão ER4Aerea - Passagens Nacionais até pela metade do preço‏ ";
+            post += "De: " + voo.origem.nome + " a " + voo.destino.nome + " por " + voo.preco.ToString("C2");
+
             int i = 0;
             foreach (Dominio dominio in repo.obterPromocao())
             {
-                email.enviar(((Cliente)dominio).email);
+                email.enviar(((Cliente)dominio).email,post);
                 i++;
             }
             Twitter twitter = new Twitter();
-            string post = "Saldão ER4Aérea - Passagens Nacionais até pela metade do preço‏ ";
-            post += "De:" + voo.origem.nome + " a " + voo.destino.nome +" por " + voo.preco.ToString("C2");
 
             twitter.postar(post);
             MessageBox.Show("Emails enviados: " + i + " e Twitter Atualizado.");

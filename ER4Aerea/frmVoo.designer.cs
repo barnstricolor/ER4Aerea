@@ -59,54 +59,60 @@
             // dAT_PARTIDALabel
             // 
             dAT_PARTIDALabel.AutoSize = true;
-            dAT_PARTIDALabel.Location = new System.Drawing.Point(29, 61);
+            dAT_PARTIDALabel.Location = new System.Drawing.Point(39, 75);
+            dAT_PARTIDALabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dAT_PARTIDALabel.Name = "dAT_PARTIDALabel";
-            dAT_PARTIDALabel.Size = new System.Drawing.Size(40, 13);
+            dAT_PARTIDALabel.Size = new System.Drawing.Size(53, 17);
             dAT_PARTIDALabel.TabIndex = 5;
             dAT_PARTIDALabel.Text = "Partida";
             // 
             // iD_AVIAOLabel
             // 
             iD_AVIAOLabel.AutoSize = true;
-            iD_AVIAOLabel.Location = new System.Drawing.Point(15, 37);
+            iD_AVIAOLabel.Location = new System.Drawing.Point(20, 46);
+            iD_AVIAOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iD_AVIAOLabel.Name = "iD_AVIAOLabel";
-            iD_AVIAOLabel.Size = new System.Drawing.Size(56, 13);
+            iD_AVIAOLabel.Size = new System.Drawing.Size(73, 17);
             iD_AVIAOLabel.TabIndex = 7;
             iD_AVIAOLabel.Text = "Aeronave:";
             // 
             // vAL_PRECOLabel
             // 
             vAL_PRECOLabel.AutoSize = true;
-            vAL_PRECOLabel.Location = new System.Drawing.Point(35, 160);
+            vAL_PRECOLabel.Location = new System.Drawing.Point(47, 197);
+            vAL_PRECOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             vAL_PRECOLabel.Name = "vAL_PRECOLabel";
-            vAL_PRECOLabel.Size = new System.Drawing.Size(34, 13);
+            vAL_PRECOLabel.Size = new System.Drawing.Size(45, 17);
             vAL_PRECOLabel.TabIndex = 13;
             vAL_PRECOLabel.Text = "Valor:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(28, 108);
+            label1.Location = new System.Drawing.Point(37, 133);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(40, 13);
+            label1.Size = new System.Drawing.Size(54, 17);
             label1.TabIndex = 113;
             label1.Text = "Origem";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(27, 132);
+            label2.Location = new System.Drawing.Point(36, 162);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(43, 13);
+            label2.Size = new System.Drawing.Size(56, 17);
             label2.TabIndex = 115;
             label2.Text = "Destino\r\n";
             // 
             // Chegada
             // 
             Chegada.AutoSize = true;
-            Chegada.Location = new System.Drawing.Point(21, 84);
+            Chegada.Location = new System.Drawing.Point(28, 103);
+            Chegada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Chegada.Name = "Chegada";
-            Chegada.Size = new System.Drawing.Size(50, 13);
+            Chegada.Size = new System.Drawing.Size(65, 17);
             Chegada.TabIndex = 116;
             Chegada.Text = "Chegada";
             // 
@@ -114,47 +120,51 @@
             // 
             this.dtpPartida.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpPartida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPartida.Location = new System.Drawing.Point(74, 60);
+            this.dtpPartida.Location = new System.Drawing.Point(99, 74);
+            this.dtpPartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpPartida.Name = "dtpPartida";
             this.dtpPartida.ShowUpDown = true;
-            this.dtpPartida.Size = new System.Drawing.Size(219, 20);
+            this.dtpPartida.Size = new System.Drawing.Size(291, 22);
             this.dtpPartida.TabIndex = 1;
             this.dtpPartida.Tag = "1";
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(389, 188);
+            this.txtId.Location = new System.Drawing.Point(519, 231);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(67, 20);
+            this.txtId.Size = new System.Drawing.Size(88, 22);
             this.txtId.TabIndex = 1;
             this.txtId.Tag = "ID_VOO,N";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(328, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(437, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(249, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(74, 158);
+            this.txtPreco.Location = new System.Drawing.Point(99, 194);
+            this.txtPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPreco.MaxLength = 20;
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(60, 20);
+            this.txtPreco.Size = new System.Drawing.Size(79, 22);
             this.txtPreco.TabIndex = 5;
             this.txtPreco.Tag = "D";
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(74, 187);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpar.Location = new System.Drawing.Point(99, 230);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(56, 19);
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -162,10 +172,10 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(460, 187);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechar.Location = new System.Drawing.Point(613, 230);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(56, 19);
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 9;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
@@ -173,10 +183,10 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(14, 187);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalvar.Location = new System.Drawing.Point(19, 230);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(56, 19);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -185,9 +195,11 @@
             // 
             this.dtpChegada.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpChegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpChegada.Location = new System.Drawing.Point(74, 84);
+            this.dtpChegada.Location = new System.Drawing.Point(99, 103);
+            this.dtpChegada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpChegada.Name = "dtpChegada";
-            this.dtpChegada.Size = new System.Drawing.Size(219, 20);
+            this.dtpChegada.ShowUpDown = true;
+            this.dtpChegada.Size = new System.Drawing.Size(291, 22);
             this.dtpChegada.TabIndex = 2;
             this.dtpChegada.Tag = "2";
             // 
@@ -195,30 +207,30 @@
             // 
             this.dcbOrigem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dcbOrigem.FormattingEnabled = true;
-            this.dcbOrigem.Location = new System.Drawing.Point(74, 108);
-            this.dcbOrigem.Margin = new System.Windows.Forms.Padding(2);
+            this.dcbOrigem.Location = new System.Drawing.Point(99, 133);
+            this.dcbOrigem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dcbOrigem.Name = "dcbOrigem";
-            this.dcbOrigem.Size = new System.Drawing.Size(219, 21);
+            this.dcbOrigem.Size = new System.Drawing.Size(291, 24);
             this.dcbOrigem.TabIndex = 3;
             // 
             // dcbDestino
             // 
             this.dcbDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dcbDestino.FormattingEnabled = true;
-            this.dcbDestino.Location = new System.Drawing.Point(74, 132);
-            this.dcbDestino.Margin = new System.Windows.Forms.Padding(2);
+            this.dcbDestino.Location = new System.Drawing.Point(99, 162);
+            this.dcbDestino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dcbDestino.Name = "dcbDestino";
-            this.dcbDestino.Size = new System.Drawing.Size(219, 21);
+            this.dcbDestino.Size = new System.Drawing.Size(291, 24);
             this.dcbDestino.TabIndex = 4;
             // 
             // dcbAviao
             // 
             this.dcbAviao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dcbAviao.FormattingEnabled = true;
-            this.dcbAviao.Location = new System.Drawing.Point(74, 35);
-            this.dcbAviao.Margin = new System.Windows.Forms.Padding(2);
+            this.dcbAviao.Location = new System.Drawing.Point(99, 43);
+            this.dcbAviao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dcbAviao.Name = "dcbAviao";
-            this.dcbAviao.Size = new System.Drawing.Size(219, 21);
+            this.dcbAviao.Size = new System.Drawing.Size(291, 24);
             this.dcbAviao.TabIndex = 0;
             this.dcbAviao.Tag = "";
             // 
@@ -226,9 +238,10 @@
             // 
             this.chkPromocao.AutoSize = true;
             this.chkPromocao.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkPromocao.Location = new System.Drawing.Point(222, 158);
+            this.chkPromocao.Location = new System.Drawing.Point(296, 194);
+            this.chkPromocao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPromocao.Name = "chkPromocao";
-            this.chkPromocao.Size = new System.Drawing.Size(74, 17);
+            this.chkPromocao.Size = new System.Drawing.Size(94, 21);
             this.chkPromocao.TabIndex = 6;
             this.chkPromocao.Tag = "";
             this.chkPromocao.Text = "Promoção";
@@ -237,9 +250,9 @@
             // 
             // frmVoo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 219);
+            this.ClientSize = new System.Drawing.Size(701, 270);
             this.Controls.Add(this.chkPromocao);
             this.Controls.Add(this.dcbAviao);
             this.Controls.Add(this.dcbDestino);
@@ -258,6 +271,7 @@
             this.Controls.Add(iD_AVIAOLabel);
             this.Controls.Add(this.txtId);
             this.Controls.Add(vAL_PRECOLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVoo";
             this.Tag = "CAD_VOO";
             this.Text = "frmVoo";

@@ -13,13 +13,13 @@ namespace ER4Aerea
     public class Email
     {
 
-        public void enviar(string email)
+        public void enviar(string email,string texto)
         {
             MailMessage mensagem = new MailMessage(
                 "er4aerea@gmail.com",
                 email,
-                "Saldão ER4Aérea - Passagens Nacionais até pela metade do preço‏",
-                "Aproveite...");
+                "Saldão ER4Aerea - Passagens Nacionais até pela metade do preço‏",
+                texto);
             
             //Attachment anexo = new Attachment(((ListBoxItem)item).Content.ToString());
             //mail.Attachments.Add(anexo);

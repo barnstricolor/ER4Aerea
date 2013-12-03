@@ -43,28 +43,29 @@ namespace ER4Aerea
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(390, 94);
+            this.txtNome.Location = new System.Drawing.Point(520, 116);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(132, 22);
             this.txtNome.TabIndex = 0;
-            this.txtNome.Text = "PI";
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(390, 120);
+            this.txtSenha.Location = new System.Drawing.Point(520, 148);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.MaxLength = 32;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtSenha.Size = new System.Drawing.Size(132, 22);
             this.txtSenha.TabIndex = 1;
-            this.txtSenha.Text = "PI";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(390, 146);
+            this.button1.Location = new System.Drawing.Point(520, 180);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(133, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Entrar\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -73,9 +74,10 @@ namespace ER4Aerea
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(284, 91);
+            this.label1.Location = new System.Drawing.Point(379, 112);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(133, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Identificação";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -83,16 +85,18 @@ namespace ER4Aerea
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(133, 28);
             this.label2.TabIndex = 7;
             // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(390, 175);
+            this.button2.Location = new System.Drawing.Point(520, 215);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.Size = new System.Drawing.Size(133, 28);
             this.button2.TabIndex = 3;
             this.button2.Text = "Sair";
             this.button2.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@ namespace ER4Aerea
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 206);
+            this.pictureBox1.Size = new System.Drawing.Size(373, 253);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -113,11 +118,11 @@ namespace ER4Aerea
             // frmLogin
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(515, 257);
+            this.ClientSize = new System.Drawing.Size(687, 316);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
@@ -125,6 +130,7 @@ namespace ER4Aerea
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNome);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
