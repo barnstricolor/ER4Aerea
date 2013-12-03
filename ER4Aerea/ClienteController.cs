@@ -105,7 +105,7 @@ namespace ER4Aerea
                 else
                     cliente.sexo = "F";
                 if (tela().chkReceb.Checked)
-                    cliente.promocao = "S";
+                    cliente.promocao = "S" ;
                 else
                     cliente.promocao = "N";
                 if (tela().chkEsp.Checked)

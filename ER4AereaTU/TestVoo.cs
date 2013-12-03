@@ -26,11 +26,12 @@ namespace ER4AereaTU
         {
             CidadeRepositorio cidadeRepositorio = new CidadeRepositorio();
             Cidade cidade = (Cidade)cidadeRepositorio.obter(1);
+            
             ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-
             cliente = (Cliente)clienteRepositorio.obter(4);
 
             vooRepositorio = new VooRepositorio();
+            
             raoSao = (Voo)vooRepositorio.obter(1);
             saoRao777 = (Voo)vooRepositorio.obter(2);
 
@@ -55,9 +56,10 @@ namespace ER4AereaTU
         {
             CidadeRepositorio cidadeRepositorio=new CidadeRepositorio();
             Agencia agencia = new Agencia();
+
             Cidade origem=(Cidade)cidadeRepositorio.obter(1);
             Cidade destino=(Cidade)cidadeRepositorio.obter(2);
-            Assert.IsTrue(agencia.obterVoos(new DateTime(2013,11,18), origem, destino, 1).Count>0);
+            Assert.IsTrue(agencia.obterVoos(new DateTime(2013,11,8), origem, destino, 1).Count>0);
 
         }
 
