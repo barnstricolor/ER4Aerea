@@ -19,6 +19,7 @@ namespace ER4Aerea
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Bd persistencia = Bd.Instance;
             if (persistencia.obterConexao()!=null)
             {

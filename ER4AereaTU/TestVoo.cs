@@ -59,7 +59,7 @@ namespace ER4AereaTU
 
             Cidade origem=(Cidade)cidadeRepositorio.obter(1);
             Cidade destino=(Cidade)cidadeRepositorio.obter(2);
-            Assert.IsTrue(agencia.obterVoos(new DateTime(2013,11,8), origem, destino, 1).Count>0);
+            Assert.IsTrue(agencia.obterVoos(new DateTime(2013,12,4), origem, destino, 1).Count>0);
 
         }
 

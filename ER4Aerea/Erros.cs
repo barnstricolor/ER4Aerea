@@ -14,7 +14,10 @@ namespace ER4Aerea
     {
         public void UnhandledThreadExceptionHandler(object sender, ThreadExceptionEventArgs e)
         {
-            this.HandleUnhandledException(e.Exception);
+            if (e.Exception is NegocioException || e.Exception is System.Data.OleDb.OleDbException)
+                MessageBox.Show(e.Exception.Message);
+            else
+                this.HandleUnhandledException(e.Exception);
         }
 
         public void HandleUnhandledException(Exception e)

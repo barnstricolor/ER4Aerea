@@ -28,7 +28,7 @@ namespace ER4Aerea
 	    public Reserva novaReserva(Cliente cliente, int assentos, Usuario usuario){
 		
 		    if (!temDisponibilidade(assentos))			
-			    throw new Exception ("Assentos insuficientes.");
+			    throw new NegocioException ("Assentos insuficientes.");
 		
 		    Reserva reserva = new Reserva(cliente, assentos, calcularPreco(cliente.getDesconto()), this, usuario); 
 		

@@ -19,6 +19,7 @@ namespace ER4Aerea
             //tratamento de erro generico
             Erros erros = new Erros();
             Application.ThreadException += new ThreadExceptionEventHandler(erros.UnhandledThreadExceptionHandler);
+            //Application.ThreadException += new ThreadExceptionEventHandler(erros.UnhandledThreadExceptionHandler);
 
             frmLogin f = new frmLogin();
             if (f.ShowDialog() == DialogResult.OK)
