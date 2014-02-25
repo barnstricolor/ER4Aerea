@@ -14,6 +14,7 @@ namespace ER4Aerea
         public Aviao(string modelo, int assentos) {
             this.modelo = modelo;
             this.assentos = assentos;
+            //comentario
         }
     }
 }
